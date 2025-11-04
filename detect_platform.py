@@ -22,7 +22,7 @@ DATA_FILE = os.path.join(ROOT, 'data.json')
 HEADERS = {
     'User-Agent': 'ecom-platform-tracker/1.0 (+https://github.com/kersov/ecom-platform-tracker.git)'
 }
-TIMEOUT = 20
+TIMEOUT = 5
 
 # -------------------------
 # Site loading & fetching
@@ -45,7 +45,7 @@ def fetch_site(url):
 # Heuristic detection
 # -------------------------
 def detect_platform_from_text(html_text, headers, url):
-    """Return platform name or 'Unknown'"""
+    """Return platform name or 'Unidentified'"""
     text = (html_text or '').lower()
     hdr_keys = ' '.join([k.lower() for k in (headers.keys() if headers else [])])
     hdr_vals = ' '.join([str(v).lower() for v in (headers.values() if headers else [])])
@@ -92,7 +92,7 @@ def detect_platform_from_text(html_text, headers, url):
     if 'wp-content' in text or 'wp-include' in text:
         return 'WordPress'
     # Fallback
-    return 'Unknown'
+    return 'Unidentified'
 
 # -------------------------
 # Main run
@@ -111,7 +111,7 @@ def main():
     date_str = datetime.utcnow().date().isoformat()
 
     for s in sites:
-        name = s.get('name') or s.get('url') or 'unknown'
+        name = s.get('name') or s.get('url') or 'unidentified'
         url = s.get('url')
         if not url:
             print(f"[WARN] Site entry missing 'url': {s}")

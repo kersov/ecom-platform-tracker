@@ -41,6 +41,9 @@ try:
 
     removed_count = len(stores) - len(unique_stores)
 
+    # Sort unique_stores by name
+    unique_stores.sort(key=lambda x: x.get('name', '').lower())
+
     # --- 3. Write the unique data back to the *same* file ---
     # Using 'w' mode will overwrite the file's contents
     with open(filename, 'w', encoding='utf-8') as f:

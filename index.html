@@ -71,11 +71,11 @@
                 // Convert platformCounts to an array and sort it
                 const sortedPlatforms = Object.entries(platformCounts).sort(([,a],[,b]) => b-a);
 
-                // Move 'Unknown' to the end of the list
-                const unknownIndex = sortedPlatforms.findIndex(([platform]) => platform === 'Unknown');
-                if (unknownIndex > -1) {
-                    const [unknownPlatform] = sortedPlatforms.splice(unknownIndex, 1);
-                    sortedPlatforms.push(unknownPlatform);
+                // Move 'Unidentified' to the end of the list
+                const unidentifiedIndex = sortedPlatforms.findIndex(([platform]) => platform === 'Unidentified');
+                if (unidentifiedIndex > -1) {
+                    const [unidentifiedPlatform] = sortedPlatforms.splice(unidentifiedIndex, 1);
+                    sortedPlatforms.push(unidentifiedPlatform);
                 }
 
                 // Loop through the sorted platforms and display the count
@@ -101,7 +101,7 @@
                     .append("g")
                     .attr("transform", `translate(${width / 2}, ${height / 2})`);
 
-                const data_ready = Object.entries(platformCounts).map(([key, value]) => ({ key, value }));
+                const data_ready = sortedPlatforms.map(([key, value]) => ({ key, value }));
 
                 // set the color scale
                 const color = d3.scaleOrdinal()
@@ -110,7 +110,7 @@
 
                 // Compute the position of each group on the pie:
                 const pie = d3.pie()
-                    .value(d => d.value)
+                    .value(d => d.value) 
                     .sort(null); // Disable sorting to maintain consistent label order
 
                 const pie_data = pie(data_ready);
@@ -175,7 +175,7 @@
                 // Calculate initial positions for labels and polylines
                 pie_data.forEach((d, i) => {
                     const pos = outerArc.centroid(d);
-                    const midangle = d.startAngle + (d.endAngle - d.endAngle) / 2; // Corrected midangle calculation
+                    const midangle = d.startAngle + (d.endAngle - d.startAngle) / 2; // Corrected midangle calculation
                     pos[0] = radius * 0.95 * (midangle < Math.PI ? 1 : -1); // x position for label and polyline end
                     d.x = pos[0];
                     d.y = pos[1];
