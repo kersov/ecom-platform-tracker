@@ -1,138 +1,99 @@
 [
-    {
-        "name": "Walmart",
-        "url": "https://www.walmart.com/"
-    },
-    {
-        "name": "Target",
-        "url": "https://www.target.com/"
-    },
-    {
-        "name": "Apple",
-        "url": "https://www.apple.com/"
-    },
-    {
-        "name": "Shein",
-        "url": "https://www.shein.com/"
-    },
-    {
-        "name": "Home Depot",
-        "url": "https://www.homedepot.com/"
-    },
-    {
-        "name": "IKEA",
-        "url": "https://www.ikea.com/"
-    },
-    {
-        "name": "Costco",
-        "url": "https://www.costco.com/"
-    },
-    {
-        "name": "Best Buy",
-        "url": "https://www.bestbuy.com/"
-    },
-    {
-        "name": "Lowe's",
-        "url": "https://www.lowes.com/"
-    },
-    {
-        "name": "Nike",
-        "url": "https://www.nike.com/"
-    },
-    {
-        "name": "Zalando",
-        "url": "https://www.zalando.com/"
-    },
-    {
-        "name": "Samsung",
-        "url": "https://www.samsung.com/"
-    },
-    {
-        "name": "Wayfair",
-        "url": "https://www.wayfair.com/"
-    },
-    {
-        "name": "Macy's",
-        "url": "https://www.macys.com/"
-    },
-    {
-        "name": "ASOS",
-        "url": "https://www.asos.com/"
-    },
-    {
-        "name": "Zara",
-        "url": "https://www.zara.com/"
-    },
-    {
-        "name": "H&M",
-        "url": "https://www.hm.com/"
-    },
-    {
-        "name": "Chewy",
-        "url": "https://www.chewy.com/"
-    },
-    {
-        "name": "Sephora",
-        "url": "https://www.sephora.com/"
-    },
-    {
-        "name": "Ulta Beauty",
-        "url": "https://www.ulta.com/"
-    },
-    {
-        "name": "CVS",
-        "url": "https://www.cvs.com/"
-    },
-    {
-        "name": "Walgreens",
-        "url": "https://www.walgreens.com/"
-    },
-    {
-        "name": "Newegg",
-        "url": "https://www.newegg.com/"
-    },
-    {
-        "name": "Otto",
-        "url": "https://www.otto.de/"
-    },
-    {
-        "name": "El Corte Ingl\u00e9s",
-        "url": "https://www.elcorteingles.es/"
-    },
-    {
-        "name": "Warby Parker",
-        "url": "https://www.warbyparker.com/"
-    },
-    {
-        "name": "Everlane",
-        "url": "https://www.everlane.com/"
-    },
-    {
-        "name": "Glossier",
-        "url": "https://www.glossier.com/"
-    },
-    {
-        "name": "Allbirds",
-        "url": "https://www.allbirds.com/"
-    },
-    {
-        "name": "Boohoo",
-        "url": "https://www.boohoo.com/"
-    },
-    {
-        "name": "Casper",
-        "url": "https://www.casper.com/"
-    },
-    {
-        "name": "Dollar Shave Club",
-        "url": "https://www.dollarshaveclub.com/"
-    },
-    {
-        "name": "Urban Outfitters",
-        "url": "https://www.urbanoutfitters.com/"
-    },
-    {
-        "name": "Alo Yoga",
-        "url": "https://www.aloyoga.com/"
-    }
+  {"name": "24S", "url": "https://www.24s.com/", "category": "Luxury Fashion"},
+  {"name": "ASOS", "url": "https://www.asos.com/", "category": "Fashion"},
+  {"name": "Adidas", "url": "https://www.adidas.com/", "category": "Sportswear"},
+  {"name": "Allbirds", "url": "https://www.allbirds.com/", "category": "Sustainable Fashion"},
+  {"name": "Allegro", "url": "https://allegro.pl/", "category": "General Retail"},
+  {"name": "Apple Store", "url": "https://www.apple.com/shop/", "category": "Electronics"},
+  {"name": "Argos", "url": "https://www.argos.co.uk/", "category": "General Retail"},
+  {"name": "Banana Republic", "url": "https://bananarepublic.gap.com/", "category": "Fashion"},
+  {"name": "Best Buy", "url": "https://www.bestbuy.com/", "category": "Electronics"},
+  {"name": "Bloomingdale's", "url": "https://www.bloomingdales.com/", "category": "Department Store"},
+  {"name": "Boohoo", "url": "https://www.boohoo.com/", "category": "Fashion"},
+  {"name": "Boots", "url": "https://www.boots.com/", "category": "Beauty & Health"},
+  {"name": "COS", "url": "https://www.cosstores.com/", "category": "Fashion"},
+  {"name": "Champs Sports", "url": "https://www.champssports.com/", "category": "Footwear"},
+  {"name": "Chewy", "url": "https://www.chewy.com/", "category": "Pet Supplies"},
+  {"name": "Coach", "url": "https://www.coach.com/", "category": "Luxury Fashion"},
+  {"name": "Decathlon", "url": "https://www.decathlon.com/", "category": "Sports Retail"},
+  {"name": "Dick's Sporting Goods", "url": "https://www.dickssportinggoods.com/", "category": "Sports Retail"},
+  {"name": "Etsy", "url": "https://www.etsy.com/", "category": "Handmade & Vintage"},
+  {"name": "Everlane", "url": "https://www.everlane.com/", "category": "Sustainable Fashion"},
+  {"name": "Farfetch", "url": "https://www.farfetch.com/", "category": "Luxury Fashion"},
+  {"name": "Fashion Nova", "url": "https://www.fashionnova.com/", "category": "Fashion"},
+  {"name": "Feelunique", "url": "https://www.feelunique.com/", "category": "Beauty"},
+  {"name": "Finish Line", "url": "https://www.finishline.com/", "category": "Footwear"},
+  {"name": "Flipkart", "url": "https://www.flipkart.com/", "category": "General Retail"},
+  {"name": "Foot Locker", "url": "https://www.footlocker.com/", "category": "Footwear"},
+  {"name": "Forever 21", "url": "https://www.forever21.com/", "category": "Fashion"},
+  {"name": "Gap", "url": "https://www.gap.com/", "category": "Fashion"},
+  {"name": "Gymshark", "url": "https://www.gymshark.com/", "category": "Activewear"},
+  {"name": "H&M", "url": "https://www.hm.com/", "category": "Fashion"},
+  {"name": "Home Depot", "url": "https://www.homedepot.com/", "category": "Home Improvement"},
+  {"name": "IKEA", "url": "https://www.ikea.com/", "category": "Home Furnishings"},
+  {"name": "In the Style", "url": "https://www.inthestyle.com/", "category": "Fashion"},
+  {"name": "JD.com", "url": "https://www.jd.com/", "category": "General Retail (China)"},
+  {"name": "John Lewis", "url": "https://www.johnlewis.com/", "category": "Department Store"},
+  {"name": "Joss & Main", "url": "https://www.jossandmain.com/", "category": "Furniture"},
+  {"name": "Kate Spade", "url": "https://www.katespade.com/", "category": "Luxury Fashion"},
+  {"name": "Lookfantastic", "url": "https://www.lookfantastic.com/", "category": "Beauty"},
+  {"name": "Lowe's", "url": "https://www.lowes.com/", "category": "Home Improvement"},
+  {"name": "Lululemon", "url": "https://shop.lululemon.com/", "category": "Activewear"},
+  {"name": "Macy's", "url": "https://www.macys.com/", "category": "Department Store"},
+  {"name": "Mango", "url": "https://www.mango.com/", "category": "Fashion"},
+  {"name": "Marks & Spencer", "url": "https://www.marksandspencer.com/", "category": "Department Store"},
+  {"name": "MatchesFashion", "url": "https://www.matchesfashion.com/", "category": "Luxury Fashion"},
+  {"name": "Mercado Libre", "url": "https://www.mercadolibre.com/", "category": "General Retail"},
+  {"name": "Michael Kors", "url": "https://www.michaelkors.com/", "category": "Luxury Fashion"},
+  {"name": "Missguided", "url": "https://www.missguided.com/", "category": "Fashion"},
+  {"name": "Missy Empire", "url": "https://www.missyempire.com/", "category": "Fashion"},
+  {"name": "Moda Operandi", "url": "https://www.modaoperandi.com/", "category": "Luxury Fashion"},
+  {"name": "Mytheresa", "url": "https://www.mytheresa.com/", "category": "Luxury Fashion"},
+  {"name": "Nasty Gal", "url": "https://www.nastygal.com/", "category": "Fashion"},
+  {"name": "Neiman Marcus", "url": "https://www.neimanmarcus.com/", "category": "Luxury"},
+  {"name": "Net-a-Porter", "url": "https://www.net-a-porter.com/", "category": "Luxury Fashion"},
+  {"name": "Newegg", "url": "https://www.newegg.com/", "category": "Electronics"},
+  {"name": "Next", "url": "https://www.next.co.uk/", "category": "Fashion Retail"},
+  {"name": "Nike", "url": "https://www.nike.com/", "category": "Sportswear"},
+  {"name": "Nordstrom", "url": "https://www.nordstrom.com/", "category": "Department Store"},
+  {"name": "Ocado", "url": "https://www.ocado.com/", "category": "Grocery"},
+  {"name": "Old Navy", "url": "https://www.oldnavy.com/", "category": "Fashion"},
+  {"name": "Ozon", "url": "https://www.ozon.ru/", "category": "General Retail"},
+  {"name": "Peloton Apparel", "url": "https://apparel.onepeloton.com/", "category": "Activewear"},
+  {"name": "Petco", "url": "https://www.petco.com/", "category": "Pet Supplies"},
+  {"name": "Pottery Barn", "url": "https://www.potterybarn.com/", "category": "Furniture & Decor"},
+  {"name": "Pretty Little Thing", "url": "https://www.prettylittlething.com/", "category": "Fashion"},
+  {"name": "Princess Polly", "url": "https://www.princesspolly.com/", "category": "Fashion"},
+  {"name": "Puma", "url": "https://www.puma.com/", "category": "Sportswear"},
+  {"name": "REI", "url": "https://www.rei.com/", "category": "Outdoor"},
+  {"name": "Reebok", "url": "https://www.reebok.com/", "category": "Sportswear"},
+  {"name": "Revolve", "url": "https://www.revolve.com/", "category": "Fashion"},
+  {"name": "SSENSE", "url": "https://www.ssense.com/", "category": "Luxury Fashion"},
+  {"name": "Sainsbury's", "url": "https://www.sainsburys.co.uk/", "category": "Grocery"},
+  {"name": "Saks Fifth Avenue", "url": "https://www.saksfifthavenue.com/", "category": "Luxury"},
+  {"name": "Samsung", "url": "https://www.samsung.com/", "category": "Electronics"},
+  {"name": "Selfridges", "url": "https://www.selfridges.com/", "category": "Luxury Department Store"},
+  {"name": "Sephora", "url": "https://www.sephora.com/", "category": "Beauty"},
+  {"name": "Shein", "url": "https://www.shein.com/", "category": "Fashion"},
+  {"name": "Shopbop", "url": "https://www.shopbop.com/", "category": "Luxury Fashion"},
+  {"name": "Shopee", "url": "https://shopee.com/", "category": "General Retail (Southeast Asia)"},
+  {"name": "Space NK", "url": "https://www.spacenk.com/", "category": "Beauty"},
+  {"name": "Taobao", "url": "https://www.taobao.com/", "category": "General Retail (China)"},
+  {"name": "Target", "url": "https://www.target.com/", "category": "General Retail"},
+  {"name": "Tesco", "url": "https://www.tesco.com/", "category": "Grocery"},
+  {"name": "The Outnet", "url": "https://www.theoutnet.com/", "category": "Discount Luxury"},
+  {"name": "Tmall", "url": "https://www.tmall.com/", "category": "General Retail (China)"},
+  {"name": "Tory Burch", "url": "https://www.toryburch.com/", "category": "Luxury Fashion"},
+  {"name": "Trendyol", "url": "https://www.trendyol.com/", "category": "Fashion"},
+  {"name": "Ulta Beauty", "url": "https://www.ulta.com/", "category": "Beauty"},
+  {"name": "Uniqlo", "url": "https://www.uniqlo.com/", "category": "Fashion"},
+  {"name": "Walmart", "url": "https://www.walmart.com/", "category": "General Retail"},
+  {"name": "Wayfair", "url": "https://www.wayfair.com/", "category": "Home Furniture"},
+  {"name": "West Elm", "url": "https://www.westelm.com/", "category": "Furniture & Decor"},
+  {"name": "Williams Sonoma", "url": "https://www.williams-sonoma.com/", "category": "Home & Kitchen"},
+  {"name": "Wish", "url": "https://www.wish.com/", "category": "General Retail"},
+  {"name": "Yoox", "url": "https://www.yoox.com/", "category": "Discount Luxury"},
+  {"name": "Zalando", "url": "https://www.zalando.com/", "category": "Fashion Retail"},
+  {"name": "Zappos", "url": "https://www.zappos.com/", "category": "Footwear & Apparel"},
+  {"name": "Zara", "url": "https://www.zara.com/", "category": "Fashion"}
 ]

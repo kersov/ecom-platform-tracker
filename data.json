@@ -1,22 +1,152 @@
 {
-  "Walmart": [
+  "24S": [
     {
       "2025-11-04": "Unknown"
     }
   ],
-  "Target": [
+  "ASOS": [
     {
       "2025-11-04": "Unknown"
     }
   ],
-  "Apple": [
+  "Adidas": [
     {
       "2025-11-04": "Unknown"
     }
   ],
-  "Shein": [
+  "Allbirds": [
+    {
+      "2025-11-04": "Shopify"
+    }
+  ],
+  "Allegro": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Apple Store": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Argos": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Banana Republic": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Best Buy": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Bloomingdale's": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Boohoo": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Boots": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "COS": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Champs Sports": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Chewy": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Coach": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Decathlon": [
+    {
+      "2025-11-04": "Shopify"
+    }
+  ],
+  "Dick's Sporting Goods": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Etsy": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Everlane": [
+    {
+      "2025-11-04": "Shopify"
+    }
+  ],
+  "Farfetch": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Fashion Nova": [
+    {
+      "2025-11-04": "Shopify"
+    }
+  ],
+  "Feelunique": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Finish Line": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Flipkart": [
     {
       "2025-11-04": "PrestaShop"
+    }
+  ],
+  "Foot Locker": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Forever 21": [
+    {
+      "2025-11-04": "Shopify"
+    }
+  ],
+  "Gap": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Gymshark": [
+    {
+      "2025-11-04": "Shopify"
+    }
+  ],
+  "H&M": [
+    {
+      "2025-11-04": "Unknown"
     }
   ],
   "Home Depot": [
@@ -29,14 +159,34 @@
       "2025-11-04": "Unknown"
     }
   ],
-  "Costco": [
+  "In the Style": [
+    {
+      "2025-11-04": "Shopify"
+    }
+  ],
+  "JD.com": [
     {
       "2025-11-04": "Unknown"
     }
   ],
-  "Best Buy": [
+  "John Lewis": [
     {
       "2025-11-04": "Unknown"
+    }
+  ],
+  "Joss & Main": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Kate Spade": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Lookfantastic": [
+    {
+      "2025-11-04": "Salesforce Commerce Cloud"
     }
   ],
   "Lowe's": [
@@ -44,12 +194,167 @@
       "2025-11-04": "Unknown"
     }
   ],
+  "Lululemon": [
+    {
+      "2025-11-04": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Macy's": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Mango": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Marks & Spencer": [
+    {
+      "2025-11-04": "PrestaShop"
+    }
+  ],
+  "MatchesFashion": [
+    {
+      "2025-11-04": "Shopify"
+    }
+  ],
+  "Mercado Libre": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Michael Kors": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Missguided": [
+    {
+      "2025-11-04": "PrestaShop"
+    }
+  ],
+  "Missy Empire": [
+    {
+      "2025-11-04": "Shopify"
+    }
+  ],
+  "Moda Operandi": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Mytheresa": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Nasty Gal": [
+    {
+      "2025-11-04": "PrestaShop"
+    }
+  ],
+  "Neiman Marcus": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Net-a-Porter": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Newegg": [
+    {
+      "2025-11-04": "PrestaShop"
+    }
+  ],
+  "Next": [
+    {
+      "2025-11-04": "SAP Commerce Cloud"
+    }
+  ],
   "Nike": [
     {
       "2025-11-04": "PrestaShop"
     }
   ],
-  "Zalando": [
+  "Nordstrom": [
+    {
+      "2025-11-04": "PrestaShop"
+    }
+  ],
+  "Ocado": [
+    {
+      "2025-11-04": "WordPress"
+    }
+  ],
+  "Old Navy": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Ozon": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Peloton Apparel": [
+    {
+      "2025-11-04": "Shopify"
+    }
+  ],
+  "Petco": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Pottery Barn": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Pretty Little Thing": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Princess Polly": [
+    {
+      "2025-11-04": "Shopify"
+    }
+  ],
+  "Puma": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "REI": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Reebok": [
+    {
+      "2025-11-04": "Shopify"
+    }
+  ],
+  "Revolve": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "SSENSE": [
+    {
+      "2025-11-04": "WordPress"
+    }
+  ],
+  "Sainsbury's": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Saks Fifth Avenue": [
     {
       "2025-11-04": "Unknown"
     }
@@ -59,32 +364,7 @@
       "2025-11-04": "SAP Commerce Cloud"
     }
   ],
-  "Wayfair": [
-    {
-      "2025-11-04": "Unknown"
-    }
-  ],
-  "Macy's": [
-    {
-      "2025-11-04": "Unknown"
-    }
-  ],
-  "ASOS": [
-    {
-      "2025-11-04": "Unknown"
-    }
-  ],
-  "Zara": [
-    {
-      "2025-11-04": "Unknown"
-    }
-  ],
-  "H&M": [
-    {
-      "2025-11-04": "Unknown"
-    }
-  ],
-  "Chewy": [
+  "Selfridges": [
     {
       "2025-11-04": "Unknown"
     }
@@ -94,79 +374,114 @@
       "2025-11-04": "Unknown"
     }
   ],
+  "Shein": [
+    {
+      "2025-11-04": "PrestaShop"
+    }
+  ],
+  "Shopbop": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Shopee": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Space NK": [
+    {
+      "2025-11-04": "Shopify"
+    }
+  ],
+  "Taobao": [
+    {
+      "2025-11-04": "PrestaShop"
+    }
+  ],
+  "Target": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Tesco": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "The Outnet": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Tmall": [
+    {
+      "2025-11-04": "PrestaShop"
+    }
+  ],
+  "Tory Burch": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Trendyol": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
   "Ulta Beauty": [
     {
       "2025-11-04": "Unknown"
     }
   ],
-  "CVS": [
+  "Uniqlo": [
     {
       "2025-11-04": "Unknown"
     }
   ],
-  "Walgreens": [
+  "Walmart": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Wayfair": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "West Elm": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Williams Sonoma": [
+    {
+      "2025-11-04": "Unknown"
+    }
+  ],
+  "Wish": [
     {
       "2025-11-04": "PrestaShop"
     }
   ],
-  "Newegg": [
-    {
-      "2025-11-04": "PrestaShop"
-    }
-  ],
-  "Otto": [
-    {
-      "2025-11-04": "PrestaShop"
-    }
-  ],
-  "El Corte Inglés": [
+  "Yoox": [
     {
       "2025-11-04": "Unknown"
     }
   ],
-  "Warby Parker": [
+  "Zalando": [
     {
       "2025-11-04": "Unknown"
     }
   ],
-  "Everlane": [
-    {
-      "2025-11-04": "Shopify"
-    }
-  ],
-  "Glossier": [
-    {
-      "2025-11-04": "Shopify"
-    }
-  ],
-  "Allbirds": [
-    {
-      "2025-11-04": "Shopify"
-    }
-  ],
-  "Boohoo": [
+  "Zappos": [
     {
       "2025-11-04": "Unknown"
     }
   ],
-  "Casper": [
-    {
-      "2025-11-04": "Shopify"
-    }
-  ],
-  "Dollar Shave Club": [
-    {
-      "2025-11-04": "Shopify"
-    }
-  ],
-  "Urban Outfitters": [
+  "Zara": [
     {
       "2025-11-04": "Unknown"
-    }
-  ],
-  "Alo Yoga": [
-    {
-      "2025-11-04": "Shopify"
     }
   ]
 }
