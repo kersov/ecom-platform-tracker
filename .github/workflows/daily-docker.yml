@@ -1,0 +1,39 @@
+name: Daily E-commerce Platform Tracker
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Run daily at 00:00 UTC
+  workflow_dispatch:     # Allow manual runs from the Actions tab
+
+jobs:
+  run-tracker:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker image
+        run: |
+          docker build -t ecom-platform-tracker .
+
+      - name: Run tracker inside container
+        run: |
+          docker run --rm \
+            -v ${{ github.workspace }}:/app \
+            ecom-platform-tracker
+
+      - name: Commit and push updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.json || true
+          git commit -m "Daily update: $(date -u +'%Y-%m-%d')" || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || echo "Push skipped"

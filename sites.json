@@ -1,0 +1,138 @@
+[
+    {
+        "name": "Walmart",
+        "url": "https://www.walmart.com/"
+    },
+    {
+        "name": "Target",
+        "url": "https://www.target.com/"
+    },
+    {
+        "name": "Apple",
+        "url": "https://www.apple.com/"
+    },
+    {
+        "name": "Shein",
+        "url": "https://www.shein.com/"
+    },
+    {
+        "name": "Home Depot",
+        "url": "https://www.homedepot.com/"
+    },
+    {
+        "name": "IKEA",
+        "url": "https://www.ikea.com/"
+    },
+    {
+        "name": "Costco",
+        "url": "https://www.costco.com/"
+    },
+    {
+        "name": "Best Buy",
+        "url": "https://www.bestbuy.com/"
+    },
+    {
+        "name": "Lowe's",
+        "url": "https://www.lowes.com/"
+    },
+    {
+        "name": "Nike",
+        "url": "https://www.nike.com/"
+    },
+    {
+        "name": "Zalando",
+        "url": "https://www.zalando.com/"
+    },
+    {
+        "name": "Samsung",
+        "url": "https://www.samsung.com/"
+    },
+    {
+        "name": "Wayfair",
+        "url": "https://www.wayfair.com/"
+    },
+    {
+        "name": "Macy's",
+        "url": "https://www.macys.com/"
+    },
+    {
+        "name": "ASOS",
+        "url": "https://www.asos.com/"
+    },
+    {
+        "name": "Zara",
+        "url": "https://www.zara.com/"
+    },
+    {
+        "name": "H&M",
+        "url": "https://www.hm.com/"
+    },
+    {
+        "name": "Chewy",
+        "url": "https://www.chewy.com/"
+    },
+    {
+        "name": "Sephora",
+        "url": "https://www.sephora.com/"
+    },
+    {
+        "name": "Ulta Beauty",
+        "url": "https://www.ulta.com/"
+    },
+    {
+        "name": "CVS",
+        "url": "https://www.cvs.com/"
+    },
+    {
+        "name": "Walgreens",
+        "url": "https://www.walgreens.com/"
+    },
+    {
+        "name": "Newegg",
+        "url": "https://www.newegg.com/"
+    },
+    {
+        "name": "Otto",
+        "url": "https://www.otto.de/"
+    },
+    {
+        "name": "El Corte Ingl\u00e9s",
+        "url": "https://www.elcorteingles.es/"
+    },
+    {
+        "name": "Warby Parker",
+        "url": "https://www.warbyparker.com/"
+    },
+    {
+        "name": "Everlane",
+        "url": "https://www.everlane.com/"
+    },
+    {
+        "name": "Glossier",
+        "url": "https://www.glossier.com/"
+    },
+    {
+        "name": "Allbirds",
+        "url": "https://www.allbirds.com/"
+    },
+    {
+        "name": "Boohoo",
+        "url": "https://www.boohoo.com/"
+    },
+    {
+        "name": "Casper",
+        "url": "https://www.casper.com/"
+    },
+    {
+        "name": "Dollar Shave Club",
+        "url": "https://www.dollarshaveclub.com/"
+    },
+    {
+        "name": "Urban Outfitters",
+        "url": "https://www.urbanoutfitters.com/"
+    },
+    {
+        "name": "Alo Yoga",
+        "url": "https://www.aloyoga.com/"
+    }
+]
