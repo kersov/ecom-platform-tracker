@@ -37,6 +37,9 @@
   "Banana Republic": [
     {
       "2025-11-04": "Unidentified"
+    },
+    {
+      "2025-11-05": "PrestaShop"
     }
   ],
   "Best Buy": [
@@ -67,6 +70,9 @@
   "Champs Sports": [
     {
       "2025-11-04": "Unidentified"
+    },
+    {
+      "2025-11-05": "PrestaShop"
     }
   ],
   "Chewy": [
@@ -122,6 +128,9 @@
   "Flipkart": [
     {
       "2025-11-04": "PrestaShop"
+    },
+    {
+      "2025-11-05": "Unidentified"
     }
   ],
   "Foot Locker": [
@@ -232,6 +241,9 @@
   "Missguided": [
     {
       "2025-11-04": "PrestaShop"
+    },
+    {
+      "2025-11-05": "Unidentified"
     }
   ],
   "Missy Empire": [
@@ -267,6 +279,9 @@
   "Newegg": [
     {
       "2025-11-04": "PrestaShop"
+    },
+    {
+      "2025-11-05": "Unidentified"
     }
   ],
   "Next": [
@@ -282,6 +297,9 @@
   "Nordstrom": [
     {
       "2025-11-04": "PrestaShop"
+    },
+    {
+      "2025-11-05": "Unidentified"
     }
   ],
   "Ocado": [
@@ -432,6 +450,9 @@
   "Ulta Beauty": [
     {
       "2025-11-04": "Unidentified"
+    },
+    {
+      "2025-11-05": "Commercetools"
     }
   ],
   "Uniqlo": [
@@ -552,6 +573,9 @@
   "Foot District": [
     {
       "2025-11-04": "Magento"
+    },
+    {
+      "2025-11-05": "Unidentified"
     }
   ],
   "Free People": [
@@ -627,6 +651,9 @@
   "Offspring": [
     {
       "2025-11-04": "SAP Commerce Cloud"
+    },
+    {
+      "2025-11-05": "Unidentified"
     }
   ],
   "Outdoor Voices": [
@@ -642,11 +669,17 @@
   "Rag & Bone": [
     {
       "2025-11-04": "Salesforce Commerce Cloud"
+    },
+    {
+      "2025-11-05": "Shopify"
     }
   ],
   "Reformation": [
     {
       "2025-11-04": "Unidentified"
+    },
+    {
+      "2025-11-05": "Shopify"
     }
   ],
   "Reiss": [
@@ -707,6 +740,9 @@
   "ThredUp": [
     {
       "2025-11-04": "PrestaShop"
+    },
+    {
+      "2025-11-05": "Unidentified"
     }
   ],
   "Timberland": [
