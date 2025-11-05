@@ -38,7 +38,7 @@ def fetch_site(url):
         r.raise_for_status()
         return r.text, r.headers
     except Exception as e:
-        print(f"[WARN] Failed to fetch {url}: {e}")
+        print(f"[WARN] Failed to fetch {url} : {e}")
         return None, {}
 
 # -------------------------

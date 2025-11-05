@@ -47,7 +47,13 @@ try:
     # --- 3. Write the unique data back to the *same* file ---
     # Using 'w' mode will overwrite the file's contents
     with open(filename, 'w', encoding='utf-8') as f:
-        json.dump(unique_stores, f, indent=4)
+        f.write('[\n')
+        for i, store in enumerate(unique_stores):
+            f.write('    ')
+            json.dump(store, f)
+            if i < len(unique_stores) - 1:
+                f.write(',\n')
+        f.write('\n]')
 
     print(f"\nSuccessfully processed {len(stores)} entries.")
     if removed_count > 0:

@@ -1,5 +1,7 @@
 # Ecom Platform Tracker
 
+See the platform usage results on the [website](https://kersov.github.io/ecom-platform-tracker/).
+
 Tracks and visualizes global trends in e-commerce platform usage across regions, industries, and time.
 
 Ecom Platform Tracker provides insights into global e-commerce technology trends by analyzing the usage and market share of popular platforms (like Shopify, SFCC, Magento, and WooCommerce)
