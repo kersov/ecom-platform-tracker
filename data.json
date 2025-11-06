@@ -37,6 +37,9 @@
   "Banana Republic": [
     {
       "2025-11-05": "PrestaShop"
+    },
+    {
+      "2025-11-06": "Unidentified"
     }
   ],
   "Best Buy": [
@@ -142,6 +145,9 @@
   "Gymshark": [
     {
       "2025-11-04": "Shopify"
+    },
+    {
+      "2025-11-06": "Unidentified"
     }
   ],
   "H&M": [
@@ -197,6 +203,9 @@
   "Lululemon": [
     {
       "2025-11-04": "Salesforce Commerce Cloud"
+    },
+    {
+      "2025-11-06": "Unidentified"
     }
   ],
   "Macy's": [
@@ -267,6 +276,9 @@
   "Newegg": [
     {
       "2025-11-04": "PrestaShop"
+    },
+    {
+      "2025-11-06": "Unidentified"
     }
   ],
   "Next": [
@@ -372,6 +384,9 @@
   "Sephora": [
     {
       "2025-11-04": "Unidentified"
+    },
+    {
+      "2025-11-06": "PrestaShop"
     }
   ],
   "Shein": [
@@ -422,6 +437,9 @@
   "Tory Burch": [
     {
       "2025-11-04": "Unidentified"
+    },
+    {
+      "2025-11-06": "Salesforce Commerce Cloud"
     }
   ],
   "Trendyol": [
@@ -437,6 +455,9 @@
   "Uniqlo": [
     {
       "2025-11-04": "Unidentified"
+    },
+    {
+      "2025-11-06": "PrestaShop"
     }
   ],
   "Walmart": [
@@ -467,6 +488,9 @@
   "Yoox": [
     {
       "2025-11-04": "Unidentified"
+    },
+    {
+      "2025-11-06": "PrestaShop"
     }
   ],
   "Zalando": [
@@ -552,6 +576,9 @@
   "Foot District": [
     {
       "2025-11-04": "Magento"
+    },
+    {
+      "2025-11-06": "Unidentified"
     }
   ],
   "Free People": [
@@ -582,6 +609,9 @@
   "Harvey Nichols": [
     {
       "2025-11-04": "Unidentified"
+    },
+    {
+      "2025-11-06": "Salesforce Commerce Cloud"
     }
   ],
   "HIP Store": [
@@ -597,6 +627,9 @@
   "J.Crew": [
     {
       "2025-11-04": "Salesforce Commerce Cloud"
+    },
+    {
+      "2025-11-06": "Unidentified"
     }
   ],
   "Jacquemus": [
@@ -707,6 +740,9 @@
   "ThredUp": [
     {
       "2025-11-04": "PrestaShop"
+    },
+    {
+      "2025-11-06": "Unidentified"
     }
   ],
   "Timberland": [
