@@ -37,7 +37,7 @@ def fetch_site(url):
         r = requests.get(url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True, verify=True)
         r.raise_for_status()
         return r.text, r.headers
-    except Exception as e:
+    except requests.exceptions.RequestException as e:
         print(f"[WARN] Failed to fetch {url} : {e}")
         return None, {}
 
@@ -77,7 +77,7 @@ def detect_platform_from_text(html_text, headers, url):
     if 'commercetools' in text:
         return 'Commercetools'
     # PrestaShop
-    if 'prestashop' in text or 'ps_' in text:
+    if 'prestashop' in text or 'prestashop' in hdr_vals:
         return 'PrestaShop'
     # Wix
     if 'wix.com' in text or 'wixstatic' in text:
@@ -118,6 +118,8 @@ def main():
             continue
         print(f"Checking {name} -> {url}")
         html, headers = fetch_site(url)
+        if not html:
+            continue
         platform = detect_platform_from_text(html, headers, url)
         print(f"  -> Detected: {platform}")
 
