@@ -1,88 +1,7 @@
 {
-  "24S": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "ASOS": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Adidas": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
   "Allbirds": [
     {
       "2025-11-04": "Shopify"
-    }
-  ],
-  "Allegro": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Apple Store": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Argos": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Banana Republic": [
-    {
-      "2025-11-05": "PrestaShop"
-    },
-    {
-      "2025-11-06": "Unidentified"
-    }
-  ],
-  "Best Buy": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Bloomingdale's": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Boohoo": [
-    {
-      "2025-11-04": "Unidentified"
-    },
-    {
-      "2025-11-07": "PrestaShop"
-    }
-  ],
-  "Boots": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "COS": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Champs Sports": [
-    {
-      "2025-11-05": "PrestaShop"
-    }
-  ],
-  "Chewy": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Coach": [
-    {
-      "2025-11-04": "Unidentified"
     }
   ],
   "Decathlon": [
@@ -90,24 +9,9 @@
       "2025-11-04": "Shopify"
     }
   ],
-  "Dick's Sporting Goods": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Etsy": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
   "Everlane": [
     {
       "2025-11-04": "Shopify"
-    }
-  ],
-  "Farfetch": [
-    {
-      "2025-11-04": "Unidentified"
     }
   ],
   "Fashion Nova": [
@@ -115,63 +19,9 @@
       "2025-11-04": "Shopify"
     }
   ],
-  "Feelunique": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Finish Line": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Flipkart": [
-    {
-      "2025-11-04": "PrestaShop"
-    },
-    {
-      "2025-11-07": "Unidentified"
-    },
-    {
-      "2025-11-08": "PrestaShop"
-    }
-  ],
-  "Foot Locker": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
   "Forever 21": [
     {
       "2025-11-04": "Shopify"
-    }
-  ],
-  "Gap": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Gymshark": [
-    {
-      "2025-11-04": "Shopify"
-    },
-    {
-      "2025-11-06": "Unidentified"
-    }
-  ],
-  "H&M": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Home Depot": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "IKEA": [
-    {
-      "2025-11-04": "Unidentified"
     }
   ],
   "In the Style": [
@@ -179,57 +29,9 @@
       "2025-11-04": "Shopify"
     }
   ],
-  "JD.com": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "John Lewis": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Joss & Main": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Kate Spade": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
   "Lookfantastic": [
     {
       "2025-11-04": "Salesforce Commerce Cloud"
-    }
-  ],
-  "Lowe's": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Lululemon": [
-    {
-      "2025-11-04": "Salesforce Commerce Cloud"
-    },
-    {
-      "2025-11-06": "Unidentified"
-    }
-  ],
-  "Macy's": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Mango": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Marks & Spencer": [
-    {
-      "2025-11-04": "PrestaShop"
     }
   ],
   "MatchesFashion": [
@@ -237,57 +39,9 @@
       "2025-11-04": "Shopify"
     }
   ],
-  "Mercado Libre": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Michael Kors": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Missguided": [
-    {
-      "2025-11-04": "PrestaShop"
-    }
-  ],
   "Missy Empire": [
     {
       "2025-11-04": "Shopify"
-    }
-  ],
-  "Moda Operandi": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Mytheresa": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Nasty Gal": [
-    {
-      "2025-11-04": "PrestaShop"
-    }
-  ],
-  "Neiman Marcus": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Net-a-Porter": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Newegg": [
-    {
-      "2025-11-04": "PrestaShop"
-    },
-    {
-      "2025-11-06": "Unidentified"
     }
   ],
   "Next": [
@@ -295,38 +49,9 @@
       "2025-11-04": "SAP Commerce Cloud"
     }
   ],
-  "Nike": [
-    {
-      "2025-11-04": "PrestaShop"
-    }
-  ],
-  "Nordstrom": [
-    {
-      "2025-11-04": "PrestaShop"
-    },
-    {
-      "2025-11-07": "Unidentified"
-    },
-    {
-      "2025-11-08": "Salesforce Commerce Cloud"
-    }
-  ],
   "Ocado": [
     {
       "2025-11-04": "WordPress"
-    }
-  ],
-  "Old Navy": [
-    {
-      "2025-11-04": "Unidentified"
-    },
-    {
-      "2025-11-07": "PrestaShop"
-    }
-  ],
-  "Ozon": [
-    {
-      "2025-11-04": "Unidentified"
     }
   ],
   "Peloton Apparel": [
@@ -334,34 +59,9 @@
       "2025-11-04": "Shopify"
     }
   ],
-  "Petco": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Pottery Barn": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Pretty Little Thing": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
   "Princess Polly": [
     {
       "2025-11-04": "Shopify"
-    }
-  ],
-  "Puma": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "REI": [
-    {
-      "2025-11-04": "Unidentified"
     }
   ],
   "Reebok": [
@@ -369,24 +69,9 @@
       "2025-11-04": "Shopify"
     }
   ],
-  "Revolve": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
   "SSENSE": [
     {
       "2025-11-04": "WordPress"
-    }
-  ],
-  "Sainsbury's": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Saks Fifth Avenue": [
-    {
-      "2025-11-04": "Unidentified"
     }
   ],
   "Samsung": [
@@ -394,75 +79,9 @@
       "2025-11-04": "SAP Commerce Cloud"
     }
   ],
-  "Selfridges": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Sephora": [
-    {
-      "2025-11-04": "Unidentified"
-    },
-    {
-      "2025-11-06": "PrestaShop"
-    }
-  ],
-  "Shein": [
-    {
-      "2025-11-04": "PrestaShop"
-    }
-  ],
-  "Shopbop": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Shopee": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
   "Space NK": [
     {
       "2025-11-04": "Shopify"
-    }
-  ],
-  "Taobao": [
-    {
-      "2025-11-04": "PrestaShop"
-    }
-  ],
-  "Target": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Tesco": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "The Outnet": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Tmall": [
-    {
-      "2025-11-04": "PrestaShop"
-    }
-  ],
-  "Tory Burch": [
-    {
-      "2025-11-04": "Unidentified"
-    },
-    {
-      "2025-11-06": "Salesforce Commerce Cloud"
-    }
-  ],
-  "Trendyol": [
-    {
-      "2025-11-04": "Unidentified"
     }
   ],
   "Ulta Beauty": [
@@ -470,85 +89,9 @@
       "2025-11-05": "Commercetools"
     }
   ],
-  "Uniqlo": [
-    {
-      "2025-11-04": "Unidentified"
-    },
-    {
-      "2025-11-06": "PrestaShop"
-    }
-  ],
-  "Walmart": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Wayfair": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "West Elm": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Williams Sonoma": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Wish": [
-    {
-      "2025-11-04": "PrestaShop"
-    }
-  ],
-  "Yoox": [
-    {
-      "2025-11-04": "Unidentified"
-    },
-    {
-      "2025-11-06": "PrestaShop"
-    }
-  ],
-  "Zalando": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Zappos": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Zara": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Alexachung": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
   "Alo Yoga": [
     {
       "2025-11-04": "Shopify"
-    }
-  ],
-  "Anthropologie": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Athleta": [
-    {
-      "2025-11-04": "PrestaShop"
-    }
-  ],
-  "Atsuko Kudo": [
-    {
-      "2025-11-04": "Unidentified"
     }
   ],
   "Birkenstock": [
@@ -566,19 +109,9 @@
       "2025-11-04": "Shopify"
     }
   ],
-  "Converse": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
   "Cult Gaia": [
     {
       "2025-11-04": "Shopify"
-    }
-  ],
-  "Depop": [
-    {
-      "2025-11-04": "Unidentified"
     }
   ],
   "Dover Street Market": [
@@ -586,78 +119,9 @@
       "2025-11-04": "Shopify"
     }
   ],
-  "Dr. Martens": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Foot District": [
-    {
-      "2025-11-04": "Magento"
-    },
-    {
-      "2025-11-06": "Unidentified"
-    }
-  ],
-  "Free People": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
   "Ganni": [
     {
       "2025-11-04": "Salesforce Commerce Cloud"
-    }
-  ],
-  "Goodhood": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Grailed": [
-    {
-      "2025-11-04": "PrestaShop"
-    }
-  ],
-  "Harrods": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "Harvey Nichols": [
-    {
-      "2025-11-04": "Unidentified"
-    },
-    {
-      "2025-11-06": "Salesforce Commerce Cloud"
-    }
-  ],
-  "HIP Store": [
-    {
-      "2025-11-04": "PrestaShop"
-    }
-  ],
-  "House of Fraser": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "J.Crew": [
-    {
-      "2025-11-04": "Salesforce Commerce Cloud"
-    },
-    {
-      "2025-11-06": "Unidentified"
-    }
-  ],
-  "Jacquemus": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "JD Sports": [
-    {
-      "2025-11-04": "PrestaShop"
     }
   ],
   "Jigsaw": [
@@ -675,42 +139,22 @@
       "2025-11-04": "Salesforce Commerce Cloud"
     }
   ],
-  "Offspring": [
-    {
-      "2025-11-04": "SAP Commerce Cloud"
-    },
-    {
-      "2025-11-08": "Unidentified"
-    }
-  ],
   "Outdoor Voices": [
     {
       "2025-11-04": "Shopify"
     }
   ],
-  "Poshmark": [
-    {
-      "2025-11-04": "PrestaShop"
-    }
-  ],
   "Rag & Bone": [
     {
       "2025-11-05": "Shopify"
+    },
+    {
+      "2025-11-08": "Salesforce Commerce Cloud"
     }
   ],
   "Reformation": [
     {
       "2025-11-05": "Shopify"
-    }
-  ],
-  "Reiss": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
-  "RHODE": [
-    {
-      "2025-11-04": "Unidentified"
     }
   ],
   "ShopSimon": [
@@ -728,19 +172,9 @@
       "2025-11-04": "Shopify"
     }
   ],
-  "Solebox": [
-    {
-      "2025-11-04": "Unidentified"
-    }
-  ],
   "Stadium Goods": [
     {
       "2025-11-04": "Shopify"
-    }
-  ],
-  "StockX": [
-    {
-      "2025-11-04": "Unidentified"
     }
   ],
   "Superdry": [
@@ -753,42 +187,679 @@
       "2025-11-04": "Shopify"
     }
   ],
-  "The RealReal": [
+  "Whistles": [
     {
-      "2025-11-04": "Unidentified"
+      "2025-11-04": "Shopify"
+    }
+  ],
+  "24S": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Admiral": [
+    {
+      "2025-11-08": "Shopify"
+    }
+  ],
+  "American Eagle": [
+    {
+      "2025-11-08": "WordPress"
+    }
+  ],
+  "Apple Store": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Arcteryx": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Argos": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Athleta": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Athletic Propulsion Labs": [
+    {
+      "2025-11-08": "Shopify"
+    }
+  ],
+  "Atsuko Kudo": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Axel Arigato": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Babolat": [
+    {
+      "2025-11-08": "OpenCart"
+    }
+  ],
+  "Banana Republic": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Belmond": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Berluti": [
+    {
+      "2025-11-08": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Bershka": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Boohoo": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "BoohooMAN": [
+    {
+      "2025-11-08": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Boots": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Burton Menswear": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Capri Holdings": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Cat Footwear": [
+    {
+      "2025-11-08": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Celine": [
+    {
+      "2025-11-08": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Chaco": [
+    {
+      "2025-11-08": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Champs Sports": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Cheval Blanc": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Coast": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Cole Haan": [
+    {
+      "2025-11-08": "Shopify"
+    }
+  ],
+  "Cropp": [
+    {
+      "2025-11-08": "Magento"
+    }
+  ],
+  "Debenhams": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Diadora": [
+    {
+      "2025-11-08": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Dom Perignon": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Dorothy Perkins": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Dr. Martens": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Dr. Scholls": [
+    {
+      "2025-11-08": "Shopify"
+    }
+  ],
+  "Fila": [
+    {
+      "2025-11-08": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Flipkart": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Foot District": [
+    {
+      "2025-11-08": "Magento"
+    }
+  ],
+  "Foot Locker": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Gap": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Givenchy": [
+    {
+      "2025-11-08": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Grailed": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Greats": [
+    {
+      "2025-11-08": "Shopify"
+    }
+  ],
+  "Harrods": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Harvey Nichols": [
+    {
+      "2025-11-08": "Salesforce Commerce Cloud"
+    }
+  ],
+  "HeyDude": [
+    {
+      "2025-11-08": "Shopify"
+    }
+  ],
+  "HIP Store": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "House": [
+    {
+      "2025-11-08": "Magento"
+    }
+  ],
+  "House of Fraser": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Hush Puppies": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "IKEA": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Inov-8": [
+    {
+      "2025-11-08": "Magento"
+    }
+  ],
+  "JAKO": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "JD Sports": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "JD.com": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Joma": [
+    {
+      "2025-11-08": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Kappa": [
+    {
+      "2025-11-08": "Shopify"
+    }
+  ],
+  "Karen Millen": [
+    {
+      "2025-11-08": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Karhu": [
+    {
+      "2025-11-08": "Shopify"
+    }
+  ],
+  "Kenzo": [
+    {
+      "2025-11-08": "Shopify"
+    }
+  ],
+  "Kering": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Koio": [
+    {
+      "2025-11-08": "Shopify"
+    }
+  ],
+  "Koton": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Krug": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "LC Waikiki": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Le Coq Sportif": [
+    {
+      "2025-11-08": "Shopify"
+    }
+  ],
+  "Loewe": [
+    {
+      "2025-11-08": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Lotto": [
+    {
+      "2025-11-08": "Shopify"
+    }
+  ],
+  "Lowe's": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Mango": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Marc Jacobs": [
+    {
+      "2025-11-08": "Shopify"
+    }
+  ],
+  "Marks & Spencer": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Mercado Libre": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Merrell": [
+    {
+      "2025-11-08": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Missguided": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "MissPap": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Mizuno": [
+    {
+      "2025-11-08": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Moda Operandi": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Moet & Chandon": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Mohito": [
+    {
+      "2025-11-08": "Magento"
+    }
+  ],
+  "Mytheresa": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Nasty Gal": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Newegg": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Nike": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Nordstrom": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Novesta": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Oasis": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Offspring": [
+    {
+      "2025-11-08": "SAP Commerce Cloud"
+    }
+  ],
+  "Old Navy": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "On Running": [
+    {
+      "2025-11-08": "Shopify"
+    }
+  ],
+  "OVS": [
+    {
+      "2025-11-08": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Poshmark": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Prada Group": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "PrettyLittleThing": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Primark": [
+    {
+      "2025-11-08": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Pull&Bear": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Rancourt & Co.": [
+    {
+      "2025-11-08": "Shopify"
+    }
+  ],
+  "Red Wing": [
+    {
+      "2025-11-08": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Reserved": [
+    {
+      "2025-11-08": "Magento"
+    }
+  ],
+  "RHODE": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Richemont": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Salewa": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Saucony": [
+    {
+      "2025-11-08": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Selfridges": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Sephora": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Shein": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Shopbop": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Shopee": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Sinsay": [
+    {
+      "2025-11-08": "Magento"
+    }
+  ],
+  "Skechers": [
+    {
+      "2025-11-08": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Sperry": [
+    {
+      "2025-11-08": "Shopify"
+    }
+  ],
+  "Stradivarius": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "TAG Heuer": [
+    {
+      "2025-11-08": "Shopify"
+    }
+  ],
+  "Taobao": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Tapestry, Inc.": [
+    {
+      "2025-11-08": "WordPress"
+    }
+  ],
+  "Target": [
+    {
+      "2025-11-08": "Unidentified"
     }
   ],
   "ThredUp": [
     {
-      "2025-11-04": "PrestaShop"
-    },
-    {
-      "2025-11-06": "Unidentified"
+      "2025-11-08": "Unidentified"
     }
   ],
-  "Timberland": [
+  "Tmall": [
     {
-      "2025-11-04": "Unidentified"
+      "2025-11-08": "Unidentified"
     }
   ],
-  "Urban Outfitters": [
+  "Topper": [
     {
-      "2025-11-04": "Unidentified"
+      "2025-11-08": "Unidentified"
     }
   ],
-  "Veja": [
+  "Tory Burch": [
     {
-      "2025-11-04": "Unidentified"
+      "2025-11-08": "Salesforce Commerce Cloud"
     }
   ],
-  "Vestiaire Collective": [
+  "Trendyol": [
     {
-      "2025-11-04": "Unidentified"
+      "2025-11-08": "Unidentified"
     }
   ],
-  "Whistles": [
+  "TYR Sport": [
     {
-      "2025-11-04": "Shopify"
+      "2025-11-08": "Shopify"
+    }
+  ],
+  "Umbro": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Under Armour": [
+    {
+      "2025-11-08": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Uniqlo": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Vero Moda": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Wallis": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Walmart": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Warehouse": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Wildling Shoes": [
+    {
+      "2025-11-08": "Shopify"
+    }
+  ],
+  "Xero Shoes": [
+    {
+      "2025-11-08": "Shopify"
+    }
+  ],
+  "Yoox": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Zalando": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Zappos": [
+    {
+      "2025-11-08": "Unidentified"
+    }
+  ],
+  "Zara": [
+    {
+      "2025-11-08": "Unidentified"
     }
   ]
 }
