@@ -150,6 +150,9 @@
     },
     {
       "2025-11-08": "Salesforce Commerce Cloud"
+    },
+    {
+      "2025-11-09": "Shopify"
     }
   ],
   "Reformation": [
@@ -245,6 +248,9 @@
   "Babolat": [
     {
       "2025-11-08": "OpenCart"
+    },
+    {
+      "2025-11-09": "Salesforce Commerce Cloud"
     }
   ],
   "Banana Republic": [
@@ -330,6 +336,9 @@
   "Cropp": [
     {
       "2025-11-08": "Magento"
+    },
+    {
+      "2025-11-09": "Unidentified"
     }
   ],
   "Debenhams": [
@@ -425,6 +434,9 @@
   "House": [
     {
       "2025-11-08": "Magento"
+    },
+    {
+      "2025-11-09": "Unidentified"
     }
   ],
   "House of Fraser": [
@@ -570,6 +582,9 @@
   "Mizuno": [
     {
       "2025-11-08": "Salesforce Commerce Cloud"
+    },
+    {
+      "2025-11-09": "BigCommerce"
     }
   ],
   "Moda Operandi": [
@@ -585,6 +600,9 @@
   "Mohito": [
     {
       "2025-11-08": "Magento"
+    },
+    {
+      "2025-11-09": "Unidentified"
     }
   ],
   "Mytheresa": [
@@ -680,6 +698,9 @@
   "Reserved": [
     {
       "2025-11-08": "Magento"
+    },
+    {
+      "2025-11-09": "Unidentified"
     }
   ],
   "RHODE": [
@@ -730,6 +751,9 @@
   "Sinsay": [
     {
       "2025-11-08": "Magento"
+    },
+    {
+      "2025-11-09": "Unidentified"
     }
   ],
   "Skechers": [
@@ -750,6 +774,9 @@
   "TAG Heuer": [
     {
       "2025-11-08": "Shopify"
+    },
+    {
+      "2025-11-09": "Salesforce Commerce Cloud"
     }
   ],
   "Taobao": [
@@ -860,6 +887,61 @@
   "Zara": [
     {
       "2025-11-08": "Unidentified"
+    }
+  ],
+  "Acqua di Parma": [
+    {
+      "2025-11-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "ASOS": [
+    {
+      "2025-11-09": "Unidentified"
+    }
+  ],
+  "Benefit Cosmetics": [
+    {
+      "2025-11-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Christian Dior": [
+    {
+      "2025-11-09": "Shopify"
+    }
+  ],
+  "Fresh": [
+    {
+      "2025-11-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Guerlain": [
+    {
+      "2025-11-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Maison Francis Kurkdjian": [
+    {
+      "2025-11-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Olukai": [
+    {
+      "2025-11-09": "Shopify"
+    }
+  ],
+  "Puma": [
+    {
+      "2025-11-09": "Unidentified"
+    }
+  ],
+  "Tesco": [
+    {
+      "2025-11-09": "Unidentified"
+    }
+  ],
+  "Topshop": [
+    {
+      "2025-11-09": "Unidentified"
     }
   ]
 }
