@@ -46,12 +46,15 @@ def fetch_site(url):
 # -------------------------
 def detect_platform_from_text(html_text, headers, url):
     """Return platform name or 'Unidentified'"""
-    text = (html_text or '').lower()
+    html_text_orig = html_text or ''
+    text = html_text_orig.lower()
     hdr_keys = ' '.join([k.lower() for k in (headers.keys() if headers else [])])
     hdr_vals = ' '.join([str(v).lower() for v in (headers.values() if headers else [])])
 
     # Shopify
-    if 'cdn.shopify.com' in text or 'shopify' in text or 'x-shopify-stage' in hdr_keys or 'x-shopify-stage' in hdr_vals:
+    # More specific checks to avoid false positives from plugins on other platforms.
+    if ('cdn.shopify.com' in text or '.myshopify.com' in text or 'Shopify.theme' in html_text_orig or
+            'content="Shopify"' in text or 'x-shopify-' in hdr_keys or 'x-shopify-' in hdr_vals):
         return 'Shopify'
     # WooCommerce / WordPress e-commerce plugin patterns
     if 'woocommerce' in text or '/wp-content/plugins/woocommerce' in text or 'woocommerce' in hdr_keys or 'woocommerce' in hdr_vals:
