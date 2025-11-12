@@ -82,6 +82,9 @@
   "Space NK": [
     {
       "2025-11-04": "Shopify"
+    },
+    {
+      "2025-11-12": "Salesforce Commerce Cloud"
     }
   ],
   "Ulta Beauty": [
@@ -132,6 +135,9 @@
   "Liberty London": [
     {
       "2025-11-04": "Shopify"
+    },
+    {
+      "2025-11-12": "Salesforce Commerce Cloud"
     }
   ],
   "LN-CC": [
@@ -152,6 +158,9 @@
   "Reformation": [
     {
       "2025-11-05": "Shopify"
+    },
+    {
+      "2025-11-12": "Salesforce Commerce Cloud"
     }
   ],
   "ShopSimon": [
@@ -182,11 +191,17 @@
   "The Kooples": [
     {
       "2025-11-04": "Shopify"
+    },
+    {
+      "2025-11-12": "Salesforce Commerce Cloud"
     }
   ],
   "Whistles": [
     {
       "2025-11-04": "Shopify"
+    },
+    {
+      "2025-11-12": "Salesforce Commerce Cloud"
     }
   ],
   "24S": [
@@ -322,6 +337,9 @@
   "Cole Haan": [
     {
       "2025-11-08": "Shopify"
+    },
+    {
+      "2025-11-12": "Salesforce Commerce Cloud"
     }
   ],
   "Cropp": [
@@ -482,6 +500,9 @@
   "Kenzo": [
     {
       "2025-11-08": "Shopify"
+    },
+    {
+      "2025-11-12": "Salesforce Commerce Cloud"
     }
   ],
   "Kering": [
@@ -537,6 +558,9 @@
   "Marc Jacobs": [
     {
       "2025-11-08": "Shopify"
+    },
+    {
+      "2025-11-12": "Salesforce Commerce Cloud"
     }
   ],
   "Marks & Spencer": [
@@ -627,6 +651,9 @@
   "On Running": [
     {
       "2025-11-08": "Shopify"
+    },
+    {
+      "2025-11-12": "Unidentified"
     }
   ],
   "OVS": [
@@ -867,6 +894,9 @@
   "Christian Dior": [
     {
       "2025-11-09": "Shopify"
+    },
+    {
+      "2025-11-12": "Magento"
     }
   ],
   "Fresh": [
@@ -902,6 +932,21 @@
   "Topshop": [
     {
       "2025-11-09": "Unidentified"
+    }
+  ],
+  "Mizuno": [
+    {
+      "2025-11-12": "BigCommerce"
+    }
+  ],
+  "Mizuno EMEA": [
+    {
+      "2025-11-12": "Salesforce Commerce Cloud"
+    }
+  ],
+  "TAG Heuer": [
+    {
+      "2025-11-12": "Salesforce Commerce Cloud"
     }
   ]
 }
