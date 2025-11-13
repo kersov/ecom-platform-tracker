@@ -81,7 +81,7 @@
   ],
   "Space NK": [
     {
-      "2025-11-04": "Shopify"
+      "2025-11-13": "Salesforce Commerce Cloud"
     }
   ],
   "Ulta Beauty": [
@@ -131,7 +131,7 @@
   ],
   "Liberty London": [
     {
-      "2025-11-04": "Shopify"
+      "2025-11-13": "Salesforce Commerce Cloud"
     }
   ],
   "LN-CC": [
@@ -151,7 +151,7 @@
   ],
   "Reformation": [
     {
-      "2025-11-05": "Shopify"
+      "2025-11-13": "Salesforce Commerce Cloud"
     }
   ],
   "ShopSimon": [
@@ -181,12 +181,12 @@
   ],
   "The Kooples": [
     {
-      "2025-11-04": "Shopify"
+      "2025-11-13": "Salesforce Commerce Cloud"
     }
   ],
   "Whistles": [
     {
-      "2025-11-04": "Shopify"
+      "2025-11-13": "Salesforce Commerce Cloud"
     }
   ],
   "24S": [
@@ -321,7 +321,7 @@
   ],
   "Cole Haan": [
     {
-      "2025-11-08": "Shopify"
+      "2025-11-13": "Salesforce Commerce Cloud"
     }
   ],
   "Cropp": [
@@ -481,7 +481,7 @@
   ],
   "Kenzo": [
     {
-      "2025-11-08": "Shopify"
+      "2025-11-13": "Salesforce Commerce Cloud"
     }
   ],
   "Kering": [
@@ -536,7 +536,7 @@
   ],
   "Marc Jacobs": [
     {
-      "2025-11-08": "Shopify"
+      "2025-11-13": "Salesforce Commerce Cloud"
     }
   ],
   "Marks & Spencer": [
@@ -891,7 +891,7 @@
   ],
   "Puma": [
     {
-      "2025-11-09": "Unidentified"
+      "2025-11-13": "Salesforce Commerce Cloud"
     }
   ],
   "Tesco": [
@@ -902,6 +902,66 @@
   "Topshop": [
     {
       "2025-11-09": "Unidentified"
+    }
+  ],
+  "Brooks": [
+    {
+      "2025-11-13": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Clarks": [
+    {
+      "2025-11-13": "Unidentified"
+    }
+  ],
+  "Feelunique": [
+    {
+      "2025-11-13": "Unidentified"
+    }
+  ],
+  "Goodhood": [
+    {
+      "2025-11-13": "Shopify"
+    }
+  ],
+  "Gymshark": [
+    {
+      "2025-11-13": "Shopify"
+    }
+  ],
+  "J.Crew": [
+    {
+      "2025-11-13": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Mizuno": [
+    {
+      "2025-11-13": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Mizuno EMEA": [
+    {
+      "2025-11-13": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Pucci": [
+    {
+      "2025-11-13": "Shopify"
+    }
+  ],
+  "Reiss": [
+    {
+      "2025-11-13": "SAP Commerce Cloud"
+    }
+  ],
+  "TAG Heuer": [
+    {
+      "2025-11-13": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Wish": [
+    {
+      "2025-11-13": "Unidentified"
     }
   ]
 }

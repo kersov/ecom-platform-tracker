@@ -12,17 +12,14 @@ Intended to be run inside GitHub Actions (Docker) or locally.
 import json
 import os
 from datetime import datetime
-import requests
+import asyncio
+from playwright.async_api import async_playwright
 
 ROOT = os.path.dirname(__file__) or '.'
 SITES_FILE = os.path.join(ROOT, 'sites.json')
 DATA_FILE = os.path.join(ROOT, 'data.json')
 
-# Basic request settings
-HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36'
-}
-TIMEOUT = 10
+TIMEOUT = 15  # Increased timeout for browser automation
 
 # -------------------------
 # Site loading & fetching
@@ -31,14 +28,31 @@ def load_sites(path=SITES_FILE):
     with open(path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
-def fetch_site(url):
+async def fetch_site(browser, url):
     """Return tuple (html_text or None, headers dict)"""
+    page = None
     try:
-        r = requests.get(url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True, verify=True)
-        r.raise_for_status()
-        return r.text, r.headers
-    except requests.exceptions.RequestException as e:
+        page = await browser.new_page()
+        response = await page.goto(url, timeout=TIMEOUT * 1000, wait_until='domcontentloaded')
+        
+        if not response:
+            print(f"[WARN] Failed to fetch {url}, no response received.")
+            await page.close()
+            return None, {}
+
+        if response.status >= 400:
+            print(f"[WARN] Failed to fetch {url} with status {response.status}")
+            await page.close()
+            return None, {}
+
+        html = await page.content()
+        headers = await response.all_headers()
+        await page.close()
+        return html, headers
+    except Exception as e:
         print(f"[WARN] Failed to fetch {url} : {e}")
+        if page and not page.is_closed():
+            await page.close()
         return None, {}
 
 # -------------------------
@@ -100,7 +114,7 @@ def detect_platform_from_text(html_text, headers, url):
 # -------------------------
 # Main run
 # -------------------------
-def main():
+async def main():
     # load sites
     sites = load_sites()
     
@@ -113,29 +127,32 @@ def main():
     # use UTC date for consistent long-term tracking
     date_str = datetime.utcnow().date().isoformat()
 
-    for s in sites:
-        name = s.get('name') or s.get('url') or 'unidentified'
-        url = s.get('url')
-        if not url:
-            print(f"[WARN] Site entry missing 'url': {s}")
-            continue
-        print(f"Checking {name} -> {url}")
-        html, headers = fetch_site(url)
-        if not html:
-            continue
-        platform = detect_platform_from_text(html, headers, url)
-        print(f"  -> Detected: {platform}")
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)
+        for s in sites:
+            name = s.get('name') or s.get('url') or 'unidentified'
+            url = s.get('url')
+            if not url:
+                print(f"[WARN] Site entry missing 'url': {s}")
+                continue
+            print(f"Checking {name} -> {url}")
+            html, headers = await fetch_site(browser, url)
+            if not html:
+                continue
+            platform = detect_platform_from_text(html, headers, url)
+            print(f"  -> Detected: {platform}")
 
-        # Update data only if the platform has changed
-        if name not in data:
-            data[name] = []
-        
-        history = data[name]
-        if not history or list(history[-1].values())[0] != platform:
-            history.append({date_str: platform})
-            print(f"  -> New platform detected. Updating data.")
-        else:
-            print(f"  -> Platform remains the same. No update.")
+            # Update data only if the platform has changed
+            if name not in data:
+                data[name] = []
+            
+            history = data[name]
+            if not history or list(history[-1].values())[0] != platform:
+                history.append({date_str: platform})
+                print(f"  -> New platform detected. Updating data.")
+            else:
+                print(f"  -> Platform remains the same. No update.")
+        await browser.close()
 
     # save data
     with open(DATA_FILE, 'w', encoding='utf-8') as f:
@@ -144,4 +161,4 @@ def main():
     print(f"Data saved to {DATA_FILE}")
 
 if __name__ == '__main__':
-    main()
+    asyncio.run(main())
