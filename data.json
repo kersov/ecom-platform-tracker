@@ -898,6 +898,9 @@
   "Puma": [
     {
       "2025-11-13": "Salesforce Commerce Cloud"
+    },
+    {
+      "2025-11-14": "Unidentified"
     }
   ],
   "Tesco": [
@@ -943,6 +946,9 @@
   "Mizuno": [
     {
       "2025-11-13": "Salesforce Commerce Cloud"
+    },
+    {
+      "2025-11-14": "BigCommerce"
     }
   ],
   "Mizuno EMEA": [
@@ -968,6 +974,11 @@
   "Wish": [
     {
       "2025-11-13": "Unidentified"
+    }
+  ],
+  "Home Depot": [
+    {
+      "2025-11-14": "Unidentified"
     }
   ]
 }
