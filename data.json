@@ -86,6 +86,9 @@
     },
     {
       "2025-11-21": "Salesforce Commerce Cloud"
+    },
+    {
+      "2025-11-24": "SAP Commerce Cloud"
     }
   ],
   "Space NK": [
@@ -469,6 +472,9 @@
     },
     {
       "2025-11-23": "WordPress"
+    },
+    {
+      "2025-11-24": "Unidentified"
     }
   ],
   "Joma": [
@@ -1002,6 +1008,11 @@
   "StockX": [
     {
       "2025-11-19": "WordPress"
+    }
+  ],
+  "Alexachung": [
+    {
+      "2025-11-24": "Shopify"
     }
   ]
 }
