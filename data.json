@@ -156,10 +156,7 @@
   ],
   "Slam City Skates": [
     {
-      "2025-11-04": "Shopify"
-    },
-    {
-      "2026-02-07": "Unidentified"
+      "2026-03-17": "Shopify"
     }
   ],
   "Stadium Goods": [
@@ -250,6 +247,9 @@
   "Babolat": [
     {
       "2025-11-09": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-03-17": "WordPress"
     }
   ],
   "Banana Republic": [
@@ -276,6 +276,9 @@
   "Bershka": [
     {
       "2025-11-08": "Unidentified"
+    },
+    {
+      "2026-03-17": "Oracle Commerce Cloud"
     }
   ],
   "Boohoo": [
@@ -286,6 +289,9 @@
   "BoohooMAN": [
     {
       "2025-11-08": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-03-17": "Unidentified"
     }
   ],
   "Boots": [
@@ -306,6 +312,9 @@
   "Cat Footwear": [
     {
       "2025-11-08": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-03-17": "Magento"
     }
   ],
   "Celine": [
@@ -482,6 +491,9 @@
   "Karen Millen": [
     {
       "2025-11-08": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-03-17": "Unidentified"
     }
   ],
   "Karhu": [
@@ -557,6 +569,9 @@
   "Merrell": [
     {
       "2025-11-08": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-03-17": "Magento"
     }
   ],
   "Missguided": [
@@ -765,6 +780,9 @@
   "Tory Burch": [
     {
       "2025-11-08": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-03-17": "Unidentified"
     }
   ],
   "Trendyol": [
@@ -883,9 +901,6 @@
   "Puma": [
     {
       "2025-11-13": "Salesforce Commerce Cloud"
-    },
-    {
-      "2025-11-14": "Unidentified"
     }
   ],
   "Tesco": [
@@ -934,6 +949,9 @@
     },
     {
       "2025-11-14": "BigCommerce"
+    },
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
     }
   ],
   "Mizuno EMEA": [
@@ -984,6 +1002,86 @@
   "Veja": [
     {
       "2026-02-20": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Anthropologie": [
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Free People": [
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
+    }
+  ],
+  "JD.com": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Joss & Main": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Loewe": [
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Newegg": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Nordstrom": [
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Prada": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Samsung": [
+    {
+      "2026-03-17": "SAP Commerce Cloud"
+    }
+  ],
+  "Salomon": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "The RealReal": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Ulta Beauty": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Walmart": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Vivobarefoot": [
+    {
+      "2026-03-17": "Magento"
+    }
+  ],
+  "Urban Outfitters": [
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Wayfair": [
+    {
+      "2026-03-17": "Unidentified"
     }
   ]
 }
