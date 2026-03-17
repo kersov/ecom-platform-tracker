@@ -74,214 +74,9 @@
       "2025-11-04": "WordPress"
     }
   ],
-  "Samsung": [
-    {
-      "2025-11-04": "SAP Commerce Cloud"
-    },
-    {
-      "2025-11-15": "Salesforce Commerce Cloud"
-    },
-    {
-      "2025-11-17": "SAP Commerce Cloud"
-    },
-    {
-      "2025-11-21": "Salesforce Commerce Cloud"
-    },
-    {
-      "2025-11-24": "SAP Commerce Cloud"
-    },
-    {
-      "2025-11-26": "Salesforce Commerce Cloud"
-    },
-    {
-      "2025-11-27": "SAP Commerce Cloud"
-    },
-    {
-      "2025-11-28": "Salesforce Commerce Cloud"
-    },
-    {
-      "2025-11-30": "SAP Commerce Cloud"
-    },
-    {
-      "2025-12-01": "Salesforce Commerce Cloud"
-    },
-    {
-      "2025-12-03": "SAP Commerce Cloud"
-    },
-    {
-      "2025-12-04": "Salesforce Commerce Cloud"
-    },
-    {
-      "2025-12-05": "SAP Commerce Cloud"
-    },
-    {
-      "2025-12-06": "Salesforce Commerce Cloud"
-    },
-    {
-      "2025-12-09": "SAP Commerce Cloud"
-    },
-    {
-      "2025-12-10": "Salesforce Commerce Cloud"
-    },
-    {
-      "2025-12-11": "SAP Commerce Cloud"
-    },
-    {
-      "2025-12-15": "Salesforce Commerce Cloud"
-    },
-    {
-      "2025-12-17": "SAP Commerce Cloud"
-    },
-    {
-      "2025-12-18": "Salesforce Commerce Cloud"
-    },
-    {
-      "2025-12-19": "SAP Commerce Cloud"
-    },
-    {
-      "2025-12-20": "Salesforce Commerce Cloud"
-    },
-    {
-      "2025-12-23": "SAP Commerce Cloud"
-    },
-    {
-      "2025-12-24": "Salesforce Commerce Cloud"
-    },
-    {
-      "2025-12-25": "SAP Commerce Cloud"
-    },
-    {
-      "2025-12-26": "Salesforce Commerce Cloud"
-    },
-    {
-      "2025-12-27": "SAP Commerce Cloud"
-    },
-    {
-      "2025-12-28": "Salesforce Commerce Cloud"
-    },
-    {
-      "2025-12-31": "SAP Commerce Cloud"
-    },
-    {
-      "2026-01-04": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-01-13": "SAP Commerce Cloud"
-    },
-    {
-      "2026-01-15": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-01-16": "SAP Commerce Cloud"
-    },
-    {
-      "2026-01-17": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-01-18": "SAP Commerce Cloud"
-    },
-    {
-      "2026-01-23": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-01-24": "SAP Commerce Cloud"
-    },
-    {
-      "2026-01-25": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-01-26": "SAP Commerce Cloud"
-    },
-    {
-      "2026-01-27": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-01-29": "SAP Commerce Cloud"
-    },
-    {
-      "2026-02-02": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-02-04": "SAP Commerce Cloud"
-    },
-    {
-      "2026-02-05": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-02-07": "SAP Commerce Cloud"
-    },
-    {
-      "2026-02-11": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-02-13": "SAP Commerce Cloud"
-    },
-    {
-      "2026-02-14": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-02-15": "SAP Commerce Cloud"
-    },
-    {
-      "2026-02-17": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-02-18": "SAP Commerce Cloud"
-    },
-    {
-      "2026-02-19": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-02-21": "SAP Commerce Cloud"
-    },
-    {
-      "2026-02-26": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-02-27": "SAP Commerce Cloud"
-    },
-    {
-      "2026-02-28": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-03-01": "SAP Commerce Cloud"
-    },
-    {
-      "2026-03-02": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-03-11": "SAP Commerce Cloud"
-    },
-    {
-      "2026-03-12": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-03-13": "SAP Commerce Cloud"
-    },
-    {
-      "2026-03-15": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-03-17": "SAP Commerce Cloud"
-    }
-  ],
   "Space NK": [
     {
       "2025-11-13": "Salesforce Commerce Cloud"
-    }
-  ],
-  "Ulta Beauty": [
-    {
-      "2025-11-05": "Commercetools"
-    },
-    {
-      "2026-01-08": "Unidentified"
-    },
-    {
-      "2026-02-10": "Commercetools"
-    },
-    {
-      "2026-02-16": "Unidentified"
     }
   ],
   "Alo Yoga": [
@@ -621,17 +416,6 @@
       "2025-11-08": "Shopify"
     }
   ],
-  "Harrods": [
-    {
-      "2025-11-08": "Unidentified"
-    },
-    {
-      "2026-01-17": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-01-18": "Unidentified"
-    }
-  ],
   "Harvey Nichols": [
     {
       "2025-11-08": "Salesforce Commerce Cloud"
@@ -683,23 +467,6 @@
   "JD Sports": [
     {
       "2025-11-08": "Unidentified"
-    }
-  ],
-  "JD.com": [
-    {
-      "2025-11-08": "Unidentified"
-    },
-    {
-      "2025-11-23": "WordPress"
-    },
-    {
-      "2025-11-24": "Unidentified"
-    },
-    {
-      "2025-12-19": "WordPress"
-    },
-    {
-      "2025-12-20": "Unidentified"
     }
   ],
   "Joma": [
@@ -755,17 +522,6 @@
   "Le Coq Sportif": [
     {
       "2025-11-08": "Shopify"
-    }
-  ],
-  "Loewe": [
-    {
-      "2025-11-08": "Salesforce Commerce Cloud"
-    },
-    {
-      "2025-12-04": "Magento"
-    },
-    {
-      "2025-12-11": "Salesforce Commerce Cloud"
     }
   ],
   "Lotto": [
@@ -838,91 +594,9 @@
       "2025-11-08": "Unidentified"
     }
   ],
-  "Newegg": [
-    {
-      "2025-11-08": "Unidentified"
-    },
-    {
-      "2026-01-10": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-01-11": "Unidentified"
-    }
-  ],
   "Nike": [
     {
       "2025-11-08": "Unidentified"
-    }
-  ],
-  "Nordstrom": [
-    {
-      "2025-11-08": "Unidentified"
-    },
-    {
-      "2025-11-29": "Salesforce Commerce Cloud"
-    },
-    {
-      "2025-11-30": "Unidentified"
-    },
-    {
-      "2025-12-04": "Salesforce Commerce Cloud"
-    },
-    {
-      "2025-12-05": "Unidentified"
-    },
-    {
-      "2025-12-11": "Salesforce Commerce Cloud"
-    },
-    {
-      "2025-12-12": "Unidentified"
-    },
-    {
-      "2025-12-19": "Salesforce Commerce Cloud"
-    },
-    {
-      "2025-12-20": "Unidentified"
-    },
-    {
-      "2026-01-13": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-01-14": "Unidentified"
-    },
-    {
-      "2026-01-30": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-01-31": "Unidentified"
-    },
-    {
-      "2026-02-10": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-02-12": "Unidentified"
-    },
-    {
-      "2026-02-15": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-02-16": "Unidentified"
-    },
-    {
-      "2026-02-26": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-02-27": "Unidentified"
-    },
-    {
-      "2026-03-11": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-03-12": "Unidentified"
-    },
-    {
-      "2026-03-15": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-03-16": "Unidentified"
     }
   ],
   "Novesta": [
@@ -933,50 +607,6 @@
   "Oasis": [
     {
       "2025-11-08": "Unidentified"
-    }
-  ],
-  "Offspring": [
-    {
-      "2025-11-08": "SAP Commerce Cloud"
-    },
-    {
-      "2025-11-21": "Unidentified"
-    },
-    {
-      "2025-11-23": "SAP Commerce Cloud"
-    },
-    {
-      "2025-12-16": "Unidentified"
-    },
-    {
-      "2025-12-28": "SAP Commerce Cloud"
-    },
-    {
-      "2026-01-02": "Unidentified"
-    },
-    {
-      "2026-01-11": "SAP Commerce Cloud"
-    },
-    {
-      "2026-01-12": "Unidentified"
-    },
-    {
-      "2026-01-25": "SAP Commerce Cloud"
-    },
-    {
-      "2026-02-04": "Unidentified"
-    },
-    {
-      "2026-02-08": "SAP Commerce Cloud"
-    },
-    {
-      "2026-02-11": "Unidentified"
-    },
-    {
-      "2026-03-01": "SAP Commerce Cloud"
-    },
-    {
-      "2026-03-12": "Unidentified"
     }
   ],
   "Old Navy": [
@@ -1170,17 +800,6 @@
   "Wallis": [
     {
       "2025-11-08": "Unidentified"
-    }
-  ],
-  "Walmart": [
-    {
-      "2025-11-08": "Unidentified"
-    },
-    {
-      "2025-12-21": "SAP Commerce Cloud"
-    },
-    {
-      "2025-12-22": "Unidentified"
     }
   ],
   "Warehouse": [
