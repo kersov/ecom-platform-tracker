@@ -103,7 +103,7 @@ class PlatformSpider(scrapy.Spider):
         self.sites = sites
         self.results = {}  # name -> platform
 
-    def start_requests(self):
+    async def start(self):
         for site in self.sites:
             name = site.get('name') or site.get('url') or 'unidentified'
             url = site.get('url')
@@ -114,23 +114,28 @@ class PlatformSpider(scrapy.Spider):
                 url,
                 callback=self.parse,
                 errback=self.handle_error,
-                meta={'name': name, 'url': url},
+                meta={'name': name, 'url': url, 'dont_verify_ssl': True},
             )
 
     def parse(self, response):
         name = response.meta['name']
         url = response.meta['url']
-        headers = {
-            k.decode(): v[0].decode()
-            for k, v in response.headers.items()
-        }
+        headers = {}
+        for k, v in response.headers.items():
+            try:
+                headers[k.decode()] = v[0].decode()
+            except (UnicodeDecodeError, AttributeError):
+                pass
         platform = detect_platform_from_text(response.text, headers, url)
         print(f"Checked {name} -> {url}  =>  {platform}")
         self.results[name] = platform
 
     def handle_error(self, failure):
         url = failure.request.meta.get('url', failure.request.url)
-        print(f"[WARN] Failed to fetch {url} : {failure.getErrorMessage()}")
+        msg = failure.getErrorMessage()
+        if len(msg) > 120:
+            msg = msg[:120] + '...'
+        print(f"[WARN] Failed to fetch {url} : {msg}")
 
 
 # -------------------------
