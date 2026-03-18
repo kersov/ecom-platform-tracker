@@ -3,7 +3,7 @@
 detect_platform.py
 
 - Reads sites.json
-- Fetches each site with Scrapy
+- Fetches each site with SeleniumBase (UC mode) to bypass bot detection
 - Uses heuristics to detect platform
 - Writes results into data.json
 
@@ -13,29 +13,14 @@ import json
 import os
 from datetime import datetime
 
-import scrapy
-from scrapy.crawler import CrawlerProcess
+from seleniumbase import SB
+from selenium.common.exceptions import TimeoutException, WebDriverException
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SITES_FILE = os.path.join(ROOT, 'sites.json')
 DATA_FILE = os.path.join(ROOT, 'data.json')
 
 TIMEOUT = 15
-
-SCRAPY_SETTINGS = {
-    'USER_AGENT': (
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
-        'AppleWebKit/537.36 (KHTML, like Gecko) '
-        'Chrome/120.0.0.0 Safari/537.36'
-    ),
-    'ROBOTSTXT_OBEY': False,
-    'LOG_LEVEL': 'WARNING',
-    'DOWNLOAD_TIMEOUT': TIMEOUT,
-    'RETRY_TIMES': 2,
-    'RETRY_HTTP_CODES': [429, 500, 502, 503, 504],
-    'CONCURRENT_REQUESTS': 16,
-    'CONCURRENT_REQUESTS_PER_DOMAIN': 2,
-}
 
 
 # -------------------------
@@ -93,49 +78,38 @@ def detect_platform_from_text(html_text, headers, url):
 
 
 # -------------------------
-# Spider
+# Fetcher
 # -------------------------
-class PlatformSpider(scrapy.Spider):
-    name = 'platform'
-
-    def __init__(self, sites, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.sites = sites
-        self.results = {}  # name -> platform
-
-    async def start(self):
-        for site in self.sites:
+def fetch_all_sites(sites):
+    """Navigate each site with a single reused Chrome instance, return name -> platform dict."""
+    results = {}
+    with SB(uc=True, headless=True,
+            chromium_arg="--no-sandbox --disable-gpu --disable-dev-shm-usage") as sb:
+        sb.driver.set_page_load_timeout(TIMEOUT)
+        for site in sites:
             name = site.get('name') or site.get('url') or 'unidentified'
             url = site.get('url')
             if not url:
                 print(f"[WARN] Site entry missing 'url': {site}")
                 continue
-            yield scrapy.Request(
-                url,
-                callback=self.parse,
-                errback=self.handle_error,
-                meta={'name': name, 'url': url, 'dont_verify_ssl': True},
-            )
-
-    def parse(self, response):
-        name = response.meta['name']
-        url = response.meta['url']
-        headers = {}
-        for k, v in response.headers.items():
             try:
-                headers[k.decode()] = v[0].decode()
-            except (UnicodeDecodeError, AttributeError):
-                pass
-        platform = detect_platform_from_text(response.text, headers, url)
-        print(f"Checked {name} -> {url}  =>  {platform}")
-        self.results[name] = platform
-
-    def handle_error(self, failure):
-        url = failure.request.meta.get('url', failure.request.url)
-        msg = failure.getErrorMessage()
-        if len(msg) > 120:
-            msg = msg[:120] + '...'
-        print(f"[WARN] Failed to fetch {url} : {msg}")
+                sb.open(url)
+                html = sb.get_page_source()
+                platform = detect_platform_from_text(html, {}, url)
+                print(f"Checked {name} -> {url}  =>  {platform}")
+                results[name] = platform
+            except TimeoutException:
+                print(f"[WARN] Timeout fetching {url}")
+                sb.open("about:blank")
+            except WebDriverException as e:
+                msg = str(e)[:120]
+                print(f"[WARN] WebDriverException {url}: {msg}")
+                sb.open("about:blank")
+            except Exception as e:
+                msg = str(e)[:120]
+                print(f"[WARN] Unexpected error {url}: {msg}")
+                sb.open("about:blank")
+    return results
 
 
 # -------------------------
@@ -152,12 +126,9 @@ def main():
 
     date_str = datetime.utcnow().date().isoformat()
 
-    process = CrawlerProcess(SCRAPY_SETTINGS)
-    crawler = process.create_crawler(PlatformSpider)
-    process.crawl(crawler, sites=sites)
-    process.start()
+    results = fetch_all_sites(sites)
 
-    for name, platform in crawler.spider.results.items():
+    for name, platform in results.items():
         if name not in data:
             data[name] = []
         history = data[name]

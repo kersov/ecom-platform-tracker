@@ -276,9 +276,6 @@
   "Bershka": [
     {
       "2025-11-08": "Unidentified"
-    },
-    {
-      "2026-03-17": "Oracle Commerce Cloud"
     }
   ],
   "Boohoo": [
@@ -432,10 +429,7 @@
   ],
   "HeyDude": [
     {
-      "2025-11-08": "Shopify"
-    },
-    {
-      "2026-02-25": "Salesforce Commerce Cloud"
+      "2026-03-17": "Unidentified"
     }
   ],
   "HIP Store": [
@@ -466,6 +460,9 @@
   "Inov-8": [
     {
       "2025-11-08": "Magento"
+    },
+    {
+      "2026-03-17": "Unidentified"
     }
   ],
   "JAKO": [
@@ -675,6 +672,9 @@
   "Red Wing": [
     {
       "2025-11-08": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-03-17": "Unidentified"
     }
   ],
   "Reserved": [
@@ -872,10 +872,7 @@
   ],
   "Christian Dior": [
     {
-      "2025-11-09": "Shopify"
-    },
-    {
-      "2025-11-12": "Magento"
+      "2026-03-17": "Unidentified"
     }
   ],
   "Fresh": [
@@ -941,6 +938,9 @@
   "J.Crew": [
     {
       "2025-11-13": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-03-17": "Unidentified"
     }
   ],
   "Mizuno": [
@@ -987,6 +987,9 @@
   "StockX": [
     {
       "2025-11-19": "WordPress"
+    },
+    {
+      "2026-03-17": "Unidentified"
     }
   ],
   "Alexachung": [
@@ -1012,6 +1015,9 @@
   "Free People": [
     {
       "2026-03-17": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-03-17": "Unidentified"
     }
   ],
   "JD.com": [
@@ -1077,11 +1083,294 @@
   "Urban Outfitters": [
     {
       "2026-03-17": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-03-17": "Unidentified"
     }
   ],
   "Wayfair": [
     {
       "2026-03-17": "Unidentified"
+    }
+  ],
+  "Adidas": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Allegro": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "ASICS": [
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Best Buy": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Bloomingdale's": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Bulgari": [
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Castore": [
+    {
+      "2026-03-17": "Shopify"
+    }
+  ],
+  "Chewy": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Coach": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Converse": [
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
+    }
+  ],
+  "COS": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Crocs": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Depop": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Dick's Sporting Goods": [
+    {
+      "2026-03-17": "WordPress"
+    }
+  ],
+  "Etsy": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Farfetch": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Fendi": [
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Finish Line": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Fred (Joaillier)": [
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
+    }
+  ],
+  "H&M": [
+    {
+      "2026-03-17": "SAP Commerce Cloud"
+    }
+  ],
+  "Harrods": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Hennessy": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Hermes International": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "HOKA": [
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Jacquemus": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "John Lewis": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Kate Spade": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Li-Ning": [
+    {
+      "2026-03-17": "Magento"
+    }
+  ],
+  "Loro Piana": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Louis Vuitton": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Lululemon": [
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Macy's": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Michael Kors": [
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Neiman Marcus": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Net-a-Porter": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "New Balance": [
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Offspring": [
+    {
+      "2026-03-17": "SAP Commerce Cloud"
+    }
+  ],
+  "Petco": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Pottery Barn": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "REI": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Revolve": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Rimowa": [
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Sainsbury's": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Saks Fifth Avenue": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Skechers GoWalk": [
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Skechers Work": [
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Solebox": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "The Outnet": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "The Swatch Group": [
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Tiffany & Co.": [
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Timberland": [
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Vans": [
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Vestiaire Collective": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Weekday": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "West Elm": [
+    {
+      "2026-03-17": "Unidentified"
+    }
+  ],
+  "Williams Sonoma": [
+    {
+      "2026-03-17": "Salesforce Commerce Cloud"
     }
   ]
 }
