@@ -210,9 +210,6 @@
   ],
   "Arcteryx": [
     {
-      "2025-11-08": "Unidentified"
-    },
-    {
       "2026-03-18": "Salesforce Commerce Cloud"
     }
   ],
@@ -250,12 +247,6 @@
   "Babolat": [
     {
       "2025-11-09": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-03-17": "WordPress"
-    },
-    {
-      "2026-03-18": "Salesforce Commerce Cloud"
     }
   ],
   "Banana Republic": [
@@ -280,9 +271,6 @@
     }
   ],
   "Bershka": [
-    {
-      "2025-11-08": "Unidentified"
-    },
     {
       "2026-03-18": "Oracle Commerce Cloud"
     }
@@ -318,12 +306,6 @@
   "Cat Footwear": [
     {
       "2025-11-08": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-03-17": "Magento"
-    },
-    {
-      "2026-03-18": "Salesforce Commerce Cloud"
     }
   ],
   "Celine": [
@@ -414,9 +396,6 @@
   ],
   "Foot Locker": [
     {
-      "2025-11-08": "Unidentified"
-    },
-    {
       "2026-03-18": "SAP Commerce Cloud"
     }
   ],
@@ -446,9 +425,6 @@
     }
   ],
   "HeyDude": [
-    {
-      "2026-03-17": "Unidentified"
-    },
     {
       "2026-03-18": "Salesforce Commerce Cloud"
     }
@@ -481,12 +457,6 @@
   "Inov-8": [
     {
       "2025-11-08": "Magento"
-    },
-    {
-      "2026-03-17": "Unidentified"
-    },
-    {
-      "2026-03-18": "Magento"
     }
   ],
   "JAKO": [
@@ -590,12 +560,6 @@
   "Merrell": [
     {
       "2025-11-08": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-03-17": "Magento"
-    },
-    {
-      "2026-03-18": "Salesforce Commerce Cloud"
     }
   ],
   "Missguided": [
@@ -699,12 +663,6 @@
   "Red Wing": [
     {
       "2025-11-08": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-03-17": "Unidentified"
-    },
-    {
-      "2026-03-18": "Salesforce Commerce Cloud"
     }
   ],
   "Reserved": [
@@ -810,12 +768,6 @@
   "Tory Burch": [
     {
       "2025-11-08": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-03-17": "Unidentified"
-    },
-    {
-      "2026-03-18": "Salesforce Commerce Cloud"
     }
   ],
   "Trendyol": [
@@ -908,9 +860,6 @@
   ],
   "Christian Dior": [
     {
-      "2026-03-17": "Unidentified"
-    },
-    {
       "2026-03-18": "Magento"
     }
   ],
@@ -980,12 +929,6 @@
   "J.Crew": [
     {
       "2025-11-13": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-03-17": "Unidentified"
-    },
-    {
-      "2026-03-18": "Salesforce Commerce Cloud"
     }
   ],
   "Mizuno": [
@@ -1066,12 +1009,6 @@
   "Free People": [
     {
       "2026-03-17": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-03-17": "Unidentified"
-    },
-    {
-      "2026-03-18": "Salesforce Commerce Cloud"
     }
   ],
   "JD.com": [
@@ -1143,12 +1080,6 @@
   "Urban Outfitters": [
     {
       "2026-03-17": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-03-17": "Unidentified"
-    },
-    {
-      "2026-03-18": "Salesforce Commerce Cloud"
     }
   ],
   "Wayfair": [
@@ -1197,9 +1128,6 @@
     }
   ],
   "Coach": [
-    {
-      "2026-03-17": "Unidentified"
-    },
     {
       "2026-03-18": "Salesforce Commerce Cloud"
     }
@@ -1322,9 +1250,6 @@
   ],
   "Macy's": [
     {
-      "2026-03-17": "Unidentified"
-    },
-    {
       "2026-03-18": "Oracle Commerce Cloud"
     }
   ],
@@ -1359,9 +1284,6 @@
     }
   ],
   "Pottery Barn": [
-    {
-      "2026-03-17": "Unidentified"
-    },
     {
       "2026-03-18": "Salesforce Commerce Cloud"
     }
@@ -1445,9 +1367,6 @@
     }
   ],
   "West Elm": [
-    {
-      "2026-03-17": "Unidentified"
-    },
     {
       "2026-03-18": "Salesforce Commerce Cloud"
     }
