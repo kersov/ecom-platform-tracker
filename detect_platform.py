@@ -3,24 +3,91 @@
 detect_platform.py
 
 - Reads sites.json
-- Fetches each site with SeleniumBase (UC mode) to bypass bot detection
+- Fetches each site with a tiered strategy and records the response code
 - Uses heuristics to detect platform
 - Writes results into data.json
+
+Fetch tiers (a site only escalates when the cheaper tier is blocked):
+  Tier 0 — plain `requests` GET. Fast, handles the majority of sites.
+  Tier 1 — `curl_cffi` with Chrome impersonation. Re-run only the 403s and
+           timeouts; fixes the TLS/HTTP2 fingerprint mismatch behind most
+           edge/WAF blocks (SFCC, Magento, generic CDN edge).
+  Tier 2 — real browser (nodriver / Camoufox) for the stubborn tail
+           (Akamai-backed luxury sites). NOT YET WIRED — see fetch_tier2().
+
+NOTE: detection is HTTP-only (no browser). Tiers 0/1 cannot render JS, so
+JS-only sites may stay Unidentified until the Tier 2 browser path is wired.
 
 Intended to be run inside GitHub Actions (Docker) or locally.
 """
 import json
 import os
+import time
+from collections import Counter
 from datetime import datetime
 
-from seleniumbase import SB
-from selenium.common.exceptions import TimeoutException, WebDriverException
+import requests
+from curl_cffi import requests as cffi_requests
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SITES_FILE = os.path.join(ROOT, 'sites.json')
 DATA_FILE = os.path.join(ROOT, 'data.json')
 
-TIMEOUT = 15
+TIMEOUT = 15          # Tier 0 (plain requests)
+TIER1_TIMEOUT = 20    # Tier 1 (curl_cffi impersonation)
+
+# A browser-like UA reduces trivial bot blocks on a plain HTTP fetch.
+REQUEST_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+}
+
+# TODO(proxies): both tiers should route through residential proxies — several
+# targets (luxury especially) block on datacenter IP reputation regardless of
+# fingerprint. Wire a proxies dict into the tier fetchers once creds exist.
+
+
+def _is_blocked(status):
+    """A result worth escalating to a stronger fetch tier.
+
+    403 = likely bot/WAF block; None = timeout or connection error.
+    Note 429 (rate limit) and 402 (frozen store) are deliberately NOT escalated
+    — they aren't fingerprint problems, so a stronger tier won't help.
+    """
+    return status is None or status == 403
+
+
+def fetch_tier0(session, url):
+    """Plain requests GET. Returns (status, text, headers); status None on error."""
+    try:
+        r = session.get(url, timeout=TIMEOUT, allow_redirects=True)
+        return r.status_code, r.text, r.headers
+    except requests.exceptions.RequestException:
+        return None, None, None
+
+
+def fetch_tier1(url):
+    """curl_cffi GET impersonating Chrome's TLS/HTTP2 fingerprint."""
+    try:
+        r = cffi_requests.get(
+            url, impersonate="chrome", timeout=TIER1_TIMEOUT, allow_redirects=True
+        )
+        return r.status_code, r.text, r.headers
+    except Exception:
+        return None, None, None
+
+
+def fetch_tier2(url):
+    """Tier 2 — real browser for the Akamai-backed holdouts.
+
+    NOT YET WIRED. Intended to route only Tier 1 failures through nodriver,
+    falling back to Camoufox for the last stubborn few (luxury cluster), both
+    behind residential proxies. Returns 'not implemented' for now.
+    """
+    return None, None, None
 
 
 # -------------------------
@@ -81,35 +148,74 @@ def detect_platform_from_text(html_text, headers, url):
 # Fetcher
 # -------------------------
 def fetch_all_sites(sites):
-    """Navigate each site with a single reused Chrome instance, return name -> platform dict."""
+    """Fetch each site over HTTP with a reused session, return name -> platform dict."""
     results = {}
-    with SB(uc=True, headless=True,
-            chromium_arg="--no-sandbox --disable-gpu --disable-dev-shm-usage") as sb:
-        sb.driver.set_page_load_timeout(TIMEOUT)
-        for site in sites:
+    total = len(sites)
+    status_counts = Counter()
+    platform_counts = Counter()
+    run_start = time.monotonic()
+    print(f"Starting platform detection for {total} site(s)...")
+    with requests.Session() as session:
+        session.headers.update(REQUEST_HEADERS)
+        for index, site in enumerate(sites, start=1):
             name = site.get('name') or site.get('url') or 'unidentified'
             url = site.get('url')
             if not url:
                 print(f"[WARN] Site entry missing 'url': {site}")
                 continue
-            try:
-                sb.open(url)
-                html = sb.get_page_source()
-                platform = detect_platform_from_text(html, {}, url)
-                print(f"Checked {name} -> {url}  =>  {platform}")
-                results[name] = platform
-            except TimeoutException:
-                print(f"[WARN] Timeout fetching {url}")
-                sb.open("about:blank")
-            except WebDriverException as e:
-                msg = str(e)[:120]
-                print(f"[WARN] WebDriverException {url}: {msg}")
-                sb.open("about:blank")
-            except Exception as e:
-                msg = str(e)[:120]
-                print(f"[WARN] Unexpected error {url}: {msg}")
-                sb.open("about:blank")
+
+            # Tier 0: plain fetch. Escalate to Tier 1 only if it looks blocked.
+            tier = 0
+            site_start = time.monotonic()
+            status, text, headers = fetch_tier0(session, url)
+            if _is_blocked(status):
+                tier = 1
+                status, text, headers = fetch_tier1(url)
+            elapsed = time.monotonic() - site_start
+
+            if text is None:
+                status_counts['unreachable'] += 1
+                print(f"[{index}/{total}] [WARN] {name} -> {url}  =>  "
+                      f"unreachable (T{tier}, {elapsed:.2f}s)")
+                continue
+
+            platform = detect_platform_from_text(text, headers, url)
+            status_counts[status] += 1
+            platform_counts[platform] += 1
+            print(f"[{index}/{total}] (T{tier}) {name} -> {url}  =>  "
+                  f"[{status}] {platform} ({elapsed:.2f}s)")
+            results[name] = platform
+
+    total_elapsed = time.monotonic() - run_start
+    print_summary(total, status_counts, platform_counts, total_elapsed)
     return results
+
+
+def _format_counts(counts, total):
+    """Yield 'label: count (pct%)' lines, most frequent first."""
+    for label, count in counts.most_common():
+        pct = (count / total * 100) if total else 0
+        yield f"  {str(label):<28} {count:>4}  ({pct:5.1f}%)"
+
+
+def print_summary(total, status_counts, platform_counts, total_elapsed):
+    """Print response-code and platform breakdowns plus total execution time."""
+    print("\n" + "=" * 48)
+    print("SUMMARY")
+    print("=" * 48)
+    print(f"Sites processed: {total}")
+
+    print("\nBy response status:")
+    for line in _format_counts(status_counts, total):
+        print(line)
+
+    print("\nBy platform:")
+    for line in _format_counts(platform_counts, total):
+        print(line)
+
+    mins, secs = divmod(total_elapsed, 60)
+    print(f"\nTotal execution time: {total_elapsed:.1f}s ({int(mins)}m {secs:04.1f}s)")
+    print("=" * 48)
 
 
 # -------------------------

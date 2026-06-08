@@ -19,10 +19,17 @@ npm run preview    # Preview production build locally
 
 ### Backend (Python)
 
+Dependencies are declared in `pyproject.toml` and locked (with hashes for all
+transitive deps) in `uv.lock`, managed with [uv](https://docs.astral.sh/uv/).
+
 ```bash
-pip install -r requirements.txt
-python detect_platform.py   # Run platform detection against sites.json
-python clean_stores.py      # Deduplicate and sort sites.json
+uv sync                          # Create/update .venv from the lockfile
+uv run python detect_platform.py # Run platform detection against sites.json
+uv run python clean_stores.py    # Deduplicate and sort sites.json
+
+# Changing dependencies: edit pyproject.toml, then refresh the lock:
+uv lock                          # Re-resolve and update uv.lock
+uv lock --check                  # CI/sanity: fail if lock is out of sync
 ```
 
 ### Docker
@@ -37,7 +44,7 @@ npm run docker:run     # Run detection in container
 ### Data Flow
 
 1. `sites.json` — list of ~260 brands with name, URL, category
-2. `detect_platform.py` — Playwright-based scraper; detects platform via heuristic HTML/header matching; writes to `data.json` only if platform changed
+2. `detect_platform.py` — HTTP-only tiered scraper (Tier 0 `requests` → Tier 1 `curl_cffi` Chrome impersonation for 403s/timeouts); detects platform via heuristic HTML/header matching; writes to `data.json` only if platform changed
 3. `data.json` — nested structure: `brand → date → platform`
 4. `src/lib/PlatformData.ts` — `PlatformDataModel` class parses `data.json`, precomputes ranked platform usage, exports a singleton
 5. React components consume the singleton for rendering charts and stats
@@ -61,4 +68,4 @@ React Router with base path awareness: `/ecom-platform-tracker` in production, `
 
 ### Platform Detection Heuristics
 
-`detect_platform.py` searches HTML and HTTP headers for platform-specific signatures (e.g., `cdn.shopify.com` for Shopify, `wp-content/plugins/woocommerce` for WooCommerce). Returns `"Unidentified"` if no match. Playwright timeout is 15 seconds per site.
+`detect_platform.py` searches HTML and HTTP headers for platform-specific signatures (e.g., `cdn.shopify.com` for Shopify, `wp-content/plugins/woocommerce` for WooCommerce). Returns `"Unidentified"` if no match. Fetch timeouts: 15s for Tier 0 (`requests`), 20s for Tier 1 (`curl_cffi`).

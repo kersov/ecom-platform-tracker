@@ -1,0 +1,17 @@
+[project]
+name = "ecom-platform-tracker"
+version = "0.1.0"
+description = "Scrapes tracked sites daily to detect which e-commerce platform each runs."
+requires-python = ">=3.11"
+dependencies = [
+    # Tier 0 fetcher: plain HTTP GET.
+    "requests==2.34.2",
+    # Tier 1 fetcher: HTTP client with browser TLS/HTTP2 fingerprint
+    # impersonation, used to recover sites that block the plain `requests` fetch.
+    "curl_cffi==0.15.0",
+]
+
+[tool.uv]
+# This is an application (run via `python detect_platform.py`), not an
+# installable package, so uv only resolves/installs the dependencies above.
+package = false

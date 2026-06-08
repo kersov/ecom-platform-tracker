@@ -1,24 +1,23 @@
 # Dockerfile
 FROM --platform=linux/amd64 python:3.11-slim
 
+# No system browser needed: detection is HTTP-only (requests + curl_cffi).
+# CA certs ship via the certifi Python package, pulled in through the lockfile.
 
-# Install Google Chrome stable (required by undetected-chromedriver)
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    ca-certificates git wget gnupg unzip \
-    && wget -q -O /tmp/chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
-    && apt-get install -y /tmp/chrome.deb \
-    && rm /tmp/chrome.deb \
-    && rm -rf /var/lib/apt/lists/*
-
+# uv: fast, reproducible installs straight from the committed lockfile.
+COPY --from=ghcr.io/astral-sh/uv:0.9.28 /uv /usr/local/bin/uv
 
 WORKDIR /app
 
+# The CI job mounts the host workspace over /app at runtime, which would
+# shadow a project-local .venv. Put the environment outside /app instead.
+ENV UV_PROJECT_ENVIRONMENT=/opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Pre-download uc_driver (patched chromedriver for UC mode) at build time
-RUN seleniumbase install uc_driver
+# Install the exact, hash-pinned dependencies from uv.lock. --frozen fails
+# the build if pyproject.toml and uv.lock have drifted out of sync.
+COPY pyproject.toml uv.lock ./
+RUN uv sync --frozen --no-dev --no-cache
 
 # copy repository files (script, sites.json, etc.)
 COPY . .
