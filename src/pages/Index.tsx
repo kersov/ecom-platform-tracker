@@ -1,5 +1,6 @@
 import { PlatformStats } from "@/components/PlatformStats";
 import { PlatformChart } from "@/components/PlatformChart";
+import { PlatformTrendChart } from "@/components/PlatformTrendChart";
 import { Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -56,7 +57,10 @@ const Index = () => {
           {/* Charts */}
           <section>
             <h2 className="mb-6 text-2xl font-bold text-foreground">Analytics & Trends</h2>
-            <PlatformChart />
+            <div className="space-y-6">
+              <PlatformChart />
+              <PlatformTrendChart />
+            </div>
           </section>
         </div>
       </main>

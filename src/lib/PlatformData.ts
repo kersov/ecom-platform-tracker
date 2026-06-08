@@ -85,6 +85,66 @@ export class PlatformDataModel {
   getUnidentifiedUsage(): { name: string; count: number } {
     return this.platformUsage['unidentified'];
   }
+
+  /**
+   * Builds a historical time series of how many sites run each platform on
+   * every observation date, from the earliest record up to today.
+   *
+   * Each site's platform is forward-filled: a site keeps its last detected
+   * platform until the next change, so a site with a single record counts
+   * toward that platform on every date from its first observation onward.
+   *
+   * Returns rows shaped for a Recharts LineChart, e.g.
+   *   [{ date: '2025-11-04', Shopify: 12, Magento: 3, ... }, ...]
+   * alongside the list of platform names (one line each).
+   */
+  getPlatformTrend(today: string = new Date().toISOString().slice(0, 10)): {
+    data: Array<Record<string, string | number>>;
+    platforms: string[];
+  } {
+    // Flatten each brand into chronologically sorted { date, platform } records.
+    // ISO date strings sort correctly lexicographically; sort is stable, so
+    // same-day records keep their original order (last one wins as "current").
+    const brands = Object.values(this.data).map(history =>
+      history
+        .map(entry => {
+          const [date, platform] = Object.entries(entry)[0];
+          return { date, platform };
+        })
+        .sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0))
+    );
+
+    // X-axis: every date anything was observed, plus today so lines reach now.
+    const dateSet = new Set<string>();
+    const platformSet = new Set<string>();
+    brands.forEach(history =>
+      history.forEach(r => {
+        dateSet.add(r.date);
+        platformSet.add(r.platform);
+      })
+    );
+    dateSet.add(today);
+    const dates = Array.from(dateSet).sort();
+    const platforms = Array.from(platformSet);
+
+    const data = dates.map(date => {
+      const row: Record<string, string | number> = { date };
+      platforms.forEach(p => (row[p] = 0));
+      brands.forEach(history => {
+        // The site's active platform on `date` is its last record on/before it.
+        // Skip sites not yet observed (first record is after `date`).
+        let active: string | null = null;
+        for (const r of history) {
+          if (r.date <= date) active = r.platform;
+          else break;
+        }
+        if (active !== null) row[active] = (row[active] as number) + 1;
+      });
+      return row;
+    });
+
+    return { data, platforms };
+  }
 }
 
 

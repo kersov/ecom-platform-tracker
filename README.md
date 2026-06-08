@@ -33,3 +33,26 @@ docker build -t ecom-platform-tracker .
 # Run the tracker
 docker run --rm -v $(pwd):/app ecom-platform-tracker
 ```
+
+---
+
+## 🌐 Run the Website
+
+The dashboard is a React + Vite app that visualizes the data in `data.json`.
+
+```bash
+# Install dependencies (first time only)
+npm install
+
+# Start the dev server with hot-reload
+npm run dev
+```
+
+Then open **http://localhost:8080** in your browser.
+
+To build and preview the production bundle instead:
+
+```bash
+npm run build     # outputs to dist/
+npm run preview   # serves the built site locally
+```
