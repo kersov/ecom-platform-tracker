@@ -1,8 +1,26 @@
 name: Deploy React App to GitHub Pages
 
-# Manual trigger only
+# Runs manually, and automatically when a human push changes site-relevant
+# files on main (backend/docs-only pushes are excluded via the paths filter).
+# NOTE: the daily data update does NOT trigger this — that job pushes with the
+# default GITHUB_TOKEN, and GitHub blocks token pushes from starting new
+# workflow runs (anti-recursion). Daily auto-deploy is handled directly inside
+# daily-docker.yml, gated on data.json actually changing.
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'index.html'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'vite.config.ts'
+      - 'tsconfig*.json'
+      - 'tailwind.config.ts'
+      - 'postcss.config.js'
+      - 'data.json'
+      - '.github/workflows/deploy.yml'
 
 jobs:
   build-and-deploy:
