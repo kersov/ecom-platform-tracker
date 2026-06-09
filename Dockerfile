@@ -1,5 +1,8 @@
 # Dockerfile
-FROM --platform=linux/amd64 python:3.11-slim
+# Builds natively for the host platform (CI runners are amd64). No platform pin
+# is needed now that detection is pure Python — curl_cffi ships amd64 + arm64
+# wheels. Pass `docker build --platform=...` if you ever need to cross-build.
+FROM python:3.11-slim
 
 # No system browser needed: detection is HTTP-only (requests + curl_cffi).
 # CA certs ship via the certifi Python package, pulled in through the lockfile.

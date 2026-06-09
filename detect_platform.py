@@ -101,21 +101,25 @@ def detect_platform_from_text(html_text, headers, url):
     hdr_vals = ' '.join([str(v).lower() for v in (headers.values() if headers else [])])
 
     # Shopify
-    if ('cdn.shopify.com' in text or '.myshopify.com' in text or 'Shopify.theme' in html_text_orig or
-            'content="Shopify"' in text or 'x-shopify-' in hdr_keys or 'x-shopify-' in hdr_vals):
+    if ('cdn.shopify.com' in text or '.myshopify.com' in text
+            or 'Shopify.theme' in html_text_orig or 'content="Shopify"' in text
+            or 'x-shopify-' in hdr_keys or 'x-shopify-' in hdr_vals):
         return 'Shopify'
     # WooCommerce / WordPress e-commerce plugin patterns
-    if 'woocommerce' in text or '/wp-content/plugins/woocommerce' in text or 'woocommerce' in hdr_keys or 'woocommerce' in hdr_vals:
+    if ('woocommerce' in text or '/wp-content/plugins/woocommerce' in text
+            or 'woocommerce' in hdr_keys or 'woocommerce' in hdr_vals):
         return 'WooCommerce'
     # Magento / Adobe Commerce
     if 'mage.js' in text or 'var mage' in text or 'magento' in text or '/skin/frontend/' in text:
         return 'Magento'
     # Salesforce Commerce Cloud (Demandware)
-    if 'demandware' in text or 'bmcdn.net' in text or 'salesforce' in text or 'sfcc' in text or 'dwstatic' in text:
+    if ('demandware' in text or 'bmcdn.net' in text or 'salesforce' in text
+            or 'sfcc' in text or 'dwstatic' in text):
         return 'Salesforce Commerce Cloud'
     # SAP Commerce Cloud (Hybris / Spartacus / OCC)
-    if ('hybris' in text or 'yaccelerator' in text or 'spartacus' in text or
-            '/occ/v' in text or '/rest/v' in text or 'sap-commerce' in text or 'sap commerce' in text):
+    if ('hybris' in text or 'yaccelerator' in text or 'spartacus' in text
+            or '/occ/v' in text or '/rest/v' in text or 'sap-commerce' in text
+            or 'sap commerce' in text):
         return 'SAP Commerce Cloud'
     # Oracle Commerce Cloud
     if 'oracle' in text or 'occ-commercestore' in text or 'oraclecloud' in text:
@@ -222,12 +226,12 @@ def print_summary(total, status_counts, platform_counts, total_elapsed):
 # Main
 # -------------------------
 def main():
-    with open(SITES_FILE, 'r', encoding='utf-8') as f:
+    with open(SITES_FILE, encoding='utf-8') as f:
         sites = json.load(f)
 
     data = {}
     if os.path.exists(DATA_FILE):
-        with open(DATA_FILE, 'r', encoding='utf-8') as f:
+        with open(DATA_FILE, encoding='utf-8') as f:
             data = json.load(f)
 
     date_str = datetime.utcnow().date().isoformat()

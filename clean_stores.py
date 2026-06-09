@@ -11,7 +11,7 @@ try:
     # --- 1. Read the file first ---
     # We must read the entire file into memory before we can write to it
     try:
-        with open(filename, 'r', encoding='utf-8') as f:
+        with open(filename, encoding='utf-8') as f:
             stores = json.load(f)
         print(f"Reading from '{filename}'...")
     except FileNotFoundError:
@@ -22,7 +22,7 @@ try:
         print(f"Error: Could not decode JSON from '{filename}'. Please check the file content.")
         exit()
 
-    
+
     # --- 2. Process the data ---
     for store in stores:
         name = store.get('name')

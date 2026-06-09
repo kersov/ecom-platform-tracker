@@ -15,3 +15,19 @@ dependencies = [
 # This is an application (run via `python detect_platform.py`), not an
 # installable package, so uv only resolves/installs the dependencies above.
 package = false
+
+[dependency-groups]
+# Dev-only tooling. The Docker build uses `uv sync --no-dev`, so ruff never
+# ships in the production image.
+dev = [
+    "ruff==0.15.16",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+# pyflakes (F) + pycodestyle (E/W) + import sorting (I) + pyupgrade (UP)
+# + flake8-bugbear (B). A pragmatic default for the small backend scripts.
+select = ["E", "W", "F", "I", "UP", "B"]

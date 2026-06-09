@@ -24,7 +24,8 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "eslint"
+    "*.{js,jsx,ts,tsx}": "eslint",
+    "*.py": "uv run ruff check"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
