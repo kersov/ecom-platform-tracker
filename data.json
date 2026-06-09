@@ -52,6 +52,9 @@
   "Ocado": [
     {
       "2025-11-04": "WordPress"
+    },
+    {
+      "2026-06-09": "Unidentified"
     }
   ],
   "Peloton Apparel": [
@@ -201,6 +204,9 @@
     },
     {
       "2025-12-13": "WordPress"
+    },
+    {
+      "2026-06-09": "Oracle Commerce Cloud"
     }
   ],
   "Apple Store": [
@@ -211,6 +217,9 @@
   "Arcteryx": [
     {
       "2026-03-18": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-09": "Unidentified"
     }
   ],
   "Argos": [
@@ -268,11 +277,17 @@
   "Berluti": [
     {
       "2025-11-08": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-09": "Unidentified"
     }
   ],
   "Bershka": [
     {
       "2026-03-18": "Oracle Commerce Cloud"
+    },
+    {
+      "2026-06-09": "Unidentified"
     }
   ],
   "Boohoo": [
@@ -392,6 +407,9 @@
     },
     {
       "2026-03-18": "Unidentified"
+    },
+    {
+      "2026-06-09": "Shopify"
     }
   ],
   "Foot Locker": [
@@ -811,6 +829,9 @@
     },
     {
       "2026-03-18": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-09": "Unidentified"
     }
   ],
   "Wildling Shoes": [
@@ -1004,6 +1025,9 @@
     },
     {
       "2026-03-18": "Unidentified"
+    },
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
     }
   ],
   "Free People": [
@@ -1050,6 +1074,9 @@
     },
     {
       "2026-03-18": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-09": "SAP Commerce Cloud"
     }
   ],
   "Salomon": [
@@ -1115,6 +1142,9 @@
   "Bulgari": [
     {
       "2026-03-17": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-09": "Unidentified"
     }
   ],
   "Castore": [
@@ -1176,6 +1206,9 @@
     },
     {
       "2026-03-18": "Unidentified"
+    },
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
     }
   ],
   "Finish Line": [
@@ -1186,6 +1219,9 @@
   "Fred (Joaillier)": [
     {
       "2026-03-17": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-09": "Unidentified"
     }
   ],
   "H&M": [
@@ -1211,11 +1247,17 @@
   "HOKA": [
     {
       "2026-03-17": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-09": "Unidentified"
     }
   ],
   "Jacquemus": [
     {
       "2026-03-17": "Unidentified"
+    },
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
     }
   ],
   "John Lewis": [
@@ -1226,6 +1268,9 @@
   "Kate Spade": [
     {
       "2026-03-17": "Unidentified"
+    },
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
     }
   ],
   "Li-Ning": [
@@ -1241,6 +1286,9 @@
   "Louis Vuitton": [
     {
       "2026-03-17": "Unidentified"
+    },
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
     }
   ],
   "Lululemon": [
@@ -1271,6 +1319,9 @@
   "New Balance": [
     {
       "2026-03-17": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-09": "Unidentified"
     }
   ],
   "Offspring": [
@@ -1319,6 +1370,9 @@
     },
     {
       "2026-03-18": "Unidentified"
+    },
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
     }
   ],
   "Skechers Work": [
@@ -1344,6 +1398,9 @@
   "Tiffany & Co.": [
     {
       "2026-03-17": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-09": "Magento"
     }
   ],
   "Timberland": [
@@ -1359,6 +1416,9 @@
   "Vestiaire Collective": [
     {
       "2026-03-17": "Unidentified"
+    },
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
     }
   ],
   "Weekday": [
@@ -1374,6 +1434,1106 @@
   "Williams Sonoma": [
     {
       "2026-03-17": "Salesforce Commerce Cloud"
+    }
+  ],
+  "& Other Stories": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "2XU": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "A.P.C.": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Abercrombie & Fitch": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Acne Studios": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Aesop": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Agent Provocateur": [
+    {
+      "2026-06-09": "Magento"
+    }
+  ],
+  "Alexander McQueen": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Alexander Wang": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Allen Edmonds": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Altra Running": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Ann Summers": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Arena": [
+    {
+      "2026-06-09": "Squarespace"
+    }
+  ],
+  "ARKET": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Article": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Away": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Ba&sh": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Balenciaga": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Balmain": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Beauty Bay": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Bergdorf Goodman": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Boden": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Bonobos": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Bonpoint": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Bose": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Bottega Veneta": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Boux Avenue": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Briogeo": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Brunello Cucinelli": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Buck Mason": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Burberry": [
+    {
+      "2026-06-09": "Oracle Commerce Cloud"
+    }
+  ],
+  "Burrow": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Byredo": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Callaway": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Calvin Klein": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Camper": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Carter's": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Cartier": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Casper": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Catbird": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "CeraVe": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Chanel": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Charlotte Tilbury": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Children's Place": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Chopard": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Chow Tai Fook": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Christian Louboutin": [
+    {
+      "2026-06-09": "Magento"
+    }
+  ],
+  "Clinique": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Columbia": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Cotopaxi": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Coupang": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Cult Beauty": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Cuyana": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Dagne Dover": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Daniel Wellington": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "De Beers": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Diptyque": [
+    {
+      "2026-06-09": "Magento"
+    }
+  ],
+  "DJI": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Dolce & Gabbana": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Drunk Elephant": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "e.l.f. Cosmetics": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "ECCO": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "El Corte Inglés": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "END Clothing": [
+    {
+      "2026-06-09": "Magento"
+    }
+  ],
+  "Estée Lauder": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Fat Face": [
+    {
+      "2026-06-09": "SAP Commerce Cloud"
+    }
+  ],
+  "Fenty Beauty": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Fjallraven": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "FootJoy": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Fossil": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "French Connection": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Frugi": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Furla": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Geox": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Glossier": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Glow Recipe": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Golden Goose": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "GoPro": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Gorjana": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Gucci": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Hanna Andersson": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Head": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Herschel": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Hobbs": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Hollister": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "HomeGoods": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Hugo Boss": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Hummel": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Hunkemöller": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "ILIA Beauty": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Indochino": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Isabel Marant": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "IWC Schaffhausen": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Janie and Jack": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Jenni Kayne": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Jimmy Choo": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Jo Malone": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Keen": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Kiehl's": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "KITH": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Kohl's": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Kylie Cosmetics": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "L'Occitane": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "La Mer": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "La Roche-Posay": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Lacoste": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Lancôme": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Le Labo": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Liewood": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Living Proof": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Logitech": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Longchamp": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "M.M. LaFleur": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "MAC Cosmetics": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Macron": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Maje": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Manolo Blahnik": [
+    {
+      "2026-06-09": "Magento"
+    }
+  ],
+  "Marshalls": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Mayoral": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "MCM": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "MediaMarkt": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Mejuri": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Mini Rodini": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Missoma": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Miu Miu": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Molo": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Monki": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Monsoon": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Moroccanoil": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Moschino": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Mothercare": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Mulberry": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "MVMT": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "NARS": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "New Look": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Nobody's Child": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "NOBULL": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Off-White": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Olaplex": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Omega": [
+    {
+      "2026-06-09": "Magento"
+    }
+  ],
+  "Oscar de la Renta": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "OshKosh B'gosh": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Osprey": [
+    {
+      "2026-06-09": "Magento"
+    }
+  ],
+  "Otto": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Ouai": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "P.E Nation": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Palace": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Pandora": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Patagonia": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "PatPat": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Paul Smith": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Paula's Choice": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Petit Bateau": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Phase Eight": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Primary": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Purple": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Quince": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Ralph Lauren": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Rapha": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Rare Beauty": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Razer": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Reima": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Rhone": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "River Island": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Ross Stores": [
+    {
+      "2026-06-09": "WordPress"
+    }
+  ],
+  "Rossignol": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Saatva": [
+    {
+      "2026-06-09": "Magento"
+    }
+  ],
+  "Saint Laurent": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Salvatore Ferragamo": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Sandro": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Savage X Fenty": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Shiseido": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "SK-II": [
+    {
+      "2026-06-09": "BigCommerce"
+    }
+  ],
+  "Sonos": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Sony": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Sorel": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Specialized": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Speedo": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Sports Direct": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Stella McCartney": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Steve Madden": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Stüssy": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "SuitSupply": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Sunday Riley": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Supreme": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Sweaty Betty": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Tatcha": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Taylor Stitch": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "TaylorMade": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Ted Baker": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "The North Face": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "The Ordinary": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "ThirdLove": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Thursday Boot Company": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Titleist": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "TJ Maxx": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Tod's": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Tommy Hilfiger": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Trek": [
+    {
+      "2026-06-09": "SAP Commerce Cloud"
+    }
+  ],
+  "Triumph": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Tuft & Needle": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Tumi": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "UGG": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Urban Decay": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Valentino": [
+    {
+      "2026-06-09": "SAP Commerce Cloud"
+    }
+  ],
+  "Van Cleef & Arpels": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Varley": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Venum": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Versace": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Vertbaudet": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Victoria's Secret": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Vipshop": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Vivienne Westwood": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Vuori": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "White Stuff": [
+    {
+      "2026-06-09": "BigCommerce"
+    }
+  ],
+  "Wilson": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Wolverine": [
+    {
+      "2026-06-09": "Salesforce Commerce Cloud"
+    }
+  ],
+  "Yonex": [
+    {
+      "2026-06-09": "Shopify"
+    }
+  ],
+  "Youth to the People": [
+    {
+      "2026-06-09": "Unidentified"
+    }
+  ],
+  "Zegna": [
+    {
+      "2026-06-09": "Unidentified"
     }
   ]
 }
