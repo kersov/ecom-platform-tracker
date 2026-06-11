@@ -1020,6 +1020,9 @@
     },
     {
       "2026-06-10": "Unidentified"
+    },
+    {
+      "2026-06-11": "Salesforce Commerce Cloud"
     }
   ],
   "Anthropologie": [
@@ -1031,11 +1034,17 @@
     },
     {
       "2026-06-09": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-11": "Unidentified"
     }
   ],
   "Free People": [
     {
       "2026-03-17": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-11": "Unidentified"
     }
   ],
   "JD.com": [
@@ -1064,6 +1073,9 @@
     },
     {
       "2026-03-18": "Unidentified"
+    },
+    {
+      "2026-06-11": "Salesforce Commerce Cloud"
     }
   ],
   "Prada": [
@@ -1105,11 +1117,17 @@
   "Vivobarefoot": [
     {
       "2026-03-17": "Magento"
+    },
+    {
+      "2026-06-11": "Unidentified"
     }
   ],
   "Urban Outfitters": [
     {
       "2026-03-17": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-11": "Unidentified"
     }
   ],
   "Wayfair": [
@@ -1156,6 +1174,9 @@
     },
     {
       "2026-06-10": "Unidentified"
+    },
+    {
+      "2026-06-11": "Shopify"
     }
   ],
   "Chewy": [
@@ -1364,6 +1385,9 @@
   "Rimowa": [
     {
       "2026-03-17": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-11": "Unidentified"
     }
   ],
   "Sainsbury's": [
@@ -1634,6 +1658,9 @@
   "Carter's": [
     {
       "2026-06-09": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-11": "Unidentified"
     }
   ],
   "Cartier": [
@@ -1839,6 +1866,9 @@
   "GoPro": [
     {
       "2026-06-09": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-11": "Unidentified"
     }
   ],
   "Gorjana": [
@@ -2159,6 +2189,9 @@
   "OshKosh B'gosh": [
     {
       "2026-06-09": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-11": "Unidentified"
     }
   ],
   "Osprey": [
@@ -2167,6 +2200,9 @@
     },
     {
       "2026-06-10": "Unidentified"
+    },
+    {
+      "2026-06-11": "Magento"
     }
   ],
   "Otto": [
