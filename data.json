@@ -1210,6 +1210,9 @@
     },
     {
       "2026-06-14": "Unidentified"
+    },
+    {
+      "2026-06-15": "Shopify"
     }
   ],
   "Chewy": [
@@ -1396,6 +1399,9 @@
     },
     {
       "2026-06-14": "Unidentified"
+    },
+    {
+      "2026-06-15": "SAP Commerce Cloud"
     }
   ],
   "Petco": [
@@ -1879,6 +1885,9 @@
     },
     {
       "2026-06-14": "Unidentified"
+    },
+    {
+      "2026-06-15": "Shopify"
     }
   ],
   "Frugi": [
@@ -2300,6 +2309,9 @@
     },
     {
       "2026-06-10": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-15": "Unidentified"
     }
   ],
   "Patagonia": [
