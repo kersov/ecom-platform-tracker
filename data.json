@@ -511,6 +511,9 @@
     },
     {
       "2026-06-18": "Unidentified"
+    },
+    {
+      "2026-06-19": "Shopify"
     }
   ],
   "Kenzo": [
@@ -1097,6 +1100,9 @@
     },
     {
       "2026-06-13": "Unidentified"
+    },
+    {
+      "2026-06-19": "Salesforce Commerce Cloud"
     }
   ],
   "Prada": [
@@ -1228,6 +1234,9 @@
     },
     {
       "2026-06-18": "Shopify"
+    },
+    {
+      "2026-06-19": "Unidentified"
     }
   ],
   "Chewy": [
@@ -1423,6 +1432,9 @@
     },
     {
       "2026-06-18": "Unidentified"
+    },
+    {
+      "2026-06-19": "SAP Commerce Cloud"
     }
   ],
   "Petco": [
@@ -1627,6 +1639,9 @@
     },
     {
       "2026-06-17": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-19": "Unidentified"
     }
   ],
   "Balenciaga": [
@@ -1770,6 +1785,9 @@
   "Chanel": [
     {
       "2026-06-09": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-19": "Unidentified"
     }
   ],
   "Charlotte Tilbury": [
@@ -1910,6 +1928,9 @@
   "Fossil": [
     {
       "2026-06-09": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-19": "Unidentified"
     }
   ],
   "French Connection": [
@@ -1921,6 +1942,9 @@
     },
     {
       "2026-06-15": "Shopify"
+    },
+    {
+      "2026-06-19": "Unidentified"
     }
   ],
   "Frugi": [
@@ -2153,6 +2177,9 @@
     },
     {
       "2026-06-17": "Magento"
+    },
+    {
+      "2026-06-19": "Unidentified"
     }
   ],
   "Maje": [
@@ -2363,6 +2390,9 @@
     },
     {
       "2026-06-18": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-19": "Unidentified"
     }
   ],
   "Patagonia": [
