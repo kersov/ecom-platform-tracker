@@ -920,6 +920,9 @@
     },
     {
       "2026-06-24": "Unidentified"
+    },
+    {
+      "2026-06-25": "Shopify"
     }
   ],
   "Puma": [
@@ -1053,6 +1056,9 @@
     },
     {
       "2026-06-23": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-25": "Unidentified"
     }
   ],
   "Anthropologie": [
@@ -1687,11 +1693,17 @@
     },
     {
       "2026-06-23": "Unidentified"
+    },
+    {
+      "2026-06-25": "Salesforce Commerce Cloud"
     }
   ],
   "Balenciaga": [
     {
       "2026-06-09": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-25": "Unidentified"
     }
   ],
   "Balmain": [
@@ -1805,6 +1817,9 @@
     },
     {
       "2026-06-18": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-25": "Unidentified"
     }
   ],
   "Cartier": [
@@ -1842,6 +1857,9 @@
     },
     {
       "2026-06-24": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-25": "Unidentified"
     }
   ],
   "Charlotte Tilbury": [
@@ -1876,6 +1894,9 @@
     },
     {
       "2026-06-24": "Unidentified"
+    },
+    {
+      "2026-06-25": "Magento"
     }
   ],
   "Clinique": [
@@ -2267,6 +2288,9 @@
     },
     {
       "2026-06-23": "Unidentified"
+    },
+    {
+      "2026-06-25": "Magento"
     }
   ],
   "Maje": [
@@ -2492,6 +2516,9 @@
     },
     {
       "2026-06-24": "Unidentified"
+    },
+    {
+      "2026-06-25": "Salesforce Commerce Cloud"
     }
   ],
   "Patagonia": [
@@ -2620,6 +2647,9 @@
   "SK-II": [
     {
       "2026-06-09": "BigCommerce"
+    },
+    {
+      "2026-06-25": "Shopify"
     }
   ],
   "Sonos": [
@@ -2645,6 +2675,9 @@
   "Speedo": [
     {
       "2026-06-09": "Unidentified"
+    },
+    {
+      "2026-06-25": "Shopify"
     }
   ],
   "Sports Direct": [
