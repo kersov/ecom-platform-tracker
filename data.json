@@ -923,6 +923,9 @@
     },
     {
       "2026-06-25": "Shopify"
+    },
+    {
+      "2026-06-26": "Unidentified"
     }
   ],
   "Puma": [
@@ -1170,6 +1173,9 @@
   "Ulta Beauty": [
     {
       "2026-03-17": "Unidentified"
+    },
+    {
+      "2026-06-26": "Commercetools"
     }
   ],
   "Walmart": [
@@ -1696,6 +1702,9 @@
     },
     {
       "2026-06-25": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-26": "Unidentified"
     }
   ],
   "Balenciaga": [
@@ -1704,6 +1713,9 @@
     },
     {
       "2026-06-25": "Unidentified"
+    },
+    {
+      "2026-06-26": "Salesforce Commerce Cloud"
     }
   ],
   "Balmain": [
@@ -1820,6 +1832,9 @@
     },
     {
       "2026-06-25": "Unidentified"
+    },
+    {
+      "2026-06-26": "Salesforce Commerce Cloud"
     }
   ],
   "Cartier": [
@@ -1860,6 +1875,9 @@
     },
     {
       "2026-06-25": "Unidentified"
+    },
+    {
+      "2026-06-26": "Salesforce Commerce Cloud"
     }
   ],
   "Charlotte Tilbury": [
@@ -1897,6 +1915,9 @@
     },
     {
       "2026-06-25": "Magento"
+    },
+    {
+      "2026-06-26": "Unidentified"
     }
   ],
   "Clinique": [
@@ -2027,6 +2048,9 @@
     },
     {
       "2026-06-24": "Unidentified"
+    },
+    {
+      "2026-06-26": "Salesforce Commerce Cloud"
     }
   ],
   "French Connection": [
@@ -2291,6 +2315,9 @@
     },
     {
       "2026-06-25": "Magento"
+    },
+    {
+      "2026-06-26": "Unidentified"
     }
   ],
   "Maje": [
@@ -2473,6 +2500,9 @@
     },
     {
       "2026-06-21": "Magento"
+    },
+    {
+      "2026-06-26": "Unidentified"
     }
   ],
   "Otto": [
@@ -2519,6 +2549,9 @@
     },
     {
       "2026-06-25": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-06-26": "Unidentified"
     }
   ],
   "Patagonia": [
@@ -2594,6 +2627,9 @@
   "Rhone": [
     {
       "2026-06-09": "Shopify"
+    },
+    {
+      "2026-06-26": "Unidentified"
     }
   ],
   "River Island": [
