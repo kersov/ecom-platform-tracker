@@ -894,6 +894,9 @@
     },
     {
       "2026-06-30": "Unidentified"
+    },
+    {
+      "2026-07-01": "Magento"
     }
   ],
   "Fresh": [
@@ -1333,6 +1336,9 @@
     },
     {
       "2026-06-30": "Shopify"
+    },
+    {
+      "2026-07-01": "Unidentified"
     }
   ],
   "Chewy": [
@@ -1771,6 +1777,9 @@
     },
     {
       "2026-06-30": "Unidentified"
+    },
+    {
+      "2026-07-01": "Salesforce Commerce Cloud"
     }
   ],
   "Balenciaga": [
@@ -1953,6 +1962,9 @@
     },
     {
       "2026-06-27": "Unidentified"
+    },
+    {
+      "2026-07-01": "Salesforce Commerce Cloud"
     }
   ],
   "Charlotte Tilbury": [
@@ -2155,6 +2167,9 @@
     },
     {
       "2026-06-30": "Unidentified"
+    },
+    {
+      "2026-07-01": "Shopify"
     }
   ],
   "Frugi": [
@@ -2414,6 +2429,9 @@
     },
     {
       "2026-06-30": "Unidentified"
+    },
+    {
+      "2026-07-01": "Magento"
     }
   ],
   "Maje": [
@@ -2605,6 +2623,9 @@
     },
     {
       "2026-06-27": "Magento"
+    },
+    {
+      "2026-07-01": "Unidentified"
     }
   ],
   "Otto": [
