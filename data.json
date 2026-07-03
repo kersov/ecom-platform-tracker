@@ -392,6 +392,9 @@
     },
     {
       "2026-07-02": "Unidentified"
+    },
+    {
+      "2026-07-03": "Shopify"
     }
   ],
   "Fila": [
@@ -1434,6 +1437,9 @@
     },
     {
       "2026-06-29": "SAP Commerce Cloud"
+    },
+    {
+      "2026-07-03": "Unidentified"
     }
   ],
   "Harrods": [
@@ -1589,6 +1595,9 @@
     },
     {
       "2026-06-12": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-07-03": "Unidentified"
     }
   ],
   "Sainsbury's": [
@@ -1789,6 +1798,9 @@
     },
     {
       "2026-07-01": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-07-03": "Unidentified"
     }
   ],
   "Balenciaga": [
@@ -1803,6 +1815,9 @@
     },
     {
       "2026-07-02": "Unidentified"
+    },
+    {
+      "2026-07-03": "Salesforce Commerce Cloud"
     }
   ],
   "Balmain": [
@@ -1876,6 +1891,9 @@
     },
     {
       "2026-07-02": "Unidentified"
+    },
+    {
+      "2026-07-03": "Shopify"
     }
   ],
   "Byredo": [
@@ -2326,6 +2344,9 @@
     },
     {
       "2026-07-02": "Unidentified"
+    },
+    {
+      "2026-07-03": "Shopify"
     }
   ],
   "Jimmy Choo": [
@@ -2453,6 +2474,9 @@
     },
     {
       "2026-07-01": "Magento"
+    },
+    {
+      "2026-07-03": "Unidentified"
     }
   ],
   "Maje": [
@@ -2565,6 +2589,9 @@
     },
     {
       "2026-07-02": "Unidentified"
+    },
+    {
+      "2026-07-03": "SAP Commerce Cloud"
     }
   ],
   "Nobody's Child": [
@@ -2708,6 +2735,9 @@
     },
     {
       "2026-07-02": "Unidentified"
+    },
+    {
+      "2026-07-03": "Salesforce Commerce Cloud"
     }
   ],
   "Patagonia": [
@@ -2822,6 +2852,9 @@
   "Salvatore Ferragamo": [
     {
       "2026-06-09": "Unidentified"
+    },
+    {
+      "2026-07-03": "Salesforce Commerce Cloud"
     }
   ],
   "Sandro": [
@@ -2896,6 +2929,9 @@
     },
     {
       "2026-07-02": "Unidentified"
+    },
+    {
+      "2026-07-03": "Shopify"
     }
   ],
   "SuitSupply": [
@@ -2913,6 +2949,9 @@
     },
     {
       "2026-06-24": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-07-03": "Shopify"
     }
   ],
   "Sunday Riley": [
@@ -3041,6 +3080,9 @@
     },
     {
       "2026-07-02": "Unidentified"
+    },
+    {
+      "2026-07-03": "Shopify"
     }
   ],
   "Versace": [
@@ -3101,6 +3143,11 @@
   "Zegna": [
     {
       "2026-06-09": "Unidentified"
+    }
+  ],
+  "Hay": [
+    {
+      "2026-07-03": "Unidentified"
     }
   ]
 }
