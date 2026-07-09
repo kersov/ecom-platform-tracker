@@ -25,9 +25,15 @@ jobs:
           docker build -t ecom-platform-tracker .
 
       - name: Run tracker inside container
+        env:
+          # Optional residential proxy for the escalation tier. Set a repo secret
+          # named SCRAPER_PROXY (http://user:pass@host:port). If unset, the run
+          # proceeds direct — detect_platform.py treats empty as "no proxy".
+          SCRAPER_PROXY: ${{ secrets.SCRAPER_PROXY }}
         run: |
           docker run --rm \
             -v ${{ github.workspace }}:/app \
+            -e SCRAPER_PROXY \
             ecom-platform-tracker
 
       - name: Commit and push updated data

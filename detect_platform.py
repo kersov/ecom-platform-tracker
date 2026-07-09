@@ -20,12 +20,15 @@ JS-only sites may stay Unidentified until the Tier 2 browser path is wired.
 
 Intended to be run inside GitHub Actions (Docker) or locally.
 """
+import asyncio
 import json
 import os
 import time
 from collections import Counter
 from datetime import datetime
+from urllib.parse import urlparse
 
+import nodriver as uc
 import requests
 from curl_cffi import requests as cffi_requests
 
@@ -35,6 +38,8 @@ DATA_FILE = os.path.join(ROOT, 'data.json')
 
 TIMEOUT = 15          # Tier 0 (plain requests)
 TIER1_TIMEOUT = 20    # Tier 1 (curl_cffi impersonation)
+TIER2_TIMEOUT = 45    # Tier 2 (nodriver browser) — hard cap per site
+TIER2_SETTLE = 4      # seconds to let anti-bot sensor JS run / auto-submit
 
 # A browser-like UA reduces trivial bot blocks on a plain HTTP fetch.
 REQUEST_HEADERS = {
@@ -45,19 +50,105 @@ REQUEST_HEADERS = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 }
 
-# TODO(proxies): both tiers should route through residential proxies — several
-# targets (luxury especially) block on datacenter IP reputation regardless of
-# fingerprint. Wire a proxies dict into the tier fetchers once creds exist.
+# Residential proxy for the escalation tier(s). Many targets (luxury especially)
+# block on datacenter IP reputation — and CI runners (GitHub Actions) sit on
+# pre-flagged datacenter ranges — so a clean residential IP flips a lot of the
+# 403/"Access Denied" tail back to 200.
+#
+# Set SCRAPER_PROXY to a full proxy URL, e.g.
+#   http://user:pass@host:port   or   socks5://user:pass@host:port
+# In CI, store it as a GitHub Actions secret and expose it as an env var — never
+# commit the address. Tier 0 stays DIRECT on purpose: residential proxies bill
+# per GB and full storefront pages are 1-3 MB each, so only the escalated retries
+# (Tier 1+, i.e. the ~30-70 blocked sites) are worth routing through the proxy.
+PROXY_URL = os.environ.get("SCRAPER_PROXY") or None
+PROXIES = {"http": PROXY_URL, "https": PROXY_URL} if PROXY_URL else None
+
+# Chrome/Chromium binary for the Tier 2 browser. nodriver auto-detects a system
+# Chrome when unset (fine on dev machines); the Docker image sets this to the
+# Chromium it installs.
+CHROME_PATH = os.environ.get("CHROME_PATH") or None
 
 
-def _is_blocked(status):
+# High-precision fingerprints of anti-bot interstitial / block pages that come
+# back with a normal-looking body (often HTTP 200) but contain no storefront
+# markup — so the detector sees them as "Unidentified". Kept tight on purpose:
+# a genuine storefront that merely *embeds* a bot-manager script must NOT match,
+# so these strings only appear on the actual challenge/deny pages themselves.
+CHALLENGE_SIGNATURES = (
+    "errors.edgesuite.net",            # Akamai "Access Denied" reference page
+    "you don't have permission to access",
+    "<title>access denied",            # Akamai deny page title
+    "istlwashere",                     # Akamai Bot Manager sensor interstitial
+    "cdn-cgi/challenge-platform",      # Cloudflare managed challenge / Turnstile
+    "attention required! | cloudflare",
+    "just a moment...</title>",        # Cloudflare interstitial
+    "captcha-delivery.com",            # DataDome
+    "perimeterx.com/whywasiblocked",   # PerimeterX / HUMAN block page
+    "px-captcha",
+)
+
+
+def _looks_blocked(status, text):
     """A result worth escalating to a stronger fetch tier.
 
-    403 = likely bot/WAF block; None = timeout or connection error.
-    Note 429 (rate limit) and 402 (frozen store) are deliberately NOT escalated
-    — they aren't fingerprint problems, so a stronger tier won't help.
+    Escalate on:
+      * status None  — timeout / connection error
+      * status 403   — likely bot/WAF forbidden
+      * HTTP 200 whose body is actually an anti-bot interstitial: it carries a
+        known challenge fingerprint or is an implausibly small stub. These come
+        back 200 today and were silently recorded as 'Unidentified'.
+
+    Deliberately NOT escalated: 429 (rate limit) and 402 (frozen store) — those
+    aren't fingerprint problems, so a stronger tier won't help. The caller only
+    consults this once detection has already failed, so a confidently identified
+    storefront is never re-fetched even if it embeds a bot-manager script.
     """
-    return status is None or status == 403
+    if status is None or status == 403:
+        return True
+    if status != 200:
+        return False
+    if not text:
+        return True
+    t = text.lower()
+    if any(sig in t for sig in CHALLENGE_SIGNATURES):
+        return True
+    # A real storefront home page is large; a bare challenge/redirect stub is not.
+    return len(text) < 1000
+
+
+# Markers that a 200 body is client-side rendered — the storefront markup (and
+# thus the platform signature) is built by JavaScript and simply isn't in the
+# HTTP response. These are the single largest cause of "Unidentified": the HTTP
+# tiers can't see the DOM, but the Tier 2 browser can. Kept precise so a normal
+# server-rendered page isn't needlessly sent to the (slow) browser.
+SPA_MARKERS = (
+    "__next_data__", 'id="__next"',                     # Next.js
+    "window.__nuxt__", 'id="__nuxt"',                   # Nuxt
+    "__remixcontext",                                    # Remix
+    "data-reactroot", 'id="react-root"', 'id="root"><script',  # React mounts
+    "ng-version=",                                       # Angular
+    "data-server-rendered", "data-v-",                  # Vue
+    "svelte-",                                           # Svelte
+    "__initial_state__", "__apollo_state__", "__preloaded_state__",
+)
+
+
+def _needs_render(text):
+    """True when a 200 body should be retried in the Tier 2 browser because it's
+    client-side rendered or an empty shell.
+
+    Only consulted for an already-Unidentified 200 that does NOT look blocked, so
+    a confidently detected or plainly custom server-rendered page is never sent
+    to the browser. Detects known SPA frameworks, or a tiny titleless shell (a JS
+    bootstrap / stealth stub) that carries no real page content.
+    """
+    if not text:
+        return False
+    t = text.lower()
+    if any(m in t for m in SPA_MARKERS):
+        return True
+    return len(text) < 3500 and "<title" not in t
 
 
 def fetch_tier0(session, url):
@@ -70,24 +161,193 @@ def fetch_tier0(session, url):
 
 
 def fetch_tier1(url):
-    """curl_cffi GET impersonating Chrome's TLS/HTTP2 fingerprint."""
+    """curl_cffi GET impersonating Chrome's TLS/HTTP2 fingerprint.
+
+    Routed through SCRAPER_PROXY when set — this is the tier that retries the
+    IP-reputation-blocked tail, so a residential IP here is the highest-leverage
+    fix for CI runs. Falls back to a direct connection when no proxy is set.
+    """
     try:
         r = cffi_requests.get(
-            url, impersonate="chrome", timeout=TIER1_TIMEOUT, allow_redirects=True
+            url, impersonate="chrome", timeout=TIER1_TIMEOUT,
+            allow_redirects=True, proxies=PROXIES,
         )
         return r.status_code, r.text, r.headers
     except Exception:
         return None, None, None
 
 
-def fetch_tier2(url):
-    """Tier 2 — real browser for the Akamai-backed holdouts.
+# Tier 2 shares one headless Chrome (via nodriver) across the whole blocked tail
+# so we pay browser startup once, not per site — this is what makes it usable
+# where the old per-run SeleniumBase setup was slow. Lazily started on first use.
+_tier2_loop = None
+_tier2_browser = None
+_tier2_disabled = False   # set if Chrome can't start (e.g. missing in the image)
 
-    NOT YET WIRED. Intended to route only Tier 1 failures through nodriver,
-    falling back to Camoufox for the last stubborn few (luxury cluster), both
-    behind residential proxies. Returns 'not implemented' for now.
+
+def _tier2_proxy_arg():
+    """`--proxy-server` for Tier 2, but only for a credential-free proxy.
+
+    Chrome's --proxy-server can't carry user:pass, and answering a proxy auth
+    prompt needs a CDP Fetch handler; without it the browser would hang. So we
+    only route Tier 2 through an IP-whitelisted proxy. An authenticated proxy
+    still protects Tier 1 (curl_cffi handles auth natively) — Tier 2 just runs
+    direct, which is fine since its job is executing the JS sensor challenge.
+    TODO: add a cdp.fetch AuthRequired handler to proxy authenticated Tier 2 too.
     """
-    return None, None, None
+    if not PROXY_URL:
+        return None
+    p = urlparse(PROXY_URL)
+    if p.username or p.password or not p.hostname or not p.port:
+        return None
+    return f"--proxy-server={p.hostname}:{p.port}"
+
+
+async def _tier2_start():
+    # Use the modern `--headless=new` flag explicitly rather than nodriver's
+    # headless=True: the latter injects the legacy `--headless`, which fails to
+    # attach on current Chrome (macOS especially). `--headless=new` is portable
+    # across macOS dev and the Linux CI container.
+    args = [
+        "--headless=new",
+        "--no-sandbox",
+        "--disable-gpu",
+        "--disable-dev-shm-usage",
+        "--blink-settings=imagesEnabled=false",  # skip images: faster, lighter
+    ]
+    proxy_arg = _tier2_proxy_arg()
+    if proxy_arg:
+        args.append(proxy_arg)
+    kwargs = {}
+    if CHROME_PATH:
+        kwargs["browser_executable_path"] = CHROME_PATH
+    return await uc.start(headless=False, sandbox=False, browser_args=args, **kwargs)
+
+
+async def _tier2_fetch(browser, url):
+    tab = await browser.get(url, new_tab=True)
+    try:
+        await tab.sleep(TIER2_SETTLE)
+        html = await tab.get_content()
+        # Anti-bot pages typically set a clearance cookie via JS then auto-reload
+        # to the real page. If we still see a challenge, give it one more cycle.
+        if _looks_blocked(200, html):
+            await tab.reload()
+            await tab.sleep(TIER2_SETTLE)
+            html = await tab.get_content()
+        return html
+    finally:
+        await tab.close()
+
+
+def fetch_tier2(url):
+    """Tier 2 — real browser (nodriver) for the JS-sensor holdouts.
+
+    Runs the page's anti-bot JavaScript in headless Chrome so Akamai/Cloudflare/
+    DataDome sensor challenges resolve to the real storefront, which the HTTP
+    tiers can't do. Reuses one shared browser. Returns (status, text, headers);
+    status is synthesized (200 when HTML comes back) because CDP navigation
+    doesn't surface it cleanly and this is the terminal tier.
+    """
+    global _tier2_loop, _tier2_browser, _tier2_disabled
+    if _tier2_disabled:
+        return None, None, None
+    try:
+        if _tier2_loop is None:
+            _tier2_loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(_tier2_loop)
+        if _tier2_browser is None:
+            # Chrome's CDP attach can race on startup; retry a couple of times
+            # before giving up on the whole tier.
+            last_err = None
+            for _attempt in range(3):
+                try:
+                    _tier2_browser = _tier2_loop.run_until_complete(_tier2_start())
+                    break
+                except Exception as e:  # noqa: BLE001 — retry any startup failure
+                    last_err = e
+                    time.sleep(2)
+            if _tier2_browser is None:
+                raise last_err
+        html = _tier2_loop.run_until_complete(
+            asyncio.wait_for(_tier2_fetch(_tier2_browser, url), TIER2_TIMEOUT)
+        )
+        return (200 if html else None), html, None
+    except Exception as e:
+        # If the browser itself never came up, stop trying it for every remaining
+        # site — degrade gracefully to "Tier 2 unavailable" for the rest of the run.
+        if _tier2_browser is None:
+            _tier2_disabled = True
+            print(f"[WARN] Tier 2 (nodriver) unavailable, disabling: {str(e)[:140]}")
+        return None, None, None
+
+
+def close_tier2():
+    """Shut down the shared Tier 2 browser + event loop, if they were started."""
+    global _tier2_loop, _tier2_browser
+    if _tier2_browser is not None:
+        try:
+            _tier2_browser.stop()
+        except Exception:
+            pass
+        _tier2_browser = None
+    if _tier2_loop is not None:
+        try:
+            # Drain the connection's leftover coroutines (aclose/keepalive) so we
+            # don't emit "coroutine was never awaited" warnings into CI logs.
+            pending = asyncio.all_tasks(_tier2_loop)
+            for task in pending:
+                task.cancel()
+            if pending:
+                _tier2_loop.run_until_complete(
+                    asyncio.gather(*pending, return_exceptions=True)
+                )
+        except Exception:
+            pass
+        try:
+            _tier2_loop.close()
+        except Exception:
+            pass
+        _tier2_loop = None
+
+
+def fetch_with_escalation(session, url):
+    """Fetch a URL, climbing fetch tiers until a platform is identified.
+
+    Escalation rules, only ever applied to an Unidentified result:
+      * looks blocked (403 / timeout / anti-bot interstitial) -> next tier up,
+        since a stronger *fetch* may beat the block (0 -> 1 -> 2).
+      * client-side rendered / empty shell -> jump straight to Tier 2, since only
+        a real browser can build the DOM (a curl_cffi hop would waste a fetch).
+      * otherwise -> stop; it's a genuine miss no stronger tier will fix.
+
+    Returns (tier, status, text, headers, platform). Keeps the most informative
+    response seen: a tier that yields text (e.g. a 403 page we can still read) is
+    preferred over a later tier that returns nothing (e.g. Tier 2 with no browser
+    available), so escalation never discards a usable earlier result.
+    """
+    fetchers = (
+        lambda: fetch_tier0(session, url),   # 0
+        lambda: fetch_tier1(url),            # 1
+        lambda: fetch_tier2(url),            # 2
+    )
+    best = None
+    tier = 0
+    while tier < len(fetchers):
+        status, text, headers = fetchers[tier]()
+        platform = (detect_platform_from_text(text, headers, url)
+                    if text is not None else 'Unidentified')
+        if text is not None or best is None:
+            best = (tier, status, text, headers, platform)
+        if platform != 'Unidentified':
+            break
+        if _looks_blocked(status, text):
+            tier += 1
+        elif _needs_render(text) and tier < 2:
+            tier = 2                          # only the browser can render this
+        else:
+            break
+    return best
 
 
 # -------------------------
@@ -158,37 +418,38 @@ def fetch_all_sites(sites):
     status_counts = Counter()
     platform_counts = Counter()
     run_start = time.monotonic()
-    print(f"Starting platform detection for {total} site(s)...")
-    with requests.Session() as session:
-        session.headers.update(REQUEST_HEADERS)
-        for index, site in enumerate(sites, start=1):
-            name = site.get('name') or site.get('url') or 'unidentified'
-            url = site.get('url')
-            if not url:
-                print(f"[WARN] Site entry missing 'url': {site}")
-                continue
+    proxy_state = "on (Tier 1+)" if PROXIES else "off (direct)"
+    print(f"Starting platform detection for {total} site(s)... [proxy: {proxy_state}]")
+    try:
+        with requests.Session() as session:
+            session.headers.update(REQUEST_HEADERS)
+            for index, site in enumerate(sites, start=1):
+                name = site.get('name') or site.get('url') or 'unidentified'
+                url = site.get('url')
+                if not url:
+                    print(f"[WARN] Site entry missing 'url': {site}")
+                    continue
 
-            # Tier 0: plain fetch. Escalate to Tier 1 only if it looks blocked.
-            tier = 0
-            site_start = time.monotonic()
-            status, text, headers = fetch_tier0(session, url)
-            if _is_blocked(status):
-                tier = 1
-                status, text, headers = fetch_tier1(url)
-            elapsed = time.monotonic() - site_start
+                # Fetch with tier escalation: a 403 or a 200-but-blocked
+                # interstitial both bump the site up to the next fetch tier.
+                site_start = time.monotonic()
+                tier, status, text, _headers, platform = fetch_with_escalation(session, url)
+                elapsed = time.monotonic() - site_start
 
-            if text is None:
-                status_counts['unreachable'] += 1
-                print(f"[{index}/{total}] [WARN] {name} -> {url}  =>  "
-                      f"unreachable (T{tier}, {elapsed:.2f}s)")
-                continue
+                if text is None:
+                    status_counts['unreachable'] += 1
+                    print(f"[{index}/{total}] [WARN] {name} -> {url}  =>  "
+                          f"unreachable (T{tier}, {elapsed:.2f}s)")
+                    continue
 
-            platform = detect_platform_from_text(text, headers, url)
-            status_counts[status] += 1
-            platform_counts[platform] += 1
-            print(f"[{index}/{total}] (T{tier}) {name} -> {url}  =>  "
-                  f"[{status}] {platform} ({elapsed:.2f}s)")
-            results[name] = platform
+                status_counts[status] += 1
+                platform_counts[platform] += 1
+                print(f"[{index}/{total}] (T{tier}) {name} -> {url}  =>  "
+                      f"[{status}] {platform} ({elapsed:.2f}s)")
+                results[name] = platform
+    finally:
+        # Always tear down the shared Tier 2 browser, even on error/interrupt.
+        close_tier2()
 
     total_elapsed = time.monotonic() - run_start
     print_summary(total, status_counts, platform_counts, total_elapsed)

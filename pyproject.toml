@@ -9,6 +9,7 @@ dependencies = [
     # Tier 1 fetcher: HTTP client with browser TLS/HTTP2 fingerprint
     # impersonation, used to recover sites that block the plain `requests` fetch.
     "curl_cffi==0.15.0",
+    "nodriver>=0.50.3",
 ]
 
 [tool.uv]

@@ -23,7 +23,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "docker:build": "docker build -t ecom-platform-tracker .",
-    "docker:run": "docker run --rm -v $(pwd):/app ecom-platform-tracker",
+    "docker:run": "docker run --rm -v $(pwd):/app -e SCRAPER_PROXY ecom-platform-tracker",
     "prepare": "husky"
   },
   "lint-staged": {
