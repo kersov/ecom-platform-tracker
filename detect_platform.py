@@ -23,6 +23,7 @@ Intended to be run inside GitHub Actions (Docker) or locally.
 import asyncio
 import json
 import os
+import sys
 import time
 from collections import Counter
 from datetime import datetime
@@ -183,6 +184,34 @@ def fetch_tier1(url):
 _tier2_loop = None
 _tier2_browser = None
 _tier2_disabled = False   # set if Chrome can't start (e.g. missing in the image)
+_tier2_hook_installed = False
+
+_default_unraisablehook = sys.unraisablehook
+
+
+def _quiet_loop_closed_at_gc(unraisable):
+    """Swallow the one harmless teardown artifact nodriver leaves behind.
+
+    nodriver terminates Chrome without fully tearing down its asyncio subprocess
+    transport, so after a run the transport can be garbage-collected *after* our
+    event loop has already closed — CPython then reports a RuntimeError('Event
+    loop is closed') from BaseSubprocessTransport.__del__. It is purely cosmetic:
+    the run has finished and data.json is already written. We drop exactly that
+    case (via sys.unraisablehook, CPython's channel for __del__ exceptions) and
+    defer everything else to the normal hook so real errors still surface.
+    """
+    exc = unraisable.exc_value
+    if isinstance(exc, RuntimeError) and "Event loop is closed" in str(exc):
+        return
+    _default_unraisablehook(unraisable)
+
+
+def _install_tier2_unraisablehook():
+    """Install the teardown-noise filter once, only when Tier 2 is actually used."""
+    global _tier2_hook_installed
+    if not _tier2_hook_installed:
+        sys.unraisablehook = _quiet_loop_closed_at_gc
+        _tier2_hook_installed = True
 
 
 def _tier2_proxy_arg():
@@ -254,13 +283,14 @@ def fetch_tier2(url):
         return None, None, None
     try:
         if _tier2_loop is None:
+            _install_tier2_unraisablehook()
             _tier2_loop = asyncio.new_event_loop()
             asyncio.set_event_loop(_tier2_loop)
         if _tier2_browser is None:
             # Chrome's CDP attach can race on startup; retry a couple of times
             # before giving up on the whole tier.
             last_err = None
-            for _attempt in range(3):
+            for _ in range(3):
                 try:
                     _tier2_browser = _tier2_loop.run_until_complete(_tier2_start())
                     break
@@ -283,31 +313,50 @@ def fetch_tier2(url):
 
 
 def close_tier2():
-    """Shut down the shared Tier 2 browser + event loop, if they were started."""
+    """Shut down the shared Tier 2 browser + event loop, if they were started.
+
+    nodriver's Browser.stop() *schedules* connection.aclose() as a task and
+    terminates Chrome without awaiting either, so a naive close leaks a
+    "coroutine was never awaited" warning plus an "Event loop is closed" error
+    when the dead subprocess transport is GC'd. To avoid both we await aclose()
+    ourselves, then await the Chrome process actually exiting so its asyncio
+    subprocess transport is torn down while the loop is still open (a fixed sleep
+    isn't enough — Chrome can take a second or two to die after SIGTERM), then
+    cancel the remaining infinite tasks (keepalive/listener).
+    """
     global _tier2_loop, _tier2_browser
-    if _tier2_browser is not None:
-        try:
-            _tier2_browser.stop()
-        except Exception:
-            pass
-        _tier2_browser = None
-    if _tier2_loop is not None:
-        try:
-            # Drain the connection's leftover coroutines (aclose/keepalive) so we
-            # don't emit "coroutine was never awaited" warnings into CI logs.
-            pending = asyncio.all_tasks(_tier2_loop)
-            for task in pending:
-                task.cancel()
-            if pending:
-                _tier2_loop.run_until_complete(
-                    asyncio.gather(*pending, return_exceptions=True)
-                )
-        except Exception:
-            pass
+    if _tier2_loop is None:
+        return
+    try:
+        if _tier2_browser is not None:
+            # Grab the process handle before stop() clears it.
+            proc = getattr(_tier2_browser, "_process", None)
+            try:
+                _tier2_loop.run_until_complete(_tier2_browser.aclose())
+            except Exception:
+                pass
+            _tier2_browser.stop()  # SIGTERM to the Chrome process
+            if proc is not None:
+                try:
+                    _tier2_loop.run_until_complete(asyncio.wait_for(proc.wait(), 8))
+                except Exception:
+                    pass
+        pending = [t for t in asyncio.all_tasks(_tier2_loop) if not t.done()]
+        for task in pending:
+            task.cancel()
+        if pending:
+            _tier2_loop.run_until_complete(
+                asyncio.gather(*pending, return_exceptions=True)
+            )
+        _tier2_loop.run_until_complete(_tier2_loop.shutdown_asyncgens())
+    except Exception:
+        pass
+    finally:
         try:
             _tier2_loop.close()
         except Exception:
             pass
+        _tier2_browser = None
         _tier2_loop = None
 
 
@@ -433,7 +482,7 @@ def fetch_all_sites(sites):
                 # Fetch with tier escalation: a 403 or a 200-but-blocked
                 # interstitial both bump the site up to the next fetch tier.
                 site_start = time.monotonic()
-                tier, status, text, _headers, platform = fetch_with_escalation(session, url)
+                tier, status, text, _, platform = fetch_with_escalation(session, url)
                 elapsed = time.monotonic() - site_start
 
                 if text is None:
