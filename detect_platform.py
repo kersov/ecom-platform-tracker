@@ -21,8 +21,10 @@ JS-only sites may stay Unidentified until the Tier 2 browser path is wired.
 Intended to be run inside GitHub Actions (Docker) or locally.
 """
 import asyncio
+import html
 import json
 import os
+import re
 import sys
 import time
 from collections import Counter
@@ -40,7 +42,10 @@ DATA_FILE = os.path.join(ROOT, 'data.json')
 TIMEOUT = 15          # Tier 0 (plain requests)
 TIER1_TIMEOUT = 20    # Tier 1 (curl_cffi impersonation)
 TIER2_TIMEOUT = 45    # Tier 2 (nodriver browser) — hard cap per site
-TIER2_SETTLE = 4      # seconds to let anti-bot sensor JS run / auto-submit
+TIER2_SETTLE = 4      # initial grace for anti-bot sensor JS / auto-submit
+TIER2_SETTLE_MAX = 15 # hard cap on the adaptive settle wait (two of these + a
+                      # reload must stay under TIER2_TIMEOUT)
+TIER2_POLL = 1.5      # re-check the DOM this often while waiting for a SPA
 
 # A browser-like UA reduces trivial bot blocks on a plain HTTP fetch.
 REQUEST_HEADERS = {
@@ -253,17 +258,51 @@ async def _tier2_start():
     return await uc.start(headless=False, sandbox=False, browser_args=args, **kwargs)
 
 
+async def _tier2_settle(tab):
+    """Adaptively wait for a client-rendered page to finish rendering.
+
+    A blind fixed sleep is the main cause of Tier 2 flip-flop: a SPA that hasn't
+    hydrated yet yields a bare shell (Unidentified) on one run and the full page
+    on the next. Instead we give the sensor/hydration JS an initial grace period,
+    then poll the live DOM until either (a) a platform signature appears, or (b)
+    the content size stops growing (render settled) — capped at TIER2_SETTLE_MAX.
+    Returns the most complete HTML observed, so a late shrink never loses content.
+    """
+    await tab.sleep(TIER2_SETTLE)
+    html = await tab.get_content() or ''
+    if detect_platform_from_text(html, None, None) != 'Unidentified':
+        return html
+    best = html
+    last_len = len(html)
+    stable = 0
+    waited = TIER2_SETTLE
+    while waited < TIER2_SETTLE_MAX:
+        await tab.sleep(TIER2_POLL)
+        waited += TIER2_POLL
+        cur = await tab.get_content() or ''
+        if len(cur) >= len(best):
+            best = cur                       # keep the most complete render
+        if detect_platform_from_text(cur, None, None) != 'Unidentified':
+            return cur                       # fingerprintable — stop early
+        if abs(len(cur) - last_len) < 256:   # DOM stopped changing
+            stable += 1
+            if stable >= 2:
+                break
+        else:
+            stable = 0
+        last_len = len(cur)
+    return best
+
+
 async def _tier2_fetch(browser, url):
     tab = await browser.get(url, new_tab=True)
     try:
-        await tab.sleep(TIER2_SETTLE)
-        html = await tab.get_content()
+        html = await _tier2_settle(tab)
         # Anti-bot pages typically set a clearance cookie via JS then auto-reload
         # to the real page. If we still see a challenge, give it one more cycle.
         if _looks_blocked(200, html):
             await tab.reload()
-            await tab.sleep(TIER2_SETTLE)
-            html = await tab.get_content()
+            html = await _tier2_settle(tab)
         return html
     finally:
         await tab.close()
@@ -396,6 +435,15 @@ def fetch_with_escalation(session, url):
             tier = 2                          # only the browser can render this
         else:
             break
+
+    # Last-tier SPA fallback: we've exhausted the fetch ladder still Unidentified.
+    # If the final page is a client-side app, decode its embedded state and try
+    # once more — the platform often hides in escaped API/CDN URLs there.
+    b_tier, b_status, b_text, b_headers, b_platform = best
+    if b_platform == 'Unidentified' and b_text is not None:
+        spa_platform = detect_platform_from_spa_state(b_text, b_headers, url)
+        if spa_platform != 'Unidentified':
+            best = (b_tier, b_status, b_text, b_headers, spa_platform)
     return best
 
 
@@ -457,6 +505,41 @@ def detect_platform_from_text(html_text, headers, url):
     return 'Unidentified'
 
 
+def _decode_escaped(text):
+    """Normalize JSON/HTML escaping so escaped platform signatures become matchable.
+
+    SPA state blobs (Next.js `__NEXT_DATA__`, Nuxt, Apollo, ...) embed URLs with
+    escaped slashes (``\\/on\\/demandware``, ``cdn\\u002fshopify``) and HTML
+    entities, so a signature like ``/skin/frontend/`` or ``.myshopify.com`` is
+    present but hidden from the raw-text detector. Decoding the common escapes
+    surfaces it. This only *normalizes* bytes already in the payload — it can
+    reveal a signature that was there, never fabricate one.
+    """
+    if not text:
+        return text
+    decoded = text.replace('\\/', '/')
+    decoded = re.sub(r'\\u([0-9a-fA-F]{4})',
+                     lambda m: chr(int(m.group(1), 16)), decoded)
+    return html.unescape(decoded)
+
+
+def detect_platform_from_spa_state(text, headers, url):
+    """Last-tier fallback for client-side-rendered pages.
+
+    When a page carries SPA state (see SPA_MARKERS) but nothing matched in its raw
+    form, decode the embedded state and re-run the signature detector over it: the
+    backend platform (Shopify Hydrogen, SFCC PWA Kit, commercetools, ...) commonly
+    leaks through escaped API/CDN URLs inside that state even when the visible DOM
+    carries no marker. Returns a platform name or 'Unidentified'. A page with no
+    SPA state is left untouched so server-rendered pages are never affected.
+    """
+    if not text:
+        return 'Unidentified'
+    if not any(m in text.lower() for m in SPA_MARKERS):
+        return 'Unidentified'
+    return detect_platform_from_text(_decode_escaped(text), headers, url)
+
+
 # -------------------------
 # Fetcher
 # -------------------------
@@ -466,6 +549,7 @@ def fetch_all_sites(sites):
     total = len(sites)
     status_counts = Counter()
     platform_counts = Counter()
+    skipped = 0
     run_start = time.monotonic()
     proxy_state = "on (Tier 1+)" if PROXIES else "off (direct)"
     print(f"Starting platform detection for {total} site(s)... [proxy: {proxy_state}]")
@@ -486,12 +570,38 @@ def fetch_all_sites(sites):
                 elapsed = time.monotonic() - site_start
 
                 if text is None:
+                    # Unreachable even on the last tier: skip entirely — never
+                    # record 'Unidentified' just because we couldn't fetch it.
                     status_counts['unreachable'] += 1
+                    skipped += 1
                     print(f"[{index}/{total}] [WARN] {name} -> {url}  =>  "
-                          f"unreachable (T{tier}, {elapsed:.2f}s)")
+                          f"unreachable — skipped (T{tier}, {elapsed:.2f}s)")
                     continue
 
                 status_counts[status] += 1
+
+                # Don't record an 'Unidentified' that isn't a genuine storefront
+                # miss. Skip it — leaving the brand's known history untouched — when
+                # the final response is either:
+                #   * a non-2xx (3xx redirect / 4xx block / 5xx error), or
+                #   * a detected anti-bot interstitial, even at HTTP 200: a WAF
+                #     (e.g. Cloudflare "Just a moment...") can launder a 403 into a
+                #     200 challenge page at the browser tier, which carries no
+                #     storefront markup. _looks_blocked already recognizes these.
+                # A plain 2xx page we simply don't recognize is a real miss and is
+                # still recorded as 'Unidentified'.
+                if platform == 'Unidentified' and (
+                        not (status is not None and 200 <= status < 300)
+                        or _looks_blocked(status, text)):
+                    skipped += 1
+                    reason = ('non-2xx'
+                              if not (status is not None and 200 <= status < 300)
+                              else 'blocked')
+                    print(f"[{index}/{total}] (T{tier}) {name} -> {url}  =>  "
+                          f"[{status}] Unidentified — skipped ({reason}) "
+                          f"({elapsed:.2f}s)")
+                    continue
+
                 platform_counts[platform] += 1
                 print(f"[{index}/{total}] (T{tier}) {name} -> {url}  =>  "
                       f"[{status}] {platform} ({elapsed:.2f}s)")
@@ -501,7 +611,7 @@ def fetch_all_sites(sites):
         close_tier2()
 
     total_elapsed = time.monotonic() - run_start
-    print_summary(total, status_counts, platform_counts, total_elapsed)
+    print_summary(total, status_counts, platform_counts, skipped, total_elapsed)
     return results
 
 
@@ -512,12 +622,14 @@ def _format_counts(counts, total):
         yield f"  {str(label):<28} {count:>4}  ({pct:5.1f}%)"
 
 
-def print_summary(total, status_counts, platform_counts, total_elapsed):
+def print_summary(total, status_counts, platform_counts, skipped, total_elapsed):
     """Print response-code and platform breakdowns plus total execution time."""
     print("\n" + "=" * 48)
     print("SUMMARY")
     print("=" * 48)
     print(f"Sites processed: {total}")
+    print(f"Recorded: {sum(platform_counts.values())}   "
+          f"Skipped (unreachable / non-2xx): {skipped}")
 
     print("\nBy response status:")
     for line in _format_counts(status_counts, total):
