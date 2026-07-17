@@ -95,12 +95,6 @@
   "Browns Fashion": [
     {
       "2025-11-04": "Shopify"
-    },
-    {
-      "2026-07-09": "Unidentified"
-    },
-    {
-      "2026-07-10": "Shopify"
     }
   ],
   "Carbon38": [
@@ -156,12 +150,6 @@
   "ShopSimon": [
     {
       "2025-11-04": "Shopify"
-    },
-    {
-      "2026-07-14": "Unidentified"
-    },
-    {
-      "2026-07-15": "Shopify"
     }
   ],
   "Skims": [
@@ -172,23 +160,11 @@
   "Slam City Skates": [
     {
       "2026-03-17": "Shopify"
-    },
-    {
-      "2026-07-14": "Unidentified"
-    },
-    {
-      "2026-07-15": "Shopify"
     }
   ],
   "Stadium Goods": [
     {
       "2025-11-04": "Shopify"
-    },
-    {
-      "2026-07-14": "Unidentified"
-    },
-    {
-      "2026-07-15": "Shopify"
     }
   ],
   "Superdry": [
@@ -241,12 +217,6 @@
   "Arcteryx": [
     {
       "2026-03-18": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-09": "Unidentified"
-    },
-    {
-      "2026-07-10": "Salesforce Commerce Cloud"
     }
   ],
   "Argos": [
@@ -304,12 +274,6 @@
   "Berluti": [
     {
       "2025-11-08": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-09": "Unidentified"
-    },
-    {
-      "2026-07-07": "Salesforce Commerce Cloud"
     },
     {
       "2026-07-08": "Unidentified"
@@ -422,12 +386,6 @@
   "Dr. Scholls": [
     {
       "2025-11-08": "Shopify"
-    },
-    {
-      "2026-07-02": "Unidentified"
-    },
-    {
-      "2026-07-03": "Shopify"
     }
   ],
   "Fila": [
@@ -449,12 +407,6 @@
     },
     {
       "2026-06-09": "Shopify"
-    },
-    {
-      "2026-07-15": "Unidentified"
-    },
-    {
-      "2026-07-16": "Shopify"
     }
   ],
   "Foot Locker": [
@@ -556,18 +508,6 @@
   "Karhu": [
     {
       "2025-11-08": "Shopify"
-    },
-    {
-      "2026-06-18": "Unidentified"
-    },
-    {
-      "2026-06-19": "Shopify"
-    },
-    {
-      "2026-07-15": "Unidentified"
-    },
-    {
-      "2026-07-16": "Shopify"
     }
   ],
   "Kenzo": [
@@ -623,24 +563,6 @@
   "Marc Jacobs": [
     {
       "2025-11-13": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-07": "Unidentified"
-    },
-    {
-      "2026-07-09": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-10": "Unidentified"
-    },
-    {
-      "2026-07-11": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-13": "Unidentified"
-    },
-    {
-      "2026-07-14": "Salesforce Commerce Cloud"
     }
   ],
   "Marks & Spencer": [
@@ -824,12 +746,6 @@
   "Sperry": [
     {
       "2025-11-08": "Shopify"
-    },
-    {
-      "2026-07-14": "Unidentified"
-    },
-    {
-      "2026-07-15": "Shopify"
     }
   ],
   "Stradivarius": [
@@ -880,12 +796,6 @@
   "TYR Sport": [
     {
       "2025-11-08": "Shopify"
-    },
-    {
-      "2026-07-14": "Unidentified"
-    },
-    {
-      "2026-07-15": "Shopify"
     }
   ],
   "Umbro": [
@@ -975,18 +885,6 @@
   "Christian Dior": [
     {
       "2026-03-18": "Magento"
-    },
-    {
-      "2026-06-30": "Unidentified"
-    },
-    {
-      "2026-07-01": "Magento"
-    },
-    {
-      "2026-07-14": "Unidentified"
-    },
-    {
-      "2026-07-15": "Magento"
     }
   ],
   "Fresh": [
@@ -1007,42 +905,6 @@
   "Olukai": [
     {
       "2025-11-09": "Shopify"
-    },
-    {
-      "2026-06-22": "Unidentified"
-    },
-    {
-      "2026-06-23": "Shopify"
-    },
-    {
-      "2026-06-24": "Unidentified"
-    },
-    {
-      "2026-06-25": "Shopify"
-    },
-    {
-      "2026-06-26": "Unidentified"
-    },
-    {
-      "2026-06-27": "Shopify"
-    },
-    {
-      "2026-07-05": "Unidentified"
-    },
-    {
-      "2026-07-06": "Shopify"
-    },
-    {
-      "2026-07-08": "Unidentified"
-    },
-    {
-      "2026-07-09": "Shopify"
-    },
-    {
-      "2026-07-11": "Unidentified"
-    },
-    {
-      "2026-07-12": "Shopify"
     },
     {
       "2026-07-15": "Unidentified"
@@ -1089,12 +951,6 @@
   "Gymshark": [
     {
       "2025-11-13": "Shopify"
-    },
-    {
-      "2026-07-09": "Unidentified"
-    },
-    {
-      "2026-07-10": "Shopify"
     }
   ],
   "J.Crew": [
@@ -1165,65 +1021,11 @@
   "Teva": [
     {
       "2026-02-09": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-28": "Unidentified"
-    },
-    {
-      "2026-06-30": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-11": "Unidentified"
-    },
-    {
-      "2026-07-12": "Salesforce Commerce Cloud"
     }
   ],
   "Veja": [
     {
       "2026-02-20": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-10": "Unidentified"
-    },
-    {
-      "2026-06-11": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-20": "Unidentified"
-    },
-    {
-      "2026-06-21": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-22": "Unidentified"
-    },
-    {
-      "2026-06-23": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-25": "Unidentified"
-    },
-    {
-      "2026-06-27": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-29": "Unidentified"
-    },
-    {
-      "2026-06-30": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-05": "Unidentified"
-    },
-    {
-      "2026-07-06": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-12": "Unidentified"
-    },
-    {
-      "2026-07-13": "Salesforce Commerce Cloud"
     },
     {
       "2026-07-14": "Unidentified"
@@ -1232,53 +1034,11 @@
   "Anthropologie": [
     {
       "2026-03-17": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-03-18": "Unidentified"
-    },
-    {
-      "2026-06-09": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-11": "Unidentified"
-    },
-    {
-      "2026-06-12": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-13": "Unidentified"
-    },
-    {
-      "2026-06-30": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-11": "Unidentified"
-    },
-    {
-      "2026-07-12": "Salesforce Commerce Cloud"
     }
   ],
   "Free People": [
     {
       "2026-03-17": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-11": "Unidentified"
-    },
-    {
-      "2026-06-12": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-13": "Unidentified"
-    },
-    {
-      "2026-06-30": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-11": "Unidentified"
-    },
-    {
-      "2026-07-12": "Salesforce Commerce Cloud"
     }
   ],
   "JD.com": [
@@ -1304,30 +1064,6 @@
   "Nordstrom": [
     {
       "2026-03-17": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-03-18": "Unidentified"
-    },
-    {
-      "2026-06-11": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-13": "Unidentified"
-    },
-    {
-      "2026-06-19": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-20": "Unidentified"
-    },
-    {
-      "2026-06-22": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-23": "Unidentified"
-    },
-    {
-      "2026-07-04": "Salesforce Commerce Cloud"
     },
     {
       "2026-07-05": "Unidentified"
@@ -1365,12 +1101,6 @@
     },
     {
       "2026-06-26": "Commercetools"
-    },
-    {
-      "2026-06-28": "Unidentified"
-    },
-    {
-      "2026-07-14": "Commercetools"
     }
   ],
   "Walmart": [
@@ -1381,47 +1111,11 @@
   "Vivobarefoot": [
     {
       "2026-03-17": "Magento"
-    },
-    {
-      "2026-06-11": "Unidentified"
-    },
-    {
-      "2026-06-12": "Magento"
-    },
-    {
-      "2026-06-28": "Unidentified"
-    },
-    {
-      "2026-06-30": "Magento"
-    },
-    {
-      "2026-07-11": "Unidentified"
-    },
-    {
-      "2026-07-12": "Magento"
     }
   ],
   "Urban Outfitters": [
     {
       "2026-03-17": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-11": "Unidentified"
-    },
-    {
-      "2026-06-12": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-13": "Unidentified"
-    },
-    {
-      "2026-06-30": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-10": "Unidentified"
-    },
-    {
-      "2026-07-12": "Salesforce Commerce Cloud"
     }
   ],
   "Wayfair": [
@@ -1442,24 +1136,6 @@
   "ASICS": [
     {
       "2026-03-17": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-18": "Unidentified"
-    },
-    {
-      "2026-07-07": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-08": "Unidentified"
-    },
-    {
-      "2026-07-11": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-13": "Unidentified"
-    },
-    {
-      "2026-07-15": "Salesforce Commerce Cloud"
     }
   ],
   "Best Buy": [
@@ -1477,90 +1153,12 @@
       "2026-03-17": "Salesforce Commerce Cloud"
     },
     {
-      "2026-06-09": "Unidentified"
-    },
-    {
-      "2026-07-04": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-05": "Unidentified"
-    },
-    {
-      "2026-07-10": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-11": "Unidentified"
-    },
-    {
-      "2026-07-12": "Salesforce Commerce Cloud"
-    },
-    {
       "2026-07-13": "Unidentified"
     }
   ],
   "Castore": [
     {
       "2026-03-17": "Shopify"
-    },
-    {
-      "2026-06-10": "Unidentified"
-    },
-    {
-      "2026-06-11": "Shopify"
-    },
-    {
-      "2026-06-12": "Unidentified"
-    },
-    {
-      "2026-06-13": "Shopify"
-    },
-    {
-      "2026-06-14": "Unidentified"
-    },
-    {
-      "2026-06-15": "Shopify"
-    },
-    {
-      "2026-06-17": "Unidentified"
-    },
-    {
-      "2026-06-18": "Shopify"
-    },
-    {
-      "2026-06-19": "Unidentified"
-    },
-    {
-      "2026-06-20": "Shopify"
-    },
-    {
-      "2026-06-22": "Unidentified"
-    },
-    {
-      "2026-06-27": "Shopify"
-    },
-    {
-      "2026-06-29": "Unidentified"
-    },
-    {
-      "2026-06-30": "Shopify"
-    },
-    {
-      "2026-07-01": "Unidentified"
-    },
-    {
-      "2026-07-02": "Shopify"
-    },
-    {
-      "2026-07-05": "Unidentified"
-    },
-    {
-      "2026-07-06": "Shopify"
-    },
-    {
-      "2026-07-10": "Unidentified"
-    },
-    {
-      "2026-07-11": "Shopify"
     },
     {
       "2026-07-15": "Unidentified"
@@ -1599,12 +1197,6 @@
   "Dick's Sporting Goods": [
     {
       "2026-03-17": "WordPress"
-    },
-    {
-      "2026-03-18": "Unidentified"
-    },
-    {
-      "2026-07-10": "WordPress"
     }
   ],
   "Etsy": [
@@ -1622,12 +1214,6 @@
       "2026-03-17": "Salesforce Commerce Cloud"
     },
     {
-      "2026-03-18": "Unidentified"
-    },
-    {
-      "2026-06-09": "Salesforce Commerce Cloud"
-    },
-    {
       "2026-06-10": "Unidentified"
     }
   ],
@@ -1641,42 +1227,12 @@
       "2026-03-17": "Salesforce Commerce Cloud"
     },
     {
-      "2026-06-09": "Unidentified"
-    },
-    {
-      "2026-07-13": "Salesforce Commerce Cloud"
-    },
-    {
       "2026-07-14": "Unidentified"
     }
   ],
   "H&M": [
     {
       "2026-03-17": "SAP Commerce Cloud"
-    },
-    {
-      "2026-06-28": "Unidentified"
-    },
-    {
-      "2026-06-29": "SAP Commerce Cloud"
-    },
-    {
-      "2026-07-03": "Unidentified"
-    },
-    {
-      "2026-07-04": "SAP Commerce Cloud"
-    },
-    {
-      "2026-07-06": "Unidentified"
-    },
-    {
-      "2026-07-07": "SAP Commerce Cloud"
-    },
-    {
-      "2026-07-11": "Unidentified"
-    },
-    {
-      "2026-07-15": "SAP Commerce Cloud"
     }
   ],
   "Harrods": [
@@ -1697,12 +1253,6 @@
   "HOKA": [
     {
       "2026-03-17": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-09": "Unidentified"
-    },
-    {
-      "2026-07-10": "Salesforce Commerce Cloud"
     }
   ],
   "Jacquemus": [
@@ -1711,12 +1261,6 @@
     },
     {
       "2026-06-09": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-10": "Unidentified"
-    },
-    {
-      "2026-07-10": "Salesforce Commerce Cloud"
     }
   ],
   "John Lewis": [
@@ -1748,24 +1292,6 @@
     },
     {
       "2026-06-09": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-27": "Unidentified"
-    },
-    {
-      "2026-06-28": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-04": "Unidentified"
-    },
-    {
-      "2026-07-08": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-10": "Unidentified"
-    },
-    {
-      "2026-07-14": "Salesforce Commerce Cloud"
     }
   ],
   "Lululemon": [
@@ -1779,12 +1305,6 @@
   "Macy's": [
     {
       "2026-03-18": "Oracle Commerce Cloud"
-    },
-    {
-      "2026-06-17": "Unidentified"
-    },
-    {
-      "2026-07-10": "Oracle Commerce Cloud"
     }
   ],
   "Michael Kors": [
@@ -1813,24 +1333,6 @@
   "Offspring": [
     {
       "2026-03-17": "SAP Commerce Cloud"
-    },
-    {
-      "2026-06-14": "Unidentified"
-    },
-    {
-      "2026-06-15": "SAP Commerce Cloud"
-    },
-    {
-      "2026-06-18": "Unidentified"
-    },
-    {
-      "2026-06-19": "SAP Commerce Cloud"
-    },
-    {
-      "2026-07-10": "Unidentified"
-    },
-    {
-      "2026-07-11": "SAP Commerce Cloud"
     }
   ],
   "Petco": [
@@ -1856,24 +1358,6 @@
   "Rimowa": [
     {
       "2026-03-17": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-11": "Unidentified"
-    },
-    {
-      "2026-06-12": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-03": "Unidentified"
-    },
-    {
-      "2026-07-05": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-10": "Unidentified"
-    },
-    {
-      "2026-07-12": "Salesforce Commerce Cloud"
     }
   ],
   "Sainsbury's": [
@@ -1889,12 +1373,6 @@
   "Skechers GoWalk": [
     {
       "2026-03-17": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-03-18": "Unidentified"
-    },
-    {
-      "2026-06-09": "Salesforce Commerce Cloud"
     }
   ],
   "Skechers Work": [
@@ -1944,12 +1422,6 @@
     },
     {
       "2026-06-09": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-10": "Unidentified"
-    },
-    {
-      "2026-07-16": "Salesforce Commerce Cloud"
     }
   ],
   "Weekday": [
@@ -1975,12 +1447,6 @@
   "2XU": [
     {
       "2026-06-09": "Shopify"
-    },
-    {
-      "2026-07-10": "Unidentified"
-    },
-    {
-      "2026-07-11": "Shopify"
     }
   ],
   "A.P.C.": [
@@ -2061,54 +1527,12 @@
       "2026-06-17": "Salesforce Commerce Cloud"
     },
     {
-      "2026-06-19": "Unidentified"
-    },
-    {
-      "2026-06-22": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-23": "Unidentified"
-    },
-    {
-      "2026-06-25": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-26": "Unidentified"
-    },
-    {
-      "2026-06-29": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-30": "Unidentified"
-    },
-    {
-      "2026-07-01": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-03": "Unidentified"
-    },
-    {
-      "2026-07-08": "Salesforce Commerce Cloud"
-    },
-    {
       "2026-07-09": "Unidentified"
     }
   ],
   "Balenciaga": [
     {
       "2026-06-09": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-25": "Unidentified"
-    },
-    {
-      "2026-06-26": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-02": "Unidentified"
-    },
-    {
-      "2026-07-03": "Salesforce Commerce Cloud"
     }
   ],
   "Balmain": [
@@ -2179,12 +1603,6 @@
   "Burrow": [
     {
       "2026-06-09": "Shopify"
-    },
-    {
-      "2026-07-02": "Unidentified"
-    },
-    {
-      "2026-07-03": "Shopify"
     }
   ],
   "Byredo": [
@@ -2210,66 +1628,6 @@
   "Carter's": [
     {
       "2026-06-09": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-11": "Unidentified"
-    },
-    {
-      "2026-06-12": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-14": "Unidentified"
-    },
-    {
-      "2026-06-16": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-17": "Unidentified"
-    },
-    {
-      "2026-06-18": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-25": "Unidentified"
-    },
-    {
-      "2026-06-26": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-28": "Unidentified"
-    },
-    {
-      "2026-06-29": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-04": "Unidentified"
-    },
-    {
-      "2026-07-05": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-07": "Unidentified"
-    },
-    {
-      "2026-07-08": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-09": "Unidentified"
-    },
-    {
-      "2026-07-10": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-11": "Unidentified"
-    },
-    {
-      "2026-07-12": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-13": "Unidentified"
-    },
-    {
-      "2026-07-14": "Salesforce Commerce Cloud"
     },
     {
       "2026-07-15": "Unidentified"
@@ -2300,48 +1658,6 @@
       "2026-06-09": "Salesforce Commerce Cloud"
     },
     {
-      "2026-06-19": "Unidentified"
-    },
-    {
-      "2026-06-21": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-22": "Unidentified"
-    },
-    {
-      "2026-06-24": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-25": "Unidentified"
-    },
-    {
-      "2026-06-26": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-27": "Unidentified"
-    },
-    {
-      "2026-07-01": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-02": "Unidentified"
-    },
-    {
-      "2026-07-07": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-08": "Unidentified"
-    },
-    {
-      "2026-07-10": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-12": "Unidentified"
-    },
-    {
-      "2026-07-13": "Salesforce Commerce Cloud"
-    },
-    {
       "2026-07-14": "Unidentified"
     }
   ],
@@ -2363,41 +1679,11 @@
   "Chow Tai Fook": [
     {
       "2026-06-09": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-09": "Unidentified"
-    },
-    {
-      "2026-07-10": "Salesforce Commerce Cloud"
     }
   ],
   "Christian Louboutin": [
     {
       "2026-06-09": "Magento"
-    },
-    {
-      "2026-06-20": "Unidentified"
-    },
-    {
-      "2026-06-21": "Magento"
-    },
-    {
-      "2026-06-24": "Unidentified"
-    },
-    {
-      "2026-06-25": "Magento"
-    },
-    {
-      "2026-06-26": "Unidentified"
-    },
-    {
-      "2026-06-27": "Magento"
-    },
-    {
-      "2026-07-12": "Unidentified"
-    },
-    {
-      "2026-07-13": "Magento"
     },
     {
       "2026-07-15": "Unidentified"
@@ -2516,77 +1802,11 @@
   "Fossil": [
     {
       "2026-06-09": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-19": "Unidentified"
-    },
-    {
-      "2026-06-21": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-22": "Unidentified"
-    },
-    {
-      "2026-06-23": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-24": "Unidentified"
-    },
-    {
-      "2026-06-26": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-08": "Unidentified"
-    },
-    {
-      "2026-07-10": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-11": "Unidentified"
-    },
-    {
-      "2026-07-12": "Salesforce Commerce Cloud"
     }
   ],
   "French Connection": [
     {
       "2026-06-09": "Shopify"
-    },
-    {
-      "2026-06-14": "Unidentified"
-    },
-    {
-      "2026-06-15": "Shopify"
-    },
-    {
-      "2026-06-19": "Unidentified"
-    },
-    {
-      "2026-06-21": "Shopify"
-    },
-    {
-      "2026-06-24": "Unidentified"
-    },
-    {
-      "2026-06-27": "Shopify"
-    },
-    {
-      "2026-06-30": "Unidentified"
-    },
-    {
-      "2026-07-01": "Shopify"
-    },
-    {
-      "2026-07-10": "Unidentified"
-    },
-    {
-      "2026-07-11": "Shopify"
-    },
-    {
-      "2026-07-12": "Unidentified"
-    },
-    {
-      "2026-07-13": "Shopify"
     },
     {
       "2026-07-15": "Unidentified"
@@ -2625,24 +1845,6 @@
   "GoPro": [
     {
       "2026-06-09": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-11": "Unidentified"
-    },
-    {
-      "2026-06-12": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-28": "Unidentified"
-    },
-    {
-      "2026-06-30": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-10": "Unidentified"
-    },
-    {
-      "2026-07-12": "Salesforce Commerce Cloud"
     }
   ],
   "Gorjana": [
@@ -2731,12 +1933,6 @@
   "Jenni Kayne": [
     {
       "2026-06-09": "Shopify"
-    },
-    {
-      "2026-07-02": "Unidentified"
-    },
-    {
-      "2026-07-03": "Shopify"
     }
   ],
   "Jimmy Choo": [
@@ -2842,36 +2038,6 @@
       "2026-06-17": "Magento"
     },
     {
-      "2026-06-19": "Unidentified"
-    },
-    {
-      "2026-06-22": "Magento"
-    },
-    {
-      "2026-06-23": "Unidentified"
-    },
-    {
-      "2026-06-25": "Magento"
-    },
-    {
-      "2026-06-26": "Unidentified"
-    },
-    {
-      "2026-06-29": "Magento"
-    },
-    {
-      "2026-06-30": "Unidentified"
-    },
-    {
-      "2026-07-01": "Magento"
-    },
-    {
-      "2026-07-03": "Unidentified"
-    },
-    {
-      "2026-07-08": "Magento"
-    },
-    {
       "2026-07-09": "Unidentified"
     }
   ],
@@ -2963,12 +2129,6 @@
   "MVMT": [
     {
       "2026-06-09": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-12": "Unidentified"
-    },
-    {
-      "2026-06-13": "Salesforce Commerce Cloud"
     }
   ],
   "NARS": [
@@ -2982,24 +2142,6 @@
     },
     {
       "2026-06-30": "SAP Commerce Cloud"
-    },
-    {
-      "2026-07-02": "Unidentified"
-    },
-    {
-      "2026-07-03": "SAP Commerce Cloud"
-    },
-    {
-      "2026-07-04": "Unidentified"
-    },
-    {
-      "2026-07-06": "SAP Commerce Cloud"
-    },
-    {
-      "2026-07-07": "Unidentified"
-    },
-    {
-      "2026-07-14": "SAP Commerce Cloud"
     },
     {
       "2026-07-15": "Unidentified"
@@ -3038,77 +2180,11 @@
   "OshKosh B'gosh": [
     {
       "2026-06-09": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-11": "Unidentified"
-    },
-    {
-      "2026-06-12": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-14": "Unidentified"
-    },
-    {
-      "2026-06-16": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-17": "Unidentified"
-    },
-    {
-      "2026-06-18": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-09": "Unidentified"
-    },
-    {
-      "2026-07-12": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-13": "Unidentified"
-    },
-    {
-      "2026-07-15": "Salesforce Commerce Cloud"
     }
   ],
   "Osprey": [
     {
       "2026-06-09": "Magento"
-    },
-    {
-      "2026-06-10": "Unidentified"
-    },
-    {
-      "2026-06-11": "Magento"
-    },
-    {
-      "2026-06-12": "Unidentified"
-    },
-    {
-      "2026-06-13": "Magento"
-    },
-    {
-      "2026-06-20": "Unidentified"
-    },
-    {
-      "2026-06-21": "Magento"
-    },
-    {
-      "2026-06-26": "Unidentified"
-    },
-    {
-      "2026-06-27": "Magento"
-    },
-    {
-      "2026-07-01": "Unidentified"
-    },
-    {
-      "2026-07-02": "Magento"
-    },
-    {
-      "2026-07-11": "Unidentified"
-    },
-    {
-      "2026-07-12": "Magento"
     },
     {
       "2026-07-14": "Unidentified"
@@ -3140,54 +2216,6 @@
     },
     {
       "2026-06-10": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-15": "Unidentified"
-    },
-    {
-      "2026-06-18": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-19": "Unidentified"
-    },
-    {
-      "2026-06-21": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-24": "Unidentified"
-    },
-    {
-      "2026-06-25": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-06-26": "Unidentified"
-    },
-    {
-      "2026-06-27": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-02": "Unidentified"
-    },
-    {
-      "2026-07-03": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-09": "Unidentified"
-    },
-    {
-      "2026-07-11": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-12": "Unidentified"
-    },
-    {
-      "2026-07-14": "Salesforce Commerce Cloud"
-    },
-    {
-      "2026-07-15": "Unidentified"
-    },
-    {
-      "2026-07-16": "Salesforce Commerce Cloud"
     }
   ],
   "Patagonia": [
@@ -3263,12 +2291,6 @@
   "Rhone": [
     {
       "2026-06-09": "Shopify"
-    },
-    {
-      "2026-06-26": "Unidentified"
-    },
-    {
-      "2026-06-27": "Shopify"
     }
   ],
   "River Island": [
@@ -3331,12 +2353,6 @@
     },
     {
       "2026-06-25": "Shopify"
-    },
-    {
-      "2026-07-14": "Unidentified"
-    },
-    {
-      "2026-07-15": "Shopify"
     }
   ],
   "Sonos": [
@@ -3365,12 +2381,6 @@
     },
     {
       "2026-06-25": "Shopify"
-    },
-    {
-      "2026-07-14": "Unidentified"
-    },
-    {
-      "2026-07-15": "Shopify"
     }
   ],
   "Sports Direct": [
@@ -3386,29 +2396,11 @@
   "Steve Madden": [
     {
       "2026-06-09": "Shopify"
-    },
-    {
-      "2026-07-14": "Unidentified"
-    },
-    {
-      "2026-07-15": "Shopify"
     }
   ],
   "Stüssy": [
     {
       "2026-06-09": "Shopify"
-    },
-    {
-      "2026-07-02": "Unidentified"
-    },
-    {
-      "2026-07-03": "Shopify"
-    },
-    {
-      "2026-07-14": "Unidentified"
-    },
-    {
-      "2026-07-15": "Shopify"
     }
   ],
   "SuitSupply": [
@@ -3437,12 +2429,6 @@
   "Sunday Riley": [
     {
       "2026-06-09": "Shopify"
-    },
-    {
-      "2026-07-14": "Unidentified"
-    },
-    {
-      "2026-07-15": "Shopify"
     }
   ],
   "Supreme": [
@@ -3458,23 +2444,11 @@
   "Tatcha": [
     {
       "2026-06-09": "Shopify"
-    },
-    {
-      "2026-07-14": "Unidentified"
-    },
-    {
-      "2026-07-15": "Shopify"
     }
   ],
   "Taylor Stitch": [
     {
       "2026-06-09": "Shopify"
-    },
-    {
-      "2026-07-14": "Unidentified"
-    },
-    {
-      "2026-07-15": "Shopify"
     }
   ],
   "TaylorMade": [
@@ -3500,12 +2474,6 @@
   "ThirdLove": [
     {
       "2026-06-09": "Shopify"
-    },
-    {
-      "2026-07-14": "Unidentified"
-    },
-    {
-      "2026-07-15": "Shopify"
     }
   ],
   "Thursday Boot Company": [
@@ -3584,12 +2552,6 @@
   "Venum": [
     {
       "2026-06-09": "Shopify"
-    },
-    {
-      "2026-07-02": "Unidentified"
-    },
-    {
-      "2026-07-03": "Shopify"
     }
   ],
   "Versace": [
@@ -3640,12 +2602,6 @@
   "Yonex": [
     {
       "2026-06-09": "Shopify"
-    },
-    {
-      "2026-07-15": "Unidentified"
-    },
-    {
-      "2026-07-16": "Shopify"
     }
   ],
   "Youth to the People": [
