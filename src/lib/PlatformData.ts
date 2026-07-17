@@ -5,20 +5,28 @@
 
 import data from '../../data.json';
 
-// Precompute ranked platform usage object
+// Precompute ranked platform usage object.
+// Each brand counts exactly once, toward its *current* platform (the latest
+// dated record) — history records are change events, so summing them all
+// would count flip-flopping brands multiple times and disagree with the
+// forward-filled trend chart.
 function computeRankedPlatformUsage(data: Record<string, Record<string, string>[]>) {
   const usage: Record<string, number> = {};
   let unidentifiedCount = 0;
   Object.values(data).forEach(historyArr => {
-    historyArr.forEach(entry => {
-      Object.values(entry).forEach(platform => {
-        if (platform === "Unidentified") {
-          unidentifiedCount++;
-        } else {
-          usage[platform] = (usage[platform] || 0) + 1;
-        }
-      });
-    });
+    const records = historyArr
+      .map(entry => {
+        const [date, platform] = Object.entries(entry)[0];
+        return { date, platform };
+      })
+      .sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
+    if (records.length === 0) return;
+    const current = records[records.length - 1].platform;
+    if (current === "Unidentified") {
+      unidentifiedCount++;
+    } else {
+      usage[current] = (usage[current] || 0) + 1;
+    }
   });
   // Sort platforms by usage descending
   const sorted = Object.entries(usage).sort((a, b) => b[1] - a[1]);
