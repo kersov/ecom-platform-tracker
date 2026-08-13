@@ -914,6 +914,9 @@
     },
     {
       "2026-07-15": "Unidentified"
+    },
+    {
+      "2026-08-13": "Shopify"
     }
   ],
   "Puma": [
@@ -1103,6 +1106,9 @@
     },
     {
       "2026-08-12": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-08-13": "Unidentified"
     }
   ],
   "Prada": [
@@ -2139,6 +2145,9 @@
   "MAC Cosmetics": [
     {
       "2026-06-09": "Unidentified"
+    },
+    {
+      "2026-08-13": "Shopify"
     }
   ],
   "Macron": [
