@@ -2009,6 +2009,9 @@
   "Head": [
     {
       "2026-06-09": "Unidentified"
+    },
+    {
+      "2026-08-27": "Magento"
     }
   ],
   "Herschel": [
@@ -2323,6 +2326,9 @@
   "Omega": [
     {
       "2026-06-09": "Magento"
+    },
+    {
+      "2026-08-27": "Salesforce Commerce Cloud"
     }
   ],
   "Oscar de la Renta": [
