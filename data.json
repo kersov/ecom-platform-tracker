@@ -123,6 +123,9 @@
   "Jigsaw": [
     {
       "2025-11-04": "Shopify"
+    },
+    {
+      "2026-09-13": "Salesforce Commerce Cloud"
     }
   ],
   "Liberty London": [
@@ -1486,6 +1489,9 @@
     },
     {
       "2026-09-09": "Unidentified"
+    },
+    {
+      "2026-09-13": "SAP Commerce Cloud"
     }
   ],
   "Petco": [
@@ -1560,6 +1566,9 @@
     },
     {
       "2026-09-05": "Unidentified"
+    },
+    {
+      "2026-09-13": "Salesforce Commerce Cloud"
     }
   ],
   "The Outnet": [
