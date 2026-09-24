@@ -219,6 +219,9 @@
     },
     {
       "2026-06-09": "Oracle Commerce Cloud"
+    },
+    {
+      "2026-09-24": "Salesforce Commerce Cloud"
     }
   ],
   "Apple Store": [
@@ -1410,6 +1413,9 @@
     },
     {
       "2026-09-18": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-09-24": "Unidentified"
     }
   ],
   "Louis Vuitton": [
@@ -1513,6 +1519,9 @@
     },
     {
       "2026-09-16": "Unidentified"
+    },
+    {
+      "2026-09-24": "SAP Commerce Cloud"
     }
   ],
   "Petco": [
@@ -1929,6 +1938,9 @@
   "Clinique": [
     {
       "2026-06-09": "Unidentified"
+    },
+    {
+      "2026-09-24": "Shopify"
     }
   ],
   "Columbia": [
