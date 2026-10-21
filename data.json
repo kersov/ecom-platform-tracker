@@ -225,6 +225,9 @@
     },
     {
       "2026-09-25": "Oracle Commerce Cloud"
+    },
+    {
+      "2026-10-21": "Salesforce Commerce Cloud"
     }
   ],
   "Apple Store": [
@@ -1169,6 +1172,9 @@
     },
     {
       "2026-10-15": "Unidentified"
+    },
+    {
+      "2026-10-21": "Salesforce Commerce Cloud"
     }
   ],
   "Prada": [
@@ -2117,6 +2123,9 @@
   "END Clothing": [
     {
       "2026-06-09": "Magento"
+    },
+    {
+      "2026-10-21": "Unidentified"
     }
   ],
   "Estée Lauder": [
