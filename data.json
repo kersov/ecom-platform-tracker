@@ -290,6 +290,9 @@
   "Belmond": [
     {
       "2025-11-08": "Unidentified"
+    },
+    {
+      "2026-10-22": "Salesforce Commerce Cloud"
     }
   ],
   "Berluti": [
@@ -1129,6 +1132,9 @@
     },
     {
       "2026-07-30": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-10-22": "Magento"
     }
   ],
   "Newegg": [
@@ -1175,6 +1181,9 @@
     },
     {
       "2026-10-21": "Salesforce Commerce Cloud"
+    },
+    {
+      "2026-10-22": "Unidentified"
     }
   ],
   "Prada": [
@@ -1606,6 +1615,9 @@
     },
     {
       "2026-10-18": "SAP Commerce Cloud"
+    },
+    {
+      "2026-10-22": "Unidentified"
     }
   ],
   "Petco": [
@@ -2126,6 +2138,9 @@
     },
     {
       "2026-10-21": "Unidentified"
+    },
+    {
+      "2026-10-22": "Shopify"
     }
   ],
   "Estée Lauder": [
